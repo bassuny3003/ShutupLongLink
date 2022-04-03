@@ -41,12 +41,9 @@ namespace ShutupLongLink
 
         public string ShortestURLShortner(string ShortestAPIKey, string LongURL)
         {
-
-
             Uri myUri = new Uri("http://api.shorte.st/s/"+ ShortestAPIKey + LongURL);
 
             string respondjoson = new WebClient().DownloadString(myUri);
-
 
             respondjoson = respondjoson.Replace("\"", "");
             respondjoson = respondjoson.Replace("}", "");
