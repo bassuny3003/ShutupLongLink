@@ -47,13 +47,15 @@ namespace ShutupLongLink
 
             string respondjoson = new WebClient().DownloadString(myUri);
 
-            shrtBox.Text = data;
-            shrtBox.Text = shrtBox.Text.Replace("\"", "");
-            shrtBox.Text = shrtBox.Text.Replace("}", "");
-            shrtBox.Text = shrtBox.Text.Replace("{status:ok,shortenedUrl:", "");
+
+            respondjoson = respondjoson.Replace("\"", "");
+            respondjoson = respondjoson.Replace("}", "");
+            respondjoson = respondjoson.Replace("{status:ok,shortenedUrl:", "");
             //shrtBox.Text = shrtBox.Text.Replace("http:\\/\\/", "");
-            shrtBox.Text = shrtBox.Text.Replace("\\/", "/");
-            return "";
+            respondjoson = respondjoson.Replace("\\/", "/");
+
+
+            return respondjoson;
         }
 
     }
