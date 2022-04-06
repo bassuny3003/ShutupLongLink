@@ -32,6 +32,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>InsertHyperlink.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -46,6 +49,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="aboutForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="aboutForm.Designer.cs">
+      <DependentUpon>aboutForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="mainFrm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -55,6 +64,9 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ShortURL.cs" />
+    <EmbeddedResource Include="aboutForm.resx">
+      <DependentUpon>aboutForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="mainFrm.resx">
       <DependentUpon>mainFrm.cs</DependentUpon>
     </EmbeddedResource>
@@ -66,6 +78,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -79,6 +92,14 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="InsertHyperlink.ico" />
+    <None Include="Resources\TinyURL_logo.png" />
+    <None Include="Resources\logo.png" />
+    <None Include="Resources\logo_shortest.png" />
+    <None Include="Resources\Bit.ly_Logo.svg.png" />
+    <None Include="Resources\adfly.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
