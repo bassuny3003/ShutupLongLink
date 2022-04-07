@@ -95,6 +95,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="InsertHyperlink.ico" />
+    <None Include="Resources\Youtube.png" />
+    <None Include="Resources\Telegram.png" />
+    <None Include="Resources\FacebookOld.png" />
+    <None Include="Resources\FacebookMessenger.png" />
+    <None Include="Resources\Insert-hyperlink-icon.png" />
     <None Include="Resources\TinyURL_logo.png" />
     <None Include="Resources\logo.png" />
     <None Include="Resources\logo_shortest.png" />

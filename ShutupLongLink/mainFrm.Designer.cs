@@ -87,8 +87,9 @@ namespace ShutupLongLink
             // submnuItm01
             // 
             this.submnuItm01.Name = "submnuItm01";
-            this.submnuItm01.Size = new System.Drawing.Size(93, 22);
+            this.submnuItm01.Size = new System.Drawing.Size(180, 22);
             this.submnuItm01.Text = "&Exit";
+            this.submnuItm01.Click += new System.EventHandler(this.submnuItm01_Click);
             // 
             // mnuItm02
             // 
@@ -136,7 +137,7 @@ namespace ShutupLongLink
             // submnuItm02
             // 
             this.submnuItm02.Name = "submnuItm02";
-            this.submnuItm02.Size = new System.Drawing.Size(180, 22);
+            this.submnuItm02.Size = new System.Drawing.Size(107, 22);
             this.submnuItm02.Text = "&About";
             this.submnuItm02.Click += new System.EventHandler(this.submnuItm02_Click);
             // 

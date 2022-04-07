@@ -57,6 +57,11 @@ namespace ShutupLongLink
             aboutForm.ShowDialog();
         }
 
+        private void submnuItm01_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
         private void btnRunShortner_Click(object sender, EventArgs e)
         {
             if (cmbBxService.Text == "Adfly")
@@ -88,11 +93,18 @@ namespace ShutupLongLink
                 }
                 else
                 {
-                    txtBxShortURL.Text = ShortURL.R7URLShortner(R7URLAPIKey, txtBxR7URLAlias.Text,txtBxLongURL.Text);
+                    if (ShortURL.R7URLShortner(R7URLAPIKey, txtBxR7URLAlias.Text, txtBxLongURL.Text) == "")
+                    {
+
+                    }
+                    else
+                    {
+                        txtBxShortURL.Text = ShortURL.R7URLShortner(R7URLAPIKey, txtBxR7URLAlias.Text, txtBxLongURL.Text);
+                    }
                     ///to do 
                     /// alise aledy Exist
 
-                
+
                 }
             }
             else if (cmbBxService.Text == "TinyURL")

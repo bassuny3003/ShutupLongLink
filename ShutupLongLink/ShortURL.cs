@@ -26,7 +26,21 @@ namespace ShutupLongLink
 
             if (respondjoson.StartsWith("error"))
             {
-                respondjoson = "Alias already exists.";
+                respondjoson = respondjoson.Replace("error\",\"message\":[\"", "");
+
+                if (respondjoson.StartsWith("URL is invalid."))
+                {
+                    respondjoson = "URL is invalid.";
+                }
+                else if (respondjoson.StartsWith("Alias already exists."))
+                {
+                    respondjoson = "Alias already exists.";
+
+                }
+                else if (respondjoson.StartsWith("This domain is not allowed on our system."))
+                {
+                    respondjoson = "This domain is not allowed on R7URL system.";
+                }
             }
             else
             {
