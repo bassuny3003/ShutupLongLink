@@ -95,6 +95,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="InsertHyperlink.ico" />
+    <None Include="Resources\1462237880_Help.png" />
+    <None Include="Resources\1471086972_Settings.png" />
+    <None Include="Resources\logout.png" />
+    <None Include="Resources\cancel_20px.png" />
     <None Include="Resources\Youtube.png" />
     <None Include="Resources\Telegram.png" />
     <None Include="Resources\FacebookOld.png" />

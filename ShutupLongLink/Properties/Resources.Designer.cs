@@ -63,6 +63,26 @@ namespace ShutupLongLink.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _1462237880_Help {
+            get {
+                object obj = ResourceManager.GetObject("_1462237880_Help", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _1471086972_Settings {
+            get {
+                object obj = ResourceManager.GetObject("_1471086972_Settings", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap adfly {
             get {
                 object obj = ResourceManager.GetObject("adfly", resourceCulture);
@@ -76,6 +96,16 @@ namespace ShutupLongLink.Properties {
         internal static System.Drawing.Bitmap Bit_ly_Logo_svg {
             get {
                 object obj = ResourceManager.GetObject("Bit_ly_Logo_svg", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap cancel_20px {
+            get {
+                object obj = ResourceManager.GetObject("cancel_20px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -126,6 +156,16 @@ namespace ShutupLongLink.Properties {
         internal static System.Drawing.Bitmap logo_shortest {
             get {
                 object obj = ResourceManager.GetObject("logo_shortest", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap logout {
+            get {
+                object obj = ResourceManager.GetObject("logout", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

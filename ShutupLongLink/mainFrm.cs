@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Diagnostics;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace ShutupLongLink
@@ -62,59 +63,102 @@ namespace ShutupLongLink
             Close();
         }
 
+        private void txtBxLongURL_TextChanged(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(txtBxLongURL.Text))
+            {
+                btnCpyShortURL.Enabled = false;
+
+                txtBxShortURL.Clear();
+            }
+        }
+
+        private void btnCpyShortURL_Click(object sender, EventArgs e)
+        {
+            Clipboard.SetText(txtBxShortURL.Text);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (Width == 515)
+            {
+                this.Width = 1300;
+                CenterToScreen();
+                chkBxOnTop.Location = new Point(1174, 7);
+
+            }
+            else
+            {
+                this.Width = 515;
+                CenterToScreen();
+                chkBxOnTop.Location = new Point(392, 7);
+            }
+
+        }
+
         private void btnRunShortner_Click(object sender, EventArgs e)
         {
-            if (cmbBxService.Text == "Adfly")
+            if (!string.IsNullOrEmpty(txtBxLongURL.Text))
             {
-                string AdType;
-
-                if (rbAdType1.Checked)
-                    AdType = "int";
-                else
-                    AdType = "banner";
-
-                txtBxShortURL.Text = ShortURL.AdflyURLShortner(AdflyAPIKey, AdflyUID, AdType,txtBxLongURL.Text);
-            }
-            else if (cmbBxService.Text == "Shortest")
-            {
-                picBxService.Image = Properties.Resources.logo_shortest;
-
-                txtBxShortURL.Text = ShortURL.ShortestURLShortner(ShortestAPIKey,txtBxLongURL.Text);
-
-            }
-            else if (cmbBxService.Text == "R7URL")
-            {
-                picBxService.Image = Properties.Resources.logo;
-
-                if (string.IsNullOrEmpty(txtBxR7URLAlias.Text))
+                if (cmbBxService.Text == "Adfly")
                 {
-                    MessageBox.Show(this, "Please Check Alias Text", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    return;
+                    string AdType;
+
+                    if (rbAdType1.Checked)
+                        AdType = "int";
+                    else
+                        AdType = "banner";
+
+                    txtBxShortURL.Text = ShortURL.AdflyURLShortner(AdflyAPIKey, AdflyUID, AdType, txtBxLongURL.Text);
                 }
-                else
+                else if (cmbBxService.Text == "Shortest")
                 {
-                    if (ShortURL.R7URLShortner(R7URLAPIKey, txtBxR7URLAlias.Text, txtBxLongURL.Text) == "")
-                    {
+                    picBxService.Image = Properties.Resources.logo_shortest;
 
+                    txtBxShortURL.Text = ShortURL.ShortestURLShortner(ShortestAPIKey, txtBxLongURL.Text);
+
+                }
+                else if (cmbBxService.Text == "R7URL")
+                {
+                    picBxService.Image = Properties.Resources.logo;
+
+                    if (string.IsNullOrEmpty(txtBxR7URLAlias.Text))
+                    {
+                        MessageBox.Show(this, "Please Check Alias Text", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        return;
                     }
                     else
                     {
-                        txtBxShortURL.Text = ShortURL.R7URLShortner(R7URLAPIKey, txtBxR7URLAlias.Text, txtBxLongURL.Text);
+                        if (ShortURL.R7URLShortner(R7URLAPIKey, txtBxR7URLAlias.Text, txtBxLongURL.Text) == "")
+                        {
+
+                        }
+                        else
+                        {
+                            txtBxShortURL.Text = ShortURL.R7URLShortner(R7URLAPIKey, txtBxR7URLAlias.Text, txtBxLongURL.Text);
+                        }
+                        ///to do 
+                        /// alise aledy Exist
+
+
                     }
-                    ///to do 
-                    /// alise aledy Exist
-
-
                 }
+                else if (cmbBxService.Text == "TinyURL")
+                {
+                    picBxService.Image = Properties.Resources.TinyURL_logo;
+                }
+                else if (cmbBxService.Text == "Bitly")
+                {
+                    picBxService.Image = Properties.Resources.Bit_ly_Logo_svg;
+                }
+
+                btnCpyShortURL.Enabled = true;
             }
-            else if (cmbBxService.Text == "TinyURL")
+            else
             {
-                picBxService.Image = Properties.Resources.TinyURL_logo;
+                MessageBox.Show(this, "Please Add URLs First", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            else if (cmbBxService.Text == "Bitly")
-            {
-                picBxService.Image = Properties.Resources.Bit_ly_Logo_svg;
-            }
+            
         }
 
         private void MainFrm_FormClosing(object sender, FormClosingEventArgs e)
