@@ -32,11 +32,13 @@ namespace ShutupLongLink
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(aboutForm));
             this.label1 = new System.Windows.Forms.Label();
             this.btnClose = new System.Windows.Forms.Button();
+            this.picBxPayPalMe = new System.Windows.Forms.PictureBox();
             this.picBxYoutube = new System.Windows.Forms.PictureBox();
             this.picBxTelegram = new System.Windows.Forms.PictureBox();
             this.picBxMessenger = new System.Windows.Forms.PictureBox();
             this.picBxFacebook = new System.Windows.Forms.PictureBox();
             this.picBxLogo = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.picBxPayPalMe)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBxYoutube)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBxTelegram)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBxMessenger)).BeginInit();
@@ -56,13 +58,25 @@ namespace ShutupLongLink
             // 
             // btnClose
             // 
-            this.btnClose.Location = new System.Drawing.Point(325, 365);
+            this.btnClose.Location = new System.Drawing.Point(325, 464);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(97, 34);
             this.btnClose.TabIndex = 10;
             this.btnClose.Text = "&Close";
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
+            // picBxPayPalMe
+            // 
+            this.picBxPayPalMe.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picBxPayPalMe.Image = global::ShutupLongLink.Properties.Resources.Paypal_icon;
+            this.picBxPayPalMe.Location = new System.Drawing.Point(15, 349);
+            this.picBxPayPalMe.Name = "picBxPayPalMe";
+            this.picBxPayPalMe.Size = new System.Drawing.Size(402, 109);
+            this.picBxPayPalMe.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picBxPayPalMe.TabIndex = 15;
+            this.picBxPayPalMe.TabStop = false;
+            this.picBxPayPalMe.Click += new System.EventHandler(this.picBxPayPalMe_Click);
             // 
             // picBxYoutube
             // 
@@ -126,7 +140,8 @@ namespace ShutupLongLink
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(434, 411);
+            this.ClientSize = new System.Drawing.Size(434, 505);
+            this.Controls.Add(this.picBxPayPalMe);
             this.Controls.Add(this.picBxYoutube);
             this.Controls.Add(this.picBxTelegram);
             this.Controls.Add(this.picBxMessenger);
@@ -142,6 +157,7 @@ namespace ShutupLongLink
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "About";
+            ((System.ComponentModel.ISupportInitialize)(this.picBxPayPalMe)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBxYoutube)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBxTelegram)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBxMessenger)).EndInit();
@@ -160,5 +176,6 @@ namespace ShutupLongLink
         private System.Windows.Forms.PictureBox picBxMessenger;
         private System.Windows.Forms.PictureBox picBxTelegram;
         private System.Windows.Forms.PictureBox picBxYoutube;
+        private System.Windows.Forms.PictureBox picBxPayPalMe;
     }
 }

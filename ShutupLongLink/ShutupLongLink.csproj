@@ -36,6 +36,9 @@
     <ApplicationIcon>InsertHyperlink.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="SQLite.NET">
+      <HintPath>..\..\..\..\..\..\..\..\06- Programming Programs\Database Design\SQLite\SQLite dlls\SQLite.NET.0.21_x68_dll\SQLite.NET.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -55,6 +58,12 @@
     <Compile Include="aboutForm.Designer.cs">
       <DependentUpon>aboutForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="aPIMangerFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="aPIMangerFrm.Designer.cs">
+      <DependentUpon>aPIMangerFrm.cs</DependentUpon>
+    </Compile>
     <Compile Include="mainFrm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -66,6 +75,9 @@
     <Compile Include="ShortURL.cs" />
     <EmbeddedResource Include="aboutForm.resx">
       <DependentUpon>aboutForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="aPIMangerFrm.resx">
+      <DependentUpon>aPIMangerFrm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="mainFrm.resx">
       <DependentUpon>mainFrm.cs</DependentUpon>
@@ -80,6 +92,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="LocalDataBase\LocalDatabase.db">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -95,6 +110,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="InsertHyperlink.ico" />
+    <EmbeddedResource Include="SQLite.NET.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <Content Include="SQLite3.dll" />
+    <None Include="Resources\1471086403_Copy v2.png" />
+    <None Include="Resources\Paypal-icon.png" />
     <None Include="Resources\1462237880_Help.png" />
     <None Include="Resources\1471086972_Settings.png" />
     <None Include="Resources\logout.png" />

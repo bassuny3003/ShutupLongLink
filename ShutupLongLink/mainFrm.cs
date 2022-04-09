@@ -7,12 +7,10 @@ namespace ShutupLongLink
 {
     public partial class MainFrm : Form
     {
-        string  AdflyAPIKey     = "4035c8e1d3931ac1fec5f8d1cec122c1",
-                AdflyUID        = "1503418",
-                ShortestAPIKey  = "b38880d274a8bd8e710bf1c47369242b",
-                R7URLAPIKey     = "81ec9a87936f0b502f75cb6df8e71512aacddd6e";
-
-
+        readonly string     DefaultAdflyAPIKey = "4035c8e1d3931ac1fec5f8d1cec122c1",
+                            DefaultAdflyUID = "1503418",
+                            DefaultShortestAPIKey = "b38880d274a8bd8e710bf1c47369242b",
+                            DefaultR7URLAPIKey = "81ec9a87936f0b502f75cb6df8e71512aacddd6e";
 
         public MainFrm()
         {
@@ -80,7 +78,7 @@ namespace ShutupLongLink
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (Width == 515)
+            if (Width == 506)
             {
                 this.Width = 1300;
                 CenterToScreen();
@@ -89,11 +87,18 @@ namespace ShutupLongLink
             }
             else
             {
-                this.Width = 515;
+                this.Width = 506;
                 CenterToScreen();
                 chkBxOnTop.Location = new Point(392, 7);
             }
 
+        }
+
+        private void submnuItm07_Click(object sender, EventArgs e)
+        {
+            aPIMangerFrm aPIMangerFrm = new aPIMangerFrm();
+            aPIMangerFrm.Owner = this;
+            aPIMangerFrm.ShowDialog();
         }
 
         private void btnRunShortner_Click(object sender, EventArgs e)
@@ -109,47 +114,77 @@ namespace ShutupLongLink
                     else
                         AdType = "banner";
 
-                    txtBxShortURL.Text = ShortURL.AdflyURLShortner(AdflyAPIKey, AdflyUID, AdType, txtBxLongURL.Text);
+                    if (!string.IsNullOrEmpty(Properties.Settings.Default.UserAdflyAPIKey) || !string.IsNullOrEmpty(Properties.Settings.Default.UserAdflyUID))
+                    {
+                        txtBxShortURL.Text = ShortURL.AdflyURLShortner(Properties.Settings.Default.UserAdflyAPIKey, Properties.Settings.Default.UserAdflyUID, AdType, txtBxLongURL.Text);
+                    }
+                    else
+                    {
+                        MessageBox.Show(this, "Please Add Your APIs Or Load Default First", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                        aPIMangerFrm aPIMangerFrm = new aPIMangerFrm();
+                        aPIMangerFrm.Owner = this;
+                        aPIMangerFrm.ShowDialog();
+                    }
+
                 }
                 else if (cmbBxService.Text == "Shortest")
                 {
                     picBxService.Image = Properties.Resources.logo_shortest;
 
-                    txtBxShortURL.Text = ShortURL.ShortestURLShortner(ShortestAPIKey, txtBxLongURL.Text);
 
+                    if (!string.IsNullOrEmpty(Properties.Settings.Default.UserShortestAPIKey))
+                    {
+                        txtBxShortURL.Text = ShortURL.ShortestURLShortner(Properties.Settings.Default.UserShortestAPIKey, txtBxLongURL.Text);
+                    }
+                    else
+                    {
+                        MessageBox.Show(this, "Please Add Your APIs Or Load Default First", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                        aPIMangerFrm aPIMangerFrm = new aPIMangerFrm();
+                        aPIMangerFrm.Owner = this;
+                        aPIMangerFrm.ShowDialog();
+                    }
                 }
                 else if (cmbBxService.Text == "R7URL")
                 {
                     picBxService.Image = Properties.Resources.logo;
 
-                    if (string.IsNullOrEmpty(txtBxR7URLAlias.Text))
+                    if (!string.IsNullOrEmpty(Properties.Settings.Default.UserR7APIKey))
                     {
-                        MessageBox.Show(this, "Please Check Alias Text", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        return;
-                    }
-                    else
-                    {
-                        if (ShortURL.R7URLShortner(R7URLAPIKey, txtBxR7URLAlias.Text, txtBxLongURL.Text) == "")
+                        if (string.IsNullOrEmpty(txtBxR7URLAlias.Text))
                         {
-
+                            MessageBox.Show(this, "Please Check Alias Text", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            return;
                         }
                         else
                         {
-                            txtBxShortURL.Text = ShortURL.R7URLShortner(R7URLAPIKey, txtBxR7URLAlias.Text, txtBxLongURL.Text);
+                            txtBxShortURL.Text = ShortURL.R7URLShortner(Properties.Settings.Default.UserR7APIKey, txtBxR7URLAlias.Text, txtBxLongURL.Text);
                         }
-                        ///to do 
-                        /// alise aledy Exist
+                    }
+                    else
+                    {
+                        MessageBox.Show(this, "Please Add Your APIs Or Load Default First", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
-
+                        aPIMangerFrm aPIMangerFrm = new aPIMangerFrm();
+                        aPIMangerFrm.Owner = this;
+                        aPIMangerFrm.ShowDialog();
                     }
                 }
                 else if (cmbBxService.Text == "TinyURL")
                 {
                     picBxService.Image = Properties.Resources.TinyURL_logo;
+
+                    txtBxShortURL.Text = ShortURL.TinyURLShortner(txtBxLongURL.Text);
                 }
                 else if (cmbBxService.Text == "Bitly")
                 {
                     picBxService.Image = Properties.Resources.Bit_ly_Logo_svg;
+
+                    //foreach (var item in txtBxLongURL.Lines)
+                    //{
+                    //    txtBxShortURL.Text = txtBxShortURL.Text + item + Environment.NewLine;
+                    //}
                 }
 
                 btnCpyShortURL.Enabled = true;

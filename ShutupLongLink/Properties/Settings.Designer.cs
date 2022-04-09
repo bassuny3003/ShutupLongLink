@@ -25,7 +25,7 @@ namespace ShutupLongLink.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        [global::System.Configuration.DefaultSettingValueAttribute("b38880d274a8bd8e710bf1c47369242b")]
         public string UserShortestAPIKey {
             get {
                 return ((string)(this["UserShortestAPIKey"]));
@@ -37,7 +37,7 @@ namespace ShutupLongLink.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        [global::System.Configuration.DefaultSettingValueAttribute("4035c8e1d3931ac1fec5f8d1cec122c1")]
         public string UserAdflyAPIKey {
             get {
                 return ((string)(this["UserAdflyAPIKey"]));
@@ -49,13 +49,25 @@ namespace ShutupLongLink.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        [global::System.Configuration.DefaultSettingValueAttribute("81ec9a87936f0b502f75cb6df8e71512aacddd6e")]
         public string UserR7APIKey {
             get {
                 return ((string)(this["UserR7APIKey"]));
             }
             set {
                 this["UserR7APIKey"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("1503418")]
+        public string UserAdflyUID {
+            get {
+                return ((string)(this["UserAdflyUID"]));
+            }
+            set {
+                this["UserAdflyUID"] = value;
             }
         }
     }

@@ -3,13 +3,16 @@
   <Profiles />
   <Settings>
     <Setting Name="UserShortestAPIKey" Type="System.String" Scope="User">
-      <Value Profile="(Default)" />
+      <Value Profile="(Default)">b38880d274a8bd8e710bf1c47369242b</Value>
     </Setting>
     <Setting Name="UserAdflyAPIKey" Type="System.String" Scope="User">
-      <Value Profile="(Default)" />
+      <Value Profile="(Default)">4035c8e1d3931ac1fec5f8d1cec122c1</Value>
     </Setting>
     <Setting Name="UserR7APIKey" Type="System.String" Scope="User">
-      <Value Profile="(Default)" />
+      <Value Profile="(Default)">81ec9a87936f0b502f75cb6df8e71512aacddd6e</Value>
+    </Setting>
+    <Setting Name="UserAdflyUID" Type="System.String" Scope="User">
+      <Value Profile="(Default)">1503418</Value>
     </Setting>
   </Settings>
 </SettingsFile>

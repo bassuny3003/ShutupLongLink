@@ -67,5 +67,10 @@ namespace ShutupLongLink
             launchBrowser("https://bit.ly/2JfJlpi");
 
         }
+
+        private void picBxPayPalMe_Click(object sender, EventArgs e)
+        {
+            launchBrowser("https://www.paypal.com/paypalme/MBassuny/1");
+        }
     }
 }
