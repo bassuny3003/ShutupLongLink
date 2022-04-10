@@ -39,10 +39,13 @@ namespace ShutupLongLink
             this.submnuItm04 = new System.Windows.Forms.ToolStripMenuItem();
             this.submnuItm05 = new System.Windows.Forms.ToolStripMenuItem();
             this.submnuItm06 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.submnuItm07 = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuItm03 = new System.Windows.Forms.ToolStripMenuItem();
             this.submnuItm02 = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrp = new System.Windows.Forms.StatusStrip();
             this.statusLbl01 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.StatusLblResponse = new System.Windows.Forms.ToolStripStatusLabel();
             this.txtBxLongURL = new System.Windows.Forms.TextBox();
             this.btnRunShortner = new System.Windows.Forms.Button();
             this.txtBxShortURL = new System.Windows.Forms.TextBox();
@@ -50,7 +53,7 @@ namespace ShutupLongLink
             this.grpBxLongURL = new System.Windows.Forms.GroupBox();
             this.grpBxShortURL = new System.Windows.Forms.GroupBox();
             this.chkBxOnTop = new System.Windows.Forms.CheckBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnOpenLocalDateBase = new System.Windows.Forms.Button();
             this.rbAdType2 = new System.Windows.Forms.RadioButton();
             this.rbAdType1 = new System.Windows.Forms.RadioButton();
             this.lblR7URLAlias = new System.Windows.Forms.Label();
@@ -61,8 +64,7 @@ namespace ShutupLongLink
             this.btnCpyShortURL = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.listView1 = new System.Windows.Forms.ListView();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.submnuItm07 = new System.Windows.Forms.ToolStripMenuItem();
+            this.timrCpyShortURL = new System.Windows.Forms.Timer(this.components);
             this.mnuStrp.SuspendLayout();
             this.statusStrp.SuspendLayout();
             this.grpBxLongURL.SuspendLayout();
@@ -119,26 +121,42 @@ namespace ShutupLongLink
             // submnuItm03
             // 
             this.submnuItm03.Name = "submnuItm03";
-            this.submnuItm03.Size = new System.Drawing.Size(180, 22);
+            this.submnuItm03.Size = new System.Drawing.Size(158, 22);
             this.submnuItm03.Text = "Adfly";
+            this.submnuItm03.Click += new System.EventHandler(this.submnuItm03_Click);
             // 
             // submnuItm04
             // 
             this.submnuItm04.Name = "submnuItm04";
-            this.submnuItm04.Size = new System.Drawing.Size(180, 22);
+            this.submnuItm04.Size = new System.Drawing.Size(158, 22);
             this.submnuItm04.Text = "Shortst";
+            this.submnuItm04.Click += new System.EventHandler(this.submnuItm04_Click);
             // 
             // submnuItm05
             // 
             this.submnuItm05.Name = "submnuItm05";
-            this.submnuItm05.Size = new System.Drawing.Size(180, 22);
+            this.submnuItm05.Size = new System.Drawing.Size(158, 22);
             this.submnuItm05.Text = "R7URL";
+            this.submnuItm05.Click += new System.EventHandler(this.submnuItm05_Click);
             // 
             // submnuItm06
             // 
             this.submnuItm06.Name = "submnuItm06";
-            this.submnuItm06.Size = new System.Drawing.Size(180, 22);
+            this.submnuItm06.Size = new System.Drawing.Size(158, 22);
             this.submnuItm06.Text = "TinyURL";
+            this.submnuItm06.Click += new System.EventHandler(this.submnuItm06_Click);
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(155, 6);
+            // 
+            // submnuItm07
+            // 
+            this.submnuItm07.Name = "submnuItm07";
+            this.submnuItm07.Size = new System.Drawing.Size(158, 22);
+            this.submnuItm07.Text = "API Key Manger";
+            this.submnuItm07.Click += new System.EventHandler(this.submnuItm07_Click);
             // 
             // mnuItm03
             // 
@@ -160,7 +178,8 @@ namespace ShutupLongLink
             // 
             this.statusStrp.GripMargin = new System.Windows.Forms.Padding(0);
             this.statusStrp.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.statusLbl01});
+            this.statusLbl01,
+            this.StatusLblResponse});
             this.statusStrp.Location = new System.Drawing.Point(0, 739);
             this.statusStrp.Name = "statusStrp";
             this.statusStrp.Size = new System.Drawing.Size(490, 22);
@@ -172,6 +191,11 @@ namespace ShutupLongLink
             // 
             this.statusLbl01.Name = "statusLbl01";
             this.statusLbl01.Size = new System.Drawing.Size(0, 17);
+            // 
+            // StatusLblResponse
+            // 
+            this.StatusLblResponse.Name = "StatusLblResponse";
+            this.StatusLblResponse.Size = new System.Drawing.Size(0, 17);
             // 
             // txtBxLongURL
             // 
@@ -249,16 +273,16 @@ namespace ShutupLongLink
             this.chkBxOnTop.UseVisualStyleBackColor = true;
             this.chkBxOnTop.CheckedChanged += new System.EventHandler(this.chkBxOnTop_CheckedChanged);
             // 
-            // button1
+            // btnOpenLocalDateBase
             // 
-            this.button1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(7, 676);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(460, 26);
-            this.button1.TabIndex = 11;
-            this.button1.Text = "Open Local Data Base      >>>>>>>>>>";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnOpenLocalDateBase.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOpenLocalDateBase.Location = new System.Drawing.Point(7, 676);
+            this.btnOpenLocalDateBase.Name = "btnOpenLocalDateBase";
+            this.btnOpenLocalDateBase.Size = new System.Drawing.Size(460, 26);
+            this.btnOpenLocalDateBase.TabIndex = 11;
+            this.btnOpenLocalDateBase.Text = "Open Local Data Base      >>>>>>>>>>";
+            this.btnOpenLocalDateBase.UseVisualStyleBackColor = true;
+            this.btnOpenLocalDateBase.Click += new System.EventHandler(this.btnOpenLocalDateBase_Click);
             // 
             // rbAdType2
             // 
@@ -318,7 +342,7 @@ namespace ShutupLongLink
             this.panel1.Controls.Add(this.grpBxLongURL);
             this.panel1.Controls.Add(this.rbAdType1);
             this.panel1.Controls.Add(this.grpBxShortURL);
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.btnOpenLocalDateBase);
             this.panel1.Controls.Add(this.btnCpyShortURL);
             this.panel1.Location = new System.Drawing.Point(8, 29);
             this.panel1.Name = "panel1";
@@ -327,6 +351,7 @@ namespace ShutupLongLink
             // 
             // picBxService
             // 
+            this.picBxService.Image = global::ShutupLongLink.Properties.Resources.adfly;
             this.picBxService.Location = new System.Drawing.Point(89, 3);
             this.picBxService.Name = "picBxService";
             this.picBxService.Size = new System.Drawing.Size(280, 120);
@@ -363,17 +388,10 @@ namespace ShutupLongLink
             this.listView1.TabIndex = 0;
             this.listView1.UseCompatibleStateImageBehavior = false;
             // 
-            // toolStripSeparator1
+            // timrCpyShortURL
             // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(177, 6);
-            // 
-            // submnuItm07
-            // 
-            this.submnuItm07.Name = "submnuItm07";
-            this.submnuItm07.Size = new System.Drawing.Size(180, 22);
-            this.submnuItm07.Text = "API Key Manger";
-            this.submnuItm07.Click += new System.EventHandler(this.submnuItm07_Click);
+            this.timrCpyShortURL.Enabled = true;
+            this.timrCpyShortURL.Tick += new System.EventHandler(this.timrCpyShortURL_Tick);
             // 
             // MainFrm
             // 
@@ -417,7 +435,6 @@ namespace ShutupLongLink
         private System.Windows.Forms.MenuStrip mnuStrp;
         private System.Windows.Forms.ToolStripMenuItem mnuItm01;
         private System.Windows.Forms.ToolStripMenuItem mnuItm02;
-        private System.Windows.Forms.StatusStrip statusStrp;
         private System.Windows.Forms.ToolStripStatusLabel statusLbl01;
         private System.Windows.Forms.TextBox txtBxLongURL;
         private System.Windows.Forms.Button btnRunShortner;
@@ -431,7 +448,7 @@ namespace ShutupLongLink
         private System.Windows.Forms.ToolStripMenuItem submnuItm01;
         private System.Windows.Forms.ToolStripMenuItem submnuItm02;
         private System.Windows.Forms.Button btnCpyShortURL;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnOpenLocalDateBase;
         private System.Windows.Forms.ToolStripMenuItem submnuItm03;
         private System.Windows.Forms.ToolStripMenuItem submnuItm04;
         private System.Windows.Forms.ToolStripMenuItem submnuItm05;
@@ -446,6 +463,9 @@ namespace ShutupLongLink
         private System.Windows.Forms.ListView listView1;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripMenuItem submnuItm07;
+        public System.Windows.Forms.StatusStrip statusStrp;
+        private System.Windows.Forms.ToolStripStatusLabel StatusLblResponse;
+        private System.Windows.Forms.Timer timrCpyShortURL;
     }
 }
 

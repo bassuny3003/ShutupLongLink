@@ -6,8 +6,9 @@ namespace ShutupLongLink
 {
     public static class ShortURL
     {
+        #region Adfly URL Shortener
 
-        public static string AdflyURLShortner(string AdflyAPIKey, string UID, string AdType, string LongURL)
+        public static string AdflyURLShortener(string AdflyAPIKey, string UID, string AdType, string LongURL)
         {
             Uri requestUri = new Uri("http://api.adf.ly/api.php?key=" + AdflyAPIKey + "&uid=" + UID + "&advert_type=" + AdType + "&domain=adf.ly&url=" + LongURL.Trim());
 
@@ -16,7 +17,11 @@ namespace ShutupLongLink
             return ShortURL;
         }
 
-        public static string R7URLShortner(string R7APIKey, string Alias, string LongURL)
+        #endregion
+
+        #region R7URL Shortener
+
+        public static string R7URLShortener(string R7APIKey, string Alias, string LongURL)
         {
             Uri requestUri = new Uri("https://7r6.com/api?api=" + R7APIKey + "&url=" + LongURL + "&alias=" + Alias + "");
 
@@ -54,9 +59,13 @@ namespace ShutupLongLink
             return respondjoson;
         }
 
-        public static string ShortestURLShortner(string ShortestAPIKey, string LongURL)
+        #endregion
+
+        #region Shortest URL Shortener
+
+        public static string ShortestURLShortener(string ShortestAPIKey, string LongURL)
         {
-            Uri myUri = new Uri("http://api.shorte.st/s/"+ ShortestAPIKey + "/" + LongURL);
+            Uri myUri = new Uri("http://api.shorte.st/s/" + ShortestAPIKey + "/" + LongURL);
 
             string respondjoson = new WebClient().DownloadString(myUri);
 
@@ -69,7 +78,11 @@ namespace ShutupLongLink
             return respondjoson;
         }
 
-        public static string TinyURLShortner(string LongURL)
+        #endregion
+
+        #region TinyURL Shortener
+
+        public static string TinyURLShortener(string LongURL)
         {
             string myShortURL;
             string myLongURL = "http://tinyurl.com/api-create.php?url=" + LongURL.ToLower();
@@ -84,6 +97,8 @@ namespace ShutupLongLink
 
             return myShortURL;
         }
+
+        #endregion
 
     }
 }

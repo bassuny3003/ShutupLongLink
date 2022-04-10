@@ -36,9 +36,6 @@
     <ApplicationIcon>InsertHyperlink.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="SQLite.NET">
-      <HintPath>..\..\..\..\..\..\..\..\06- Programming Programs\Database Design\SQLite\SQLite dlls\SQLite.NET.0.21_x68_dll\SQLite.NET.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -92,7 +89,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="LocalDataBase\LocalDatabase.db">
+    <EmbeddedResource Include="LocalDataBase\SavedURLs.db">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
@@ -110,10 +107,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="InsertHyperlink.ico" />
-    <EmbeddedResource Include="SQLite.NET.dll">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </EmbeddedResource>
-    <Content Include="SQLite3.dll" />
     <None Include="Resources\1471086403_Copy v2.png" />
     <None Include="Resources\Paypal-icon.png" />
     <None Include="Resources\1462237880_Help.png" />

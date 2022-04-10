@@ -9,6 +9,8 @@ namespace ShutupLongLink
         {
             InitializeComponent();
 
+            #region Get All API Keys From Settings
+
             txtBxAdfly.Text = Properties.Settings.Default.UserAdflyAPIKey;
             txtBxAdflyUID.Text = Properties.Settings.Default.UserAdflyUID;
 
@@ -16,13 +18,19 @@ namespace ShutupLongLink
 
             txtBxShortest.Text = Properties.Settings.Default.UserShortestAPIKey;
 
+            #endregion
         }
+
+        #region Close API Manger Form
 
         private void btnClose_Click(object sender, EventArgs e)
         {
             Close();
         }
 
+        #endregion
+
+        #region Save New API Keys Button 
         private void btnSave_Click(object sender, EventArgs e)
         {
             Properties.Settings.Default.UserAdflyAPIKey = txtBxAdfly.Text;
@@ -36,8 +44,11 @@ namespace ShutupLongLink
 
             Close();
 
-
         }
+
+        #endregion
+
+        #region Load Default API Keys Button
 
         private void btnLoadDefault_Click(object sender, EventArgs e)
         {
@@ -47,5 +58,10 @@ namespace ShutupLongLink
             txtBxR7URL.Text = "81ec9a87936f0b502f75cb6df8e71512aacddd6e";
 
         }
+
+        #endregion
+
+
+
     }
 }
