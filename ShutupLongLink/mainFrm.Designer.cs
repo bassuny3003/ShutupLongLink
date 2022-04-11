@@ -63,8 +63,28 @@ namespace ShutupLongLink
             this.picBxService = new System.Windows.Forms.PictureBox();
             this.btnCpyShortURL = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.listView1 = new System.Windows.Forms.ListView();
+            this.lstVw = new System.Windows.Forms.ListView();
             this.timrCpyShortURL = new System.Windows.Forms.Timer(this.components);
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.button1 = new System.Windows.Forms.Button();
+            this.rightClickLstVw = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.CopyHoleRow = new System.Windows.Forms.ToolStripMenuItem();
+            this.CopyLongURL = new System.Windows.Forms.ToolStripMenuItem();
+            this.CopyAliasURL = new System.Windows.Forms.ToolStripMenuItem();
+            this.CopyNotesURL = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.GoToLongURL = new System.Windows.Forms.ToolStripMenuItem();
+            this.GoToShortURL = new System.Windows.Forms.ToolStripMenuItem();
+            this.GoToServiceWebSite = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
+            this.DeleteSelectedURL = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
+            this.EditeNotesURL = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuStrp.SuspendLayout();
             this.statusStrp.SuspendLayout();
             this.grpBxLongURL.SuspendLayout();
@@ -72,6 +92,7 @@ namespace ShutupLongLink
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBxService)).BeginInit();
             this.panel2.SuspendLayout();
+            this.rightClickLstVw.SuspendLayout();
             this.SuspendLayout();
             // 
             // mnuStrp
@@ -83,7 +104,7 @@ namespace ShutupLongLink
             this.mnuItm03});
             this.mnuStrp.Location = new System.Drawing.Point(0, 0);
             this.mnuStrp.Name = "mnuStrp";
-            this.mnuStrp.Size = new System.Drawing.Size(490, 24);
+            this.mnuStrp.Size = new System.Drawing.Size(1481, 24);
             this.mnuStrp.TabIndex = 0;
             this.mnuStrp.Text = "mnuStp";
             // 
@@ -182,7 +203,7 @@ namespace ShutupLongLink
             this.StatusLblResponse});
             this.statusStrp.Location = new System.Drawing.Point(0, 739);
             this.statusStrp.Name = "statusStrp";
-            this.statusStrp.Size = new System.Drawing.Size(490, 22);
+            this.statusStrp.Size = new System.Drawing.Size(1481, 22);
             this.statusStrp.SizingGrip = false;
             this.statusStrp.TabIndex = 1;
             this.statusStrp.Text = "statusStrp";
@@ -265,7 +286,7 @@ namespace ShutupLongLink
             // 
             this.chkBxOnTop.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.chkBxOnTop.AutoSize = true;
-            this.chkBxOnTop.Location = new System.Drawing.Point(380, 7);
+            this.chkBxOnTop.Location = new System.Drawing.Point(1371, 7);
             this.chkBxOnTop.Name = "chkBxOnTop";
             this.chkBxOnTop.Size = new System.Drawing.Size(98, 17);
             this.chkBxOnTop.TabIndex = 9;
@@ -319,6 +340,7 @@ namespace ShutupLongLink
             // txtBxR7URLAlias
             // 
             this.txtBxR7URLAlias.Location = new System.Drawing.Point(119, 158);
+            this.txtBxR7URLAlias.MaxLength = 30;
             this.txtBxR7URLAlias.Name = "txtBxR7URLAlias";
             this.txtBxR7URLAlias.Size = new System.Drawing.Size(250, 20);
             this.txtBxR7URLAlias.TabIndex = 28;
@@ -333,6 +355,7 @@ namespace ShutupLongLink
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.picBxService);
             this.panel1.Controls.Add(this.txtBxR7URLAlias);
             this.panel1.Controls.Add(this.btnRunShortner);
@@ -373,31 +396,171 @@ namespace ShutupLongLink
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.listView1);
+            this.panel2.Controls.Add(this.lstVw);
             this.panel2.Location = new System.Drawing.Point(496, 29);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(776, 705);
             this.panel2.TabIndex = 30;
             // 
-            // listView1
+            // lstVw
             // 
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(3, 3);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(770, 699);
-            this.listView1.TabIndex = 0;
-            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.lstVw.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.columnHeader2,
+            this.columnHeader3,
+            this.columnHeader4,
+            this.columnHeader5,
+            this.columnHeader6});
+            this.lstVw.FullRowSelect = true;
+            this.lstVw.GridLines = true;
+            this.lstVw.HideSelection = false;
+            this.lstVw.Location = new System.Drawing.Point(3, 3);
+            this.lstVw.MultiSelect = false;
+            this.lstVw.Name = "lstVw";
+            this.lstVw.ShowGroups = false;
+            this.lstVw.Size = new System.Drawing.Size(770, 699);
+            this.lstVw.TabIndex = 0;
+            this.lstVw.TileSize = new System.Drawing.Size(168, 30);
+            this.lstVw.UseCompatibleStateImageBehavior = false;
+            this.lstVw.View = System.Windows.Forms.View.Details;
+            this.lstVw.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lstVw_MouseClick);
             // 
             // timrCpyShortURL
             // 
             this.timrCpyShortURL.Enabled = true;
             this.timrCpyShortURL.Tick += new System.EventHandler(this.timrCpyShortURL_Tick);
             // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "ID";
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "Service";
+            this.columnHeader2.Width = 100;
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "Long URL";
+            this.columnHeader3.Width = 250;
+            // 
+            // columnHeader4
+            // 
+            this.columnHeader4.Text = "Short URL";
+            this.columnHeader4.Width = 200;
+            // 
+            // columnHeader5
+            // 
+            this.columnHeader5.Text = "Alias URL";
+            this.columnHeader5.Width = 80;
+            // 
+            // columnHeader6
+            // 
+            this.columnHeader6.Text = "Notes";
+            this.columnHeader6.Width = 75;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(386, 80);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 29;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // rightClickLstVw
+            // 
+            this.rightClickLstVw.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.EditeNotesURL,
+            this.toolStripSeparator4,
+            this.CopyHoleRow,
+            this.CopyLongURL,
+            this.CopyAliasURL,
+            this.CopyNotesURL,
+            this.toolStripSeparator2,
+            this.GoToServiceWebSite,
+            this.GoToLongURL,
+            this.GoToShortURL,
+            this.toolStripSeparator3,
+            this.DeleteSelectedURL});
+            this.rightClickLstVw.Name = "rightClickLstVw";
+            this.rightClickLstVw.Size = new System.Drawing.Size(191, 242);
+            // 
+            // CopyHoleRow
+            // 
+            this.CopyHoleRow.Name = "CopyHoleRow";
+            this.CopyHoleRow.Size = new System.Drawing.Size(190, 22);
+            this.CopyHoleRow.Text = "Copy Hole Row";
+            // 
+            // CopyLongURL
+            // 
+            this.CopyLongURL.Name = "CopyLongURL";
+            this.CopyLongURL.Size = new System.Drawing.Size(190, 22);
+            this.CopyLongURL.Text = "Copy Long URL";
+            // 
+            // CopyAliasURL
+            // 
+            this.CopyAliasURL.Name = "CopyAliasURL";
+            this.CopyAliasURL.Size = new System.Drawing.Size(190, 22);
+            this.CopyAliasURL.Text = "Copy Alias URL";
+            // 
+            // CopyNotesURL
+            // 
+            this.CopyNotesURL.Name = "CopyNotesURL";
+            this.CopyNotesURL.Size = new System.Drawing.Size(190, 22);
+            this.CopyNotesURL.Text = "Copy Notes URL";
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(187, 6);
+            // 
+            // GoToLongURL
+            // 
+            this.GoToLongURL.Name = "GoToLongURL";
+            this.GoToLongURL.Size = new System.Drawing.Size(190, 22);
+            this.GoToLongURL.Text = "Go To Long URL";
+            // 
+            // GoToShortURL
+            // 
+            this.GoToShortURL.Name = "GoToShortURL";
+            this.GoToShortURL.Size = new System.Drawing.Size(190, 22);
+            this.GoToShortURL.Text = "Go To Short URL";
+            // 
+            // GoToServiceWebSite
+            // 
+            this.GoToServiceWebSite.Name = "GoToServiceWebSite";
+            this.GoToServiceWebSite.Size = new System.Drawing.Size(190, 22);
+            this.GoToServiceWebSite.Text = "Go To Service WebSite";
+            // 
+            // toolStripSeparator3
+            // 
+            this.toolStripSeparator3.Name = "toolStripSeparator3";
+            this.toolStripSeparator3.Size = new System.Drawing.Size(187, 6);
+            // 
+            // DeleteSelectedURL
+            // 
+            this.DeleteSelectedURL.Name = "DeleteSelectedURL";
+            this.DeleteSelectedURL.Size = new System.Drawing.Size(190, 22);
+            this.DeleteSelectedURL.Text = "Delete Selected URL";
+            // 
+            // toolStripSeparator4
+            // 
+            this.toolStripSeparator4.Name = "toolStripSeparator4";
+            this.toolStripSeparator4.Size = new System.Drawing.Size(187, 6);
+            // 
+            // EditeNotesURL
+            // 
+            this.EditeNotesURL.Name = "EditeNotesURL";
+            this.EditeNotesURL.Size = new System.Drawing.Size(190, 22);
+            this.EditeNotesURL.Text = "Edite Notes URL";
+            // 
             // MainFrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(490, 761);
+            this.ClientSize = new System.Drawing.Size(1481, 761);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.chkBxOnTop);
@@ -425,6 +588,7 @@ namespace ShutupLongLink
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBxService)).EndInit();
             this.panel2.ResumeLayout(false);
+            this.rightClickLstVw.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -460,12 +624,32 @@ namespace ShutupLongLink
         private System.Windows.Forms.ImageList imgLst;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ListView lstVw;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripMenuItem submnuItm07;
         public System.Windows.Forms.StatusStrip statusStrp;
         private System.Windows.Forms.ToolStripStatusLabel StatusLblResponse;
         private System.Windows.Forms.Timer timrCpyShortURL;
+        private System.Windows.Forms.ColumnHeader columnHeader1;
+        private System.Windows.Forms.ColumnHeader columnHeader2;
+        private System.Windows.Forms.ColumnHeader columnHeader3;
+        private System.Windows.Forms.ColumnHeader columnHeader4;
+        private System.Windows.Forms.ColumnHeader columnHeader5;
+        private System.Windows.Forms.ColumnHeader columnHeader6;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ContextMenuStrip rightClickLstVw;
+        private System.Windows.Forms.ToolStripMenuItem CopyHoleRow;
+        private System.Windows.Forms.ToolStripMenuItem CopyLongURL;
+        private System.Windows.Forms.ToolStripMenuItem CopyAliasURL;
+        private System.Windows.Forms.ToolStripMenuItem CopyNotesURL;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
+        private System.Windows.Forms.ToolStripMenuItem GoToServiceWebSite;
+        private System.Windows.Forms.ToolStripMenuItem GoToLongURL;
+        private System.Windows.Forms.ToolStripMenuItem GoToShortURL;
+        private System.Windows.Forms.ToolStripMenuItem EditeNotesURL;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
+        private System.Windows.Forms.ToolStripMenuItem DeleteSelectedURL;
     }
 }
 

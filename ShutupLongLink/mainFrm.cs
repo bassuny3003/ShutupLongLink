@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Data;
 using System.Diagnostics;
 using System.Drawing;
 using System.Windows.Forms;
@@ -7,6 +8,38 @@ namespace ShutupLongLink
 {
     public partial class MainFrm : Form
     {
+        TableSavedURLs TableSavedURLs = new TableSavedURLs();
+
+        private void GetAllSavedURLs()
+        {
+            lstVw.Items.Clear();
+
+            DataTable MyDataTable = TableSavedURLs.GetAllSavedURLs();
+
+            if (MyDataTable.Rows.Count > 0)
+            {
+                for (int i = 0; i < MyDataTable.Rows.Count; i++)
+                {
+                    ListViewItem lstvwItm = new ListViewItem(MyDataTable.Rows[i]["id"].ToString());
+                    lstvwItm.SubItems.Add(MyDataTable.Rows[i]["UsedService"].ToString());
+                    lstvwItm.SubItems.Add(MyDataTable.Rows[i]["LongURL"].ToString());
+                    lstvwItm.SubItems.Add(MyDataTable.Rows[i]["ShortURL"].ToString());
+                    lstvwItm.SubItems.Add(MyDataTable.Rows[i]["AliasURL"].ToString());
+                    lstvwItm.SubItems.Add(MyDataTable.Rows[i]["NotesURL"].ToString());
+
+                    lstVw.Items.Add(lstvwItm);
+
+                }
+
+                lstVw.Focus();
+                lstVw.Items[0].Selected = true;
+            }
+            else
+            {
+                lstVw.Items.Clear();
+            }
+        }
+
         public MainFrm()
         {
             InitializeComponent();
@@ -26,6 +59,8 @@ namespace ShutupLongLink
             cmbBxService.ValueMember = "Value";
 
             #endregion
+
+            GetAllSavedURLs();
 
         }
 
@@ -178,6 +213,7 @@ namespace ShutupLongLink
             {
                 if (cmbBxService.Text == "Adfly")
                 {
+
                     string AdType;
 
                     if (rbAdType1.Checked)
@@ -185,9 +221,26 @@ namespace ShutupLongLink
                     else
                         AdType = "banner";
 
+                    txtBxR7URLAlias.Text = "";
+
                     if (!string.IsNullOrEmpty(Properties.Settings.Default.UserAdflyAPIKey) || !string.IsNullOrEmpty(Properties.Settings.Default.UserAdflyUID))
                     {
                         txtBxShortURL.Text = ShortURL.AdflyURLShortener(Properties.Settings.Default.UserAdflyAPIKey, Properties.Settings.Default.UserAdflyUID, AdType, txtBxLongURL.Text);
+
+                        TableSavedURLs tableSavedURLs = new TableSavedURLs()
+                        {
+                            AliasURL = txtBxR7URLAlias.Text,
+                            UsedService = "Adfly.com",
+                            LongURL = txtBxLongURL.Text,
+                            ShortURL = txtBxShortURL.Text,
+                            NotesURL = ""
+
+                        };
+
+                        tableSavedURLs.SaveNewURL();
+
+                        GetAllSavedURLs();
+
                     }
                     else
                     {
@@ -309,7 +362,26 @@ namespace ShutupLongLink
 
         }
 
+
         #endregion
+
+        #region Rigt Click List View 
+
+        private void lstVw_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Right)
+            {
+                rightClickLstVw.Show(lstVw, new Point(e.X, e.Y));
+
+            }
+        }
+
+        #endregion
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
 
 
     }

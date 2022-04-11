@@ -10,3 +10,14 @@ H:\07- Programming  Projects\03-C Sharp Projects\C Sharp Projects\NetFrame\Windo
 H:\07- Programming  Projects\03-C Sharp Projects\C Sharp Projects\NetFrame\WindowsForm Projects\Short Link Programs\ShutupLongLink\ShutupLongLink\obj\Debug\ShutupLongLink.exe
 H:\07- Programming  Projects\03-C Sharp Projects\C Sharp Projects\NetFrame\WindowsForm Projects\Short Link Programs\ShutupLongLink\ShutupLongLink\obj\Debug\ShutupLongLink.pdb
 H:\07- Programming  Projects\03-C Sharp Projects\C Sharp Projects\NetFrame\WindowsForm Projects\Short Link Programs\ShutupLongLink\ShutupLongLink\bin\Debug\LocalDataBase\SavedURLs.db
+H:\07- Programming  Projects\03-C Sharp Projects\C Sharp Projects\NetFrame\WindowsForm Projects\Short Link Programs\ShutupLongLink\ShutupLongLink\obj\Debug\ShutupLongLink.csprojAssemblyReference.cache
+H:\07- Programming  Projects\03-C Sharp Projects\C Sharp Projects\NetFrame\WindowsForm Projects\Short Link Programs\ShutupLongLink\ShutupLongLink\bin\Debug\SQLite.Designer.dll
+H:\07- Programming  Projects\03-C Sharp Projects\C Sharp Projects\NetFrame\WindowsForm Projects\Short Link Programs\ShutupLongLink\ShutupLongLink\bin\Debug\System.Data.SQLite.dll
+H:\07- Programming  Projects\03-C Sharp Projects\C Sharp Projects\NetFrame\WindowsForm Projects\Short Link Programs\ShutupLongLink\ShutupLongLink\bin\Debug\System.Data.SQLite.EF6.dll
+H:\07- Programming  Projects\03-C Sharp Projects\C Sharp Projects\NetFrame\WindowsForm Projects\Short Link Programs\ShutupLongLink\ShutupLongLink\bin\Debug\System.Data.SQLite.Linq.dll
+H:\07- Programming  Projects\03-C Sharp Projects\C Sharp Projects\NetFrame\WindowsForm Projects\Short Link Programs\ShutupLongLink\ShutupLongLink\bin\Debug\Microsoft.VisualStudio.Shell.Interop.dll
+H:\07- Programming  Projects\03-C Sharp Projects\C Sharp Projects\NetFrame\WindowsForm Projects\Short Link Programs\ShutupLongLink\ShutupLongLink\bin\Debug\Microsoft.VisualStudio.OLE.Interop.dll
+H:\07- Programming  Projects\03-C Sharp Projects\C Sharp Projects\NetFrame\WindowsForm Projects\Short Link Programs\ShutupLongLink\ShutupLongLink\bin\Debug\EnvDTE.dll
+H:\07- Programming  Projects\03-C Sharp Projects\C Sharp Projects\NetFrame\WindowsForm Projects\Short Link Programs\ShutupLongLink\ShutupLongLink\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.dll
+H:\07- Programming  Projects\03-C Sharp Projects\C Sharp Projects\NetFrame\WindowsForm Projects\Short Link Programs\ShutupLongLink\ShutupLongLink\bin\Debug\stdole.dll
+H:\07- Programming  Projects\03-C Sharp Projects\C Sharp Projects\NetFrame\WindowsForm Projects\Short Link Programs\ShutupLongLink\ShutupLongLink\obj\Debug\ShutupLongLink.csproj.CopyComplete

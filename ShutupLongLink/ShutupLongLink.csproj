@@ -33,11 +33,23 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>InsertHyperlink.ico</ApplicationIcon>
+    <ApplicationIcon>Shutup Long Link.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="SQLite.Designer">
+      <HintPath>..\..\..\..\..\..\..\..\06- Programming Programs\Database Design\SQLite\SQLite dlls\SQLite DLL Files\SQLite.Designer.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.SQLite">
+      <HintPath>..\..\..\..\..\..\..\..\06- Programming Programs\Database Design\SQLite\SQLite dlls\SQLite DLL Files\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SQLite.EF6">
+      <HintPath>..\..\..\..\..\..\..\..\06- Programming Programs\Database Design\SQLite\SQLite dlls\SQLite DLL Files\System.Data.SQLite.EF6.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SQLite.Linq">
+      <HintPath>..\..\..\..\..\..\..\..\06- Programming Programs\Database Design\SQLite\SQLite dlls\SQLite DLL Files\System.Data.SQLite.Linq.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -61,6 +73,7 @@
     <Compile Include="aPIMangerFrm.Designer.cs">
       <DependentUpon>aPIMangerFrm.cs</DependentUpon>
     </Compile>
+    <Compile Include="AppConnections.cs" />
     <Compile Include="mainFrm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -70,6 +83,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ShortURL.cs" />
+    <Compile Include="TableSavedURLs.cs" />
     <EmbeddedResource Include="aboutForm.resx">
       <DependentUpon>aboutForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -107,6 +121,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="InsertHyperlink.ico" />
+    <None Include="Resources\Shutup Long Link.png" />
+    <Content Include="Shutup Long Link.ico" />
     <None Include="Resources\1471086403_Copy v2.png" />
     <None Include="Resources\Paypal-icon.png" />
     <None Include="Resources\1462237880_Help.png" />

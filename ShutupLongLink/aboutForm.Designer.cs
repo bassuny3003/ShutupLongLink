@@ -128,7 +128,7 @@ namespace ShutupLongLink
             // 
             // picBxLogo
             // 
-            this.picBxLogo.Image = global::ShutupLongLink.Properties.Resources.Insert_hyperlink_icon;
+            this.picBxLogo.Image = global::ShutupLongLink.Properties.Resources.Shutup_Long_Link;
             this.picBxLogo.Location = new System.Drawing.Point(111, 12);
             this.picBxLogo.Name = "picBxLogo";
             this.picBxLogo.Size = new System.Drawing.Size(210, 188);
