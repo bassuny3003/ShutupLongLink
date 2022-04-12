@@ -8,11 +8,19 @@ namespace ShutupLongLink
 {
     public partial class MainFrm : Form
     {
+        #region Variables
+
         TableSavedURLs TableSavedURLs = new TableSavedURLs();
 
-        private void GetAllSavedURLs()
+        #endregion
+
+        #region Get All ( Refresh ) Saved URLs In DataBase 
+
+        public void GetAllSavedURLs()
         {
+            //lstVw.Refresh();
             lstVw.Items.Clear();
+            lstVw.Update();
 
             DataTable MyDataTable = TableSavedURLs.GetAllSavedURLs();
 
@@ -31,14 +39,19 @@ namespace ShutupLongLink
 
                 }
 
+                lstVw.Refresh();
                 lstVw.Focus();
                 lstVw.Items[0].Selected = true;
             }
             else
             {
                 lstVw.Items.Clear();
+                lstVw.Update();
+
             }
         }
+
+        #endregion
 
         public MainFrm()
         {
@@ -115,6 +128,8 @@ namespace ShutupLongLink
 
         private void submnuItm07_Click(object sender, EventArgs e)
         {
+            chkBxOnTop.Checked = false;
+
             aPIMangerFrm aPIMangerFrm = new aPIMangerFrm();
             aPIMangerFrm.Owner = this;
             aPIMangerFrm.ShowDialog();
@@ -146,6 +161,9 @@ namespace ShutupLongLink
             if (cmbBxService.Text == "Adfly")
             {
                 picBxService.Image = Properties.Resources.adfly;
+
+                txtBxR7URLAlias.Clear();
+
                 rbAdType1.Visible = true;
                 rbAdType2.Visible = true;
                 lblR7URLAlias.Visible = false;
@@ -155,6 +173,9 @@ namespace ShutupLongLink
             else if (cmbBxService.Text == "Shortest")
             {
                 picBxService.Image = Properties.Resources.logo_shortest;
+
+                txtBxR7URLAlias.Clear();
+
                 rbAdType1.Visible = false;
                 rbAdType2.Visible = false;
                 lblR7URLAlias.Visible = false;
@@ -173,6 +194,9 @@ namespace ShutupLongLink
             else if (cmbBxService.Text == "TinyURL")
             {
                 picBxService.Image = Properties.Resources.TinyURL_logo;
+
+                txtBxR7URLAlias.Clear();
+
                 rbAdType1.Visible = false;
                 rbAdType2.Visible = false;
                 lblR7URLAlias.Visible = false;
@@ -182,6 +206,9 @@ namespace ShutupLongLink
             else if (cmbBxService.Text == "Bitly")
             {
                 picBxService.Image = Properties.Resources.Bit_ly_Logo_svg;
+
+                txtBxR7URLAlias.Clear();
+
                 rbAdType1.Visible = false;
                 rbAdType2.Visible = false;
                 lblR7URLAlias.Visible = false;
@@ -221,8 +248,6 @@ namespace ShutupLongLink
                     else
                         AdType = "banner";
 
-                    txtBxR7URLAlias.Text = "";
-
                     if (!string.IsNullOrEmpty(Properties.Settings.Default.UserAdflyAPIKey) || !string.IsNullOrEmpty(Properties.Settings.Default.UserAdflyUID))
                     {
                         txtBxShortURL.Text = ShortURL.AdflyURLShortener(Properties.Settings.Default.UserAdflyAPIKey, Properties.Settings.Default.UserAdflyUID, AdType, txtBxLongURL.Text);
@@ -230,7 +255,7 @@ namespace ShutupLongLink
                         TableSavedURLs tableSavedURLs = new TableSavedURLs()
                         {
                             AliasURL = txtBxR7URLAlias.Text,
-                            UsedService = "Adfly.com",
+                            UsedService = "https://adf.ly",
                             LongURL = txtBxLongURL.Text,
                             ShortURL = txtBxShortURL.Text,
                             NotesURL = ""
@@ -254,12 +279,24 @@ namespace ShutupLongLink
                 }
                 else if (cmbBxService.Text == "Shortest")
                 {
-                    picBxService.Image = Properties.Resources.logo_shortest;
-
 
                     if (!string.IsNullOrEmpty(Properties.Settings.Default.UserShortestAPIKey))
                     {
                         txtBxShortURL.Text = ShortURL.ShortestURLShortener(Properties.Settings.Default.UserShortestAPIKey, txtBxLongURL.Text);
+
+                        TableSavedURLs tableSavedURLs = new TableSavedURLs()
+                        {
+                            AliasURL = txtBxR7URLAlias.Text,
+                            UsedService = "https://shorte.st",
+                            LongURL = txtBxLongURL.Text,
+                            ShortURL = txtBxShortURL.Text,
+                            NotesURL = ""
+
+                        };
+
+                        tableSavedURLs.SaveNewURL();
+
+                        GetAllSavedURLs();
                     }
                     else
                     {
@@ -272,7 +309,6 @@ namespace ShutupLongLink
                 }
                 else if (cmbBxService.Text == "R7URL")
                 {
-                    picBxService.Image = Properties.Resources.logo;
 
                     if (!string.IsNullOrEmpty(Properties.Settings.Default.UserR7APIKey))
                     {
@@ -284,6 +320,20 @@ namespace ShutupLongLink
                         else
                         {
                             txtBxShortURL.Text = ShortURL.R7URLShortener(Properties.Settings.Default.UserR7APIKey, txtBxR7URLAlias.Text, txtBxLongURL.Text);
+
+                            TableSavedURLs tableSavedURLs = new TableSavedURLs()
+                            {
+                                AliasURL = txtBxR7URLAlias.Text,
+                                UsedService = "https://7r6.com",
+                                LongURL = txtBxLongURL.Text,
+                                ShortURL = txtBxShortURL.Text,
+                                NotesURL = ""
+
+                            };
+
+                            tableSavedURLs.SaveNewURL();
+
+                            GetAllSavedURLs();
                         }
                     }
                     else
@@ -297,13 +347,27 @@ namespace ShutupLongLink
                 }
                 else if (cmbBxService.Text == "TinyURL")
                 {
-                    picBxService.Image = Properties.Resources.TinyURL_logo;
 
                     txtBxShortURL.Text = ShortURL.TinyURLShortener(txtBxLongURL.Text);
+
+                    TableSavedURLs tableSavedURLs = new TableSavedURLs()
+                    {
+                        AliasURL = txtBxR7URLAlias.Text,
+                        UsedService = "https://tinyurl.com",
+                        LongURL = txtBxLongURL.Text,
+                        ShortURL = txtBxShortURL.Text,
+                        NotesURL = ""
+
+                    };
+
+                    tableSavedURLs.SaveNewURL();
+
+                    GetAllSavedURLs();
+
+
                 }
                 else if (cmbBxService.Text == "Bitly")
                 {
-                    picBxService.Image = Properties.Resources.Bit_ly_Logo_svg;
 
                     //foreach (var item in txtBxLongURL.Lines)
                     //{
@@ -311,11 +375,20 @@ namespace ShutupLongLink
                     //}
                 }
 
+                statusLbl01.Text = "Check Your Shorts URLs";
+                timrCpyShortURL.Interval = 5000;
+                timrCpyShortURL.Start();
+
                 btnCpyShortURL.Enabled = true;
             }
             else
             {
+                statusLbl01.Text = "Please Add URLs First";
+                timrCpyShortURL.Interval = 5000;
+                timrCpyShortURL.Start();
+
                 MessageBox.Show(this, "Please Add URLs First", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
             }
 
         }
@@ -329,7 +402,7 @@ namespace ShutupLongLink
             Clipboard.SetText(txtBxShortURL.Text);
 
             statusLbl01.Text = "ShortURL Copied";
-            timrCpyShortURL.Interval = 4000;
+            timrCpyShortURL.Interval = 5000;
             timrCpyShortURL.Start();
         }
 
@@ -365,7 +438,7 @@ namespace ShutupLongLink
 
         #endregion
 
-        #region Rigt Click List View 
+        #region Rigt Click List View Events
 
         private void lstVw_MouseClick(object sender, MouseEventArgs e)
         {
@@ -375,11 +448,127 @@ namespace ShutupLongLink
 
             }
         }
+        private void EditeNotesURL_Click(object sender, EventArgs e)
+        {
+            int selectedItems = Convert.ToInt32(lstVw.SelectedItems[0].Text);
+
+            noteEditeFrm noteEditeFrm = new noteEditeFrm(selectedItems);
+
+            noteEditeFrm.MyParent = this;
+            noteEditeFrm.ShowDialog();
+
+        }
+
+        private void CopyWholeRow_Click(object sender, EventArgs e)
+        {
+            ListView.SelectedListViewItemCollection selectedItems = lstVw.SelectedItems;
+
+            String WholeRowText = "";
+
+            foreach (ListViewItem item in selectedItems)
+            {
+                for (int i = 1; i < item.SubItems.Count; i++)
+                {
+                    WholeRowText += "\" " + item.SubItems[i].Text + "\" ";
+                }
+            }
+
+            Clipboard.SetText(WholeRowText);
+        }
+
+        private void CopyLongURL_Click(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(lstVw.SelectedItems[0].SubItems[2].Text))
+            {
+                Clipboard.SetText(lstVw.SelectedItems[0].SubItems[2].Text);
+            }
+            else
+            {
+                Clipboard.Clear();
+            }
+        }
+
+        private void CopyShortURL_Click(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(lstVw.SelectedItems[0].SubItems[3].Text))
+            {
+                Clipboard.SetText(lstVw.SelectedItems[0].SubItems[3].Text);
+            }
+            else
+            {
+                Clipboard.Clear();
+            }
+        }
+
+        private void CopyAliasURL_Click(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(lstVw.SelectedItems[0].SubItems[4].Text))
+            {
+                Clipboard.SetText(lstVw.SelectedItems[0].SubItems[4].Text);
+            }
+            else
+            {
+                Clipboard.Clear();
+            }
+        }
+
+        private void CopyNotesURL_Click(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(lstVw.SelectedItems[0].SubItems[5].Text))
+            {
+                Clipboard.SetText(lstVw.SelectedItems[0].SubItems[5].Text);
+            }
+            else
+            {
+                Clipboard.Clear();
+            }
+        }
+
+        private void GoToServiceWebSite_Click(object sender, EventArgs e)
+        {
+            StartURLInBrowser.Url = lstVw.SelectedItems[0].SubItems[1].Text;
+            StartURLInBrowser.launchDefualtBrowser();
+        }
+
+        private void GoToLongURL_Click(object sender, EventArgs e)
+        {
+            StartURLInBrowser.Url = lstVw.SelectedItems[0].SubItems[2].Text;
+            StartURLInBrowser.launchDefualtBrowser();
+        }
+
+        private void GoToShortURL_Click(object sender, EventArgs e)
+        {
+            StartURLInBrowser.Url = lstVw.SelectedItems[0].SubItems[3].Text;
+            StartURLInBrowser.launchDefualtBrowser();
+        }
+
+        private void DeleteSelectedURL_Click(object sender, EventArgs e)
+        {
+            int ChoosedID = Convert.ToInt32(lstVw.SelectedItems[0].Text);
+
+            switch (MessageBox.Show(this, "You Are About To Delete URL With ID : ( " + ChoosedID + " ) Are You Sure ?", "Delete URL", MessageBoxButtons.YesNo, MessageBoxIcon.Question))
+            {
+                case DialogResult.Yes:
+
+                    TableSavedURLs tableSavedURLs = new TableSavedURLs()
+                    {
+                        ID = ChoosedID
+                    };
+                    tableSavedURLs.DeleteSelectedURL();
+
+                    GetAllSavedURLs();
+
+                    break;
+                default:
+                    break;
+            }
+        }
 
         #endregion
 
         private void button1_Click(object sender, EventArgs e)
         {
+            lstVw.Items.Clear();
 
         }
 

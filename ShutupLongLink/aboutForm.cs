@@ -1,39 +1,10 @@
-﻿using Microsoft.Win32;
-using System;
-using System.Diagnostics;
+﻿using System;
 using System.Windows.Forms;
 
 namespace ShutupLongLink
 {
     public partial class aboutForm : Form
     {
-        public void launchBrowser(string url)
-        {
-            string browserName = "iexplore.exe";
-            using (RegistryKey userChoiceKey = Registry.CurrentUser.OpenSubKey(@"Software\Microsoft\Windows\Shell\Associations\UrlAssociations\http\UserChoice"))
-            {
-                if (userChoiceKey != null)
-                {
-                    object progIdValue = userChoiceKey.GetValue("Progid");
-                    if (progIdValue != null)
-                    {
-                        if (progIdValue.ToString().ToLower().Contains("chrome"))
-                            browserName = "chrome.exe";
-                        else if (progIdValue.ToString().ToLower().Contains("firefox"))
-                            browserName = "firefox.exe";
-                        else if (progIdValue.ToString().ToLower().Contains("safari"))
-                            browserName = "safari.exe";
-                        else if (progIdValue.ToString().ToLower().Contains("opera"))
-                            browserName = "opera.exe";
-                    }
-                }
-            }
-
-            Process.Start(browserName, url);
-        }
-
-
-
         public aboutForm()
         {
             InitializeComponent();
@@ -46,31 +17,35 @@ namespace ShutupLongLink
 
         private void picBxFacebook_Click(object sender, EventArgs e)
         {
-            launchBrowser("https://www.facebook.com/7Kingdomsar");
-
+            StartURLInBrowser.Url = "https://www.facebook.com/7Kingdomsar";
+            StartURLInBrowser.launchDefualtBrowser();
         }
 
         private void picBxMessenger_Click(object sender, EventArgs e)
         {
-            launchBrowser("https://m.me/bassuny3003");
+            StartURLInBrowser.Url = "https://m.me/bassuny3003";
+            StartURLInBrowser.launchDefualtBrowser();
 
         }
 
         private void picBxTelegram_Click(object sender, EventArgs e)
         {
-            launchBrowser("https://t.me/techkingdomchannel");
+            StartURLInBrowser.Url = "https://t.me/techkingdomchannel";
+            StartURLInBrowser.launchDefualtBrowser();
 
         }
 
         private void picBxYoutube_Click(object sender, EventArgs e)
         {
-            launchBrowser("https://bit.ly/2JfJlpi");
+            StartURLInBrowser.Url = "https://bit.ly/2JfJlpi";
+            StartURLInBrowser.launchDefualtBrowser();
 
         }
 
         private void picBxPayPalMe_Click(object sender, EventArgs e)
         {
-            launchBrowser("https://www.paypal.com/paypalme/MBassuny/1");
+            StartURLInBrowser.Url = "https://www.paypal.com/paypalme/MBassuny/1";
+            StartURLInBrowser.launchDefualtBrowser();
         }
     }
 }
