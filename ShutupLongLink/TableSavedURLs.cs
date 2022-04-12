@@ -137,7 +137,7 @@ namespace ShutupLongLink
 
         #endregion Update URL Data With Notes
 
-        #region Delete URL Data
+        #region Delete URL Data Need ID Only
 
         /// <summary>
         /// Delete Selected URL
@@ -156,7 +156,25 @@ namespace ShutupLongLink
             MyConnection.Close();
         }
 
-        #endregion Delete Product Data
+        #endregion Delete Product Data Need ID Only
 
+
+        #region Delete All Saved URLs
+
+        /// <summary>
+        /// Delete All Saved URLs
+        /// </summary>
+        public void DeleteAllSavedURLs()
+        {
+            SQLiteCommand MySQLiteDeleteCommand = new SQLiteCommand("Delete From SavedURLs", MyConnection);
+
+            MyConnection.Open();
+
+            MySQLiteDeleteCommand.ExecuteNonQuery();
+
+            MyConnection.Close();
+        }
+
+        #endregion Delete All Saved URLs
     }
 }

@@ -2,13 +2,16 @@
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <ProjectView>ProjectFiles</ProjectView>
-    <PublishUrlHistory>publish\</PublishUrlHistory>
+    <PublishUrlHistory>C:\Users\EnGBassunY\OneDrive\Desktop\New folder\|publish\</PublishUrlHistory>
     <InstallUrlHistory />
-    <SupportUrlHistory />
+    <SupportUrlHistory>https://youtu.be/TmprPMUoE4k</SupportUrlHistory>
     <UpdateUrlHistory />
     <BootstrapperUrlHistory />
     <ErrorReportUrlHistory />
     <FallbackCulture>en-US</FallbackCulture>
     <VerifyUploadedFiles>false</VerifyUploadedFiles>
+  </PropertyGroup>
+  <PropertyGroup>
+    <EnableSecurityDebugging>false</EnableSecurityDebugging>
   </PropertyGroup>
 </Project>

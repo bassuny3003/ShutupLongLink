@@ -166,6 +166,7 @@ namespace ShutupLongLink
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "aPIMangerFrm";
+            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "API Key Manger";
             this.ResumeLayout(false);

@@ -8,13 +8,10 @@ namespace ShutupLongLink
 {
     public class AppConnections
     {
-        string TodayDate = DateTime.Now.ToString("ddMMyyyy");
-        string TodayTime = DateTime.Now.ToString("hhmmss tt");
+        public static string DataBaseFolderPath = Environment.CurrentDirectory + "\\LocalDataBase\\";
+        public static string DataBaseFilePath   = Environment.CurrentDirectory + "\\LocalDataBase\\SavedURLs.db";
 
-        static string DataBaseFolderPath = Environment.CurrentDirectory + "\\LocalDataBase\\";
-        static string DataBaseFilePath   = Environment.CurrentDirectory + "\\LocalDataBase\\SavedURLs.db";
-
-        static string DataBaseBackUpFolderPath = Environment.CurrentDirectory + "\\LocalDataBase\\Backups\\";
+        public static string DataBaseBackUpFolderPath = Environment.CurrentDirectory + "\\LocalDataBase\\Backups\\";
 
 
         #region DataBase Connection String Builder For SQLite
@@ -115,8 +112,11 @@ namespace ShutupLongLink
         /// 
         /// </summary>
         /// <returns></returns>
-        public bool BackUpDataBase()
+        public static bool BackUpDataBase()
         {
+            string TodayDate = DateTime.Now.ToString("ddMMyyyy");
+            string TodayTime = DateTime.Now.ToString("hhmmss tt");
+
             bool Result = false;
 
             if (Directory.Exists(DataBaseFolderPath))
@@ -125,8 +125,15 @@ namespace ShutupLongLink
                 {
                     if (Directory.Exists(DataBaseBackUpFolderPath))
                     {
-                        File.Copy(DataBaseFilePath, DataBaseBackUpFolderPath + "SavedURLs - Date " + TodayDate + " Time " + TodayTime + " .dbBackup");
-                        Result = true;
+                        if (!File.Exists(DataBaseBackUpFolderPath + "SavedURLs - Date " + TodayDate + " Time " + TodayTime + " .dbBackup"))
+                        {
+                            File.Copy(DataBaseFilePath, DataBaseBackUpFolderPath + "SavedURLs - Date " + TodayDate + " Time " + TodayTime + " .dbBackup");
+                            Result = true;
+                        }
+                        else
+                        {
+                            Result = false;
+                        }
                     }
                     else
                     {

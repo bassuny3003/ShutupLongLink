@@ -135,6 +135,52 @@ namespace ShutupLongLink
             aPIMangerFrm.ShowDialog();
         }
 
+        private void submnuItm08_Click(object sender, EventArgs e)
+        {
+            switch (MessageBox.Show(this, "You Are About To BackUp DataBase File , Are You Sure ?", "BackUp DataBase", MessageBoxButtons.YesNo, MessageBoxIcon.Question))
+            {
+                case DialogResult.Yes:
+                    if (AppConnections.BackUpDataBase())
+                    {
+                        MessageBox.Show(this, "BackUp DataBase File Done, Have Nice Day :)", "BackUp DataBase", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        MessageBox.Show(this, "Something Went Wrong , Maybe backUp File Already Exist :)", "BackUp DataBase", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+
+                    break;
+                default:
+                    break;
+            }
+
+        }
+
+        private void submnuItm09_Click(object sender, EventArgs e)
+        {
+            chkBxOnTop.Checked = false;
+
+            restorBackUpFrm restorBackUpFrm = new restorBackUpFrm();
+            restorBackUpFrm.MyParent = this;
+            restorBackUpFrm.ShowDialog();
+        }
+
+        private void submnuItm10_Click(object sender, EventArgs e)
+        {
+            switch (MessageBox.Show(this, "You Are About To Clear All DataBase Data \n# You Will canNOT Restore This Data Again #\nAre You Sure ?", "Clear DataBase", MessageBoxButtons.YesNo, MessageBoxIcon.Question))
+            {
+                case DialogResult.Yes:
+                    TableSavedURLs.DeleteAllSavedURLs();
+
+                    MessageBox.Show(this, "All DataBase Data has Been Cleared.", "BackUp DataBase", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    
+                    GetAllSavedURLs();
+                    break;
+                default:
+                    break;
+            }
+        }
+
         #endregion
 
         #region Form Closing
@@ -568,10 +614,9 @@ namespace ShutupLongLink
 
         private void button1_Click(object sender, EventArgs e)
         {
-            lstVw.Items.Clear();
+            //lstVw.Items.Clear();
+
 
         }
-
-
     }
 }

@@ -85,6 +85,7 @@ namespace ShutupLongLink
         public static string TinyURLShortener(string LongURL)
         {
             string myShortURL;
+
             string myLongURL = "http://tinyurl.com/api-create.php?url=" + LongURL.ToLower();
 
             var request = (HttpWebRequest)WebRequest.Create(myLongURL);
