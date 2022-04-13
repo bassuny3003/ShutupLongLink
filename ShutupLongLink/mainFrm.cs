@@ -53,6 +53,8 @@ namespace ShutupLongLink
 
         #endregion
 
+        #region Constractor
+
         public MainFrm()
         {
             InitializeComponent();
@@ -60,12 +62,12 @@ namespace ShutupLongLink
             #region Set Combo Box Defult Value Service
 
             var itemsService = new[] {
-                new { Text = "Adfly", Value = "Adfly" },
-                new { Text = "Shortest", Value = "Shortest" },
-                new { Text = "R7URL", Value = "R7URL" },
-                new { Text = "TinyURL", Value = "TinyURL" },
+                new { Text = "Adfly",     Value = "Adfly" },
+                new { Text = "Shortest",  Value = "Shortest" },
+                new { Text = "R7URL",     Value = "R7URL" },
+                new { Text = "TinyURL",   Value = "TinyURL" },
                 new { Text = "Rebrandly", Value = "Rebrandly" },
-                new { Text = "Bitly", Value = "Bitly" },
+                new { Text = "Bitly",     Value = "Bitly" },
             };
 
             cmbBxService.DataSource = itemsService;
@@ -74,11 +76,23 @@ namespace ShutupLongLink
 
             #endregion
 
-            GetAllSavedURLs();
+            #region Set App Version In App Titel
+
+            this.Text = Text + " Version: " + Application.ProductVersion;
+
+            #endregion
+
+            #region Get All Saved URLs From DB
+
+            GetAllSavedURLs(); 
+
+            #endregion
 
         }
+        
+        #endregion
 
-        #region All Menu Code
+        #region All Menu Code Events
 
         private void chkBxOnTop_CheckedChanged(object sender, EventArgs e)
         {
@@ -184,7 +198,7 @@ namespace ShutupLongLink
 
         #endregion
 
-        #region Form Closing
+        #region Form Closing Event
 
         private void MainFrm_FormClosing(object sender, FormClosingEventArgs e)
         {
@@ -211,9 +225,9 @@ namespace ShutupLongLink
 
                 txtBxR7URLAlias.Clear();
 
-                rbAdType1.Visible = true;
-                rbAdType2.Visible = true;
-                lblR7URLAlias.Visible = false;
+                rbAdType1.Visible       = true;
+                rbAdType2.Visible       = true;
+                lblR7URLAlias.Visible   = false;
                 txtBxR7URLAlias.Visible = false;
 
             }
@@ -223,54 +237,51 @@ namespace ShutupLongLink
 
                 txtBxR7URLAlias.Clear();
 
-                rbAdType1.Visible = false;
-                rbAdType2.Visible = false;
-                lblR7URLAlias.Visible = false;
+                rbAdType1.Visible       = false;
+                rbAdType2.Visible       = false;
+                lblR7URLAlias.Visible   = false;
                 txtBxR7URLAlias.Visible = false;
 
             }
             else if (cmbBxService.Text == "R7URL")
             {
-                picBxService.Image = Properties.Resources.logo;
-                rbAdType1.Visible = false;
-                rbAdType2.Visible = false;
-                lblR7URLAlias.Visible = true;
+                picBxService.Image      = Properties.Resources.logo;
+                rbAdType1.Visible       = false;
+                rbAdType2.Visible       = false;
+                lblR7URLAlias.Visible   = true;
                 txtBxR7URLAlias.Visible = true;
 
             }
             else if (cmbBxService.Text == "TinyURL")
             {
-                picBxService.Image = Properties.Resources.TinyURL_logo;
-
                 txtBxR7URLAlias.Clear();
 
-                rbAdType1.Visible = false;
-                rbAdType2.Visible = false;
-                lblR7URLAlias.Visible = false;
+                picBxService.Image      = Properties.Resources.TinyURL_logo;
+                rbAdType1.Visible       = false;
+                rbAdType2.Visible       = false;
+                lblR7URLAlias.Visible   = false;
                 txtBxR7URLAlias.Visible = false;
 
             }
             else if (cmbBxService.Text == "Bitly")
             {
-                picBxService.Image = Properties.Resources.Bit_ly_Logo_svg;
-
                 txtBxR7URLAlias.Clear();
 
-                rbAdType1.Visible = false;
-                rbAdType2.Visible = false;
-                lblR7URLAlias.Visible = false;
+                picBxService.Image      = Properties.Resources.Bit_ly_Logo_svg;
+                rbAdType1.Visible       = false;
+                rbAdType2.Visible       = false;
+                lblR7URLAlias.Visible   = false;
                 txtBxR7URLAlias.Visible = false;
 
             }
             else if (cmbBxService.Text == "Rebrandly")
             {
-                picBxService.Image = Properties.Resources.rebrand_ly;
-
                 txtBxR7URLAlias.Clear();
 
-                rbAdType1.Visible = false;
-                rbAdType2.Visible = false;
-                lblR7URLAlias.Visible = false;
+                picBxService.Image      = Properties.Resources.rebrand_ly;
+                rbAdType1.Visible       = false;
+                rbAdType2.Visible       = false;
+                lblR7URLAlias.Visible   = false;
                 txtBxR7URLAlias.Visible = false;
 
             }
@@ -278,7 +289,7 @@ namespace ShutupLongLink
 
         #endregion
 
-        #region Long URL TEXTBOX
+        #region Long URL TextBox
 
         private void txtBxLongURL_TextChanged(object sender, EventArgs e)
         {
@@ -635,19 +646,19 @@ namespace ShutupLongLink
         private void GoToServiceWebSite_Click(object sender, EventArgs e)
         {
             StartURLInBrowser.Url = lstVw.SelectedItems[0].SubItems[1].Text;
-            StartURLInBrowser.launchDefualtBrowser();
+            StartURLInBrowser.StartDefualtBrowser();
         }
 
         private void GoToLongURL_Click(object sender, EventArgs e)
         {
             StartURLInBrowser.Url = lstVw.SelectedItems[0].SubItems[2].Text;
-            StartURLInBrowser.launchDefualtBrowser();
+            StartURLInBrowser.StartDefualtBrowser();
         }
 
         private void GoToShortURL_Click(object sender, EventArgs e)
         {
             StartURLInBrowser.Url = lstVw.SelectedItems[0].SubItems[3].Text;
-            StartURLInBrowser.launchDefualtBrowser();
+            StartURLInBrowser.StartDefualtBrowser();
         }
 
         private void DeleteSelectedURL_Click(object sender, EventArgs e)

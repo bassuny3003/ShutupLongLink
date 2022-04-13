@@ -5,10 +5,15 @@ namespace ShutupLongLink
 {
     public static class StartURLInBrowser
     {
+        #region Variable
+
         public static string Url { get; set; }
 
+        #endregion
 
-        public static void StartLink()
+        #region Open URL In "CMD" To Browser
+
+        public static void StartURL()
         {
             ProcessStartInfo processStartInfo = new ProcessStartInfo("cmd", "/C start " + Url)
             {
@@ -24,7 +29,11 @@ namespace ShutupLongLink
             process.Start();
         }
 
-        public static void launchDefualtBrowser()
+        #endregion
+
+        #region Get Defualt Browser And Start URL In It
+
+        public static void StartDefualtBrowser()
         {
             string browserName = "iexplore.exe";
             using (RegistryKey userChoiceKey = Registry.CurrentUser.OpenSubKey(@"Software\Microsoft\Windows\Shell\Associations\UrlAssociations\http\UserChoice"))
@@ -47,6 +56,8 @@ namespace ShutupLongLink
             }
 
             Process.Start(browserName, Url);
-        }
+        } 
+
+        #endregion
     }
 }

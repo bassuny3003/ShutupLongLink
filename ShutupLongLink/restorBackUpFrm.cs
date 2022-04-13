@@ -6,16 +6,26 @@ namespace ShutupLongLink
 {
     public partial class restorBackUpFrm : Form
     {
-        public Form MyParent { get; set; }
+        #region Variables
 
         string ChoosedBackUp = "";
 
+        public Form MyParent { get; set; }
+
         OpenFileDialog openFileDialog = new OpenFileDialog();
+
+        #endregion
+
+        #region Constractor
 
         public restorBackUpFrm()
         {
             InitializeComponent();
         }
+
+        #endregion
+
+        #region Browse DataBase BackUp Event
 
         private void btnBrowse_Click(object sender, EventArgs e)
         {
@@ -39,6 +49,10 @@ namespace ShutupLongLink
             }
         }
 
+        #endregion
+
+        #region Restore DataBase File Evnet
+
         private void btnRestore_Click(object sender, EventArgs e)
         {
             switch (MessageBox.Show(this, "You Are About To Restore DataBase File\n( " + lblChoosedFileName.Text + " )\nAre You Sure? ", "Restore DataBase", MessageBoxButtons.YesNo, MessageBoxIcon.Question))
@@ -48,7 +62,7 @@ namespace ShutupLongLink
 
                     MyParent.GetType().GetMethod("GetAllSavedURLs").Invoke(MyParent, null);
 
-                    MessageBox.Show(this, "DataBaseFile RestoredAnd Loaded, Have Nice Day :)", "Restore DataBase", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show(this, "DataBaseFile Restored And Loaded, Have Nice Day :)", "Restore DataBase", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                     break;
                 default:
@@ -56,9 +70,15 @@ namespace ShutupLongLink
             }
         }
 
+        #endregion
+
+        #region Close Event
+
         private void btnClose_Click(object sender, EventArgs e)
         {
             Close();
         }
+
+        #endregion
     }
 }

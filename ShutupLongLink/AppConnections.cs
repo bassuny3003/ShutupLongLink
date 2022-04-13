@@ -8,11 +8,14 @@ namespace ShutupLongLink
 {
     public class AppConnections
     {
+        #region Variables
+
         public static string DataBaseFolderPath = Environment.CurrentDirectory + "\\LocalDataBase\\";
-        public static string DataBaseFilePath   = Environment.CurrentDirectory + "\\LocalDataBase\\SavedURLs.db";
+        public static string DataBaseFilePath = Environment.CurrentDirectory + "\\LocalDataBase\\SavedURLs.db";
 
         public static string DataBaseBackUpFolderPath = Environment.CurrentDirectory + "\\LocalDataBase\\Backups\\";
 
+        #endregion
 
         #region DataBase Connection String Builder For SQLite
 
@@ -92,7 +95,8 @@ namespace ShutupLongLink
 
         public void SetDataBaseFolderPath()
         {
-
+            //Todo
+            //
         }
 
         #endregion Set DataBase Folder Path        

@@ -5,8 +5,17 @@ namespace ShutupLongLink
 {
     public partial class noteEditeFrm : Form
     {
+        #region Variables
+
         int SelectedID;
+
+        public Form MyParent { get; set; }
+
         TableSavedURLs tableSavedURLs = new TableSavedURLs();
+
+        #endregion
+
+        #region Get Selected Notes By ID
 
         private string GetSelectedNotes(int sID)
         {
@@ -16,8 +25,12 @@ namespace ShutupLongLink
 
             string NoteURL = MyDataTable.Rows[0]["NotesURL"].ToString();
 
-            return NoteURL; 
+            return NoteURL;
         }
+
+        #endregion
+
+        #region Constractor
 
         public noteEditeFrm(int ID)
         {
@@ -29,12 +42,18 @@ namespace ShutupLongLink
             txtBxNote.Text = GetSelectedNotes(SelectedID);
         }
 
-        public Form MyParent { get; set; }
+        #endregion
+
+        #region Close Event
 
         private void btnClose_Click(object sender, System.EventArgs e)
         {
             Close();
         }
+
+        #endregion
+
+        #region Save Event
 
         private void btnSave_Click(object sender, System.EventArgs e)
         {
@@ -44,6 +63,8 @@ namespace ShutupLongLink
             tableSavedURLs.SetNotesURL();
 
             MyParent.GetType().GetMethod("GetAllSavedURLs").Invoke(MyParent, null);
-        }
+        } 
+
+        #endregion
     }
 }

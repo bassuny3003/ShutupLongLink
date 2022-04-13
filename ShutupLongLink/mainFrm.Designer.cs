@@ -32,7 +32,6 @@ namespace ShutupLongLink
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainFrm));
             this.mnuStrp = new System.Windows.Forms.MenuStrip();
-            this.mnuItm03 = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrp = new System.Windows.Forms.StatusStrip();
             this.statusLbl01 = new System.Windows.Forms.ToolStripStatusLabel();
             this.StatusLblResponse = new System.Windows.Forms.ToolStripStatusLabel();
@@ -75,9 +74,6 @@ namespace ShutupLongLink
             this.GoToShortURL = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.DeleteSelectedURL = new System.Windows.Forms.ToolStripMenuItem();
-            this.submnuItm08 = new System.Windows.Forms.ToolStripMenuItem();
-            this.submnuItm09 = new System.Windows.Forms.ToolStripMenuItem();
-            this.submnuItm10 = new System.Windows.Forms.ToolStripMenuItem();
             this.picBxService = new System.Windows.Forms.PictureBox();
             this.mnuItm01 = new System.Windows.Forms.ToolStripMenuItem();
             this.submnuItm01 = new System.Windows.Forms.ToolStripMenuItem();
@@ -88,6 +84,10 @@ namespace ShutupLongLink
             this.submnuItm06 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.submnuItm07 = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuItm03 = new System.Windows.Forms.ToolStripMenuItem();
+            this.submnuItm08 = new System.Windows.Forms.ToolStripMenuItem();
+            this.submnuItm09 = new System.Windows.Forms.ToolStripMenuItem();
+            this.submnuItm10 = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuItm04 = new System.Windows.Forms.ToolStripMenuItem();
             this.submnuItm02 = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuStrp.SuspendLayout();
@@ -113,16 +113,6 @@ namespace ShutupLongLink
             this.mnuStrp.Size = new System.Drawing.Size(490, 24);
             this.mnuStrp.TabIndex = 0;
             this.mnuStrp.Text = "mnuStp";
-            // 
-            // mnuItm03
-            // 
-            this.mnuItm03.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.submnuItm08,
-            this.submnuItm09,
-            this.submnuItm10});
-            this.mnuItm03.Name = "mnuItm03";
-            this.mnuItm03.Size = new System.Drawing.Size(107, 20);
-            this.mnuItm03.Text = "Mange Database";
             // 
             // statusStrp
             // 
@@ -493,27 +483,6 @@ namespace ShutupLongLink
             this.DeleteSelectedURL.Text = "Delete Selected URL";
             this.DeleteSelectedURL.Click += new System.EventHandler(this.DeleteSelectedURL_Click);
             // 
-            // submnuItm08
-            // 
-            this.submnuItm08.Name = "submnuItm08";
-            this.submnuItm08.Size = new System.Drawing.Size(267, 22);
-            this.submnuItm08.Text = "BackUp DataBase";
-            this.submnuItm08.Click += new System.EventHandler(this.submnuItm08_Click);
-            // 
-            // submnuItm09
-            // 
-            this.submnuItm09.Name = "submnuItm09";
-            this.submnuItm09.Size = new System.Drawing.Size(267, 22);
-            this.submnuItm09.Text = "Restore DataBase";
-            this.submnuItm09.Click += new System.EventHandler(this.submnuItm09_Click);
-            // 
-            // submnuItm10
-            // 
-            this.submnuItm10.Name = "submnuItm10";
-            this.submnuItm10.Size = new System.Drawing.Size(267, 22);
-            this.submnuItm10.Text = "Clear All DataBase Data ( Be Careful )";
-            this.submnuItm10.Click += new System.EventHandler(this.submnuItm10_Click);
-            // 
             // picBxService
             // 
             this.picBxService.Image = global::ShutupLongLink.Properties.Resources.adfly;
@@ -528,7 +497,7 @@ namespace ShutupLongLink
             // 
             this.mnuItm01.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.submnuItm01});
-            this.mnuItm01.Image = global::ShutupLongLink.Properties.Resources.logout;
+            this.mnuItm01.Image = global::ShutupLongLink.Properties.Resources.exit_24px;
             this.mnuItm01.Name = "mnuItm01";
             this.mnuItm01.Size = new System.Drawing.Size(53, 20);
             this.mnuItm01.Text = "&File";
@@ -550,7 +519,7 @@ namespace ShutupLongLink
             this.submnuItm06,
             this.toolStripSeparator1,
             this.submnuItm07});
-            this.mnuItm02.Image = global::ShutupLongLink.Properties.Resources._1471086972_Settings;
+            this.mnuItm02.Image = global::ShutupLongLink.Properties.Resources.service_24px;
             this.mnuItm02.Name = "mnuItm02";
             this.mnuItm02.Size = new System.Drawing.Size(77, 20);
             this.mnuItm02.Text = "&Services";
@@ -558,56 +527,93 @@ namespace ShutupLongLink
             // submnuItm03
             // 
             this.submnuItm03.Name = "submnuItm03";
-            this.submnuItm03.Size = new System.Drawing.Size(158, 22);
+            this.submnuItm03.Size = new System.Drawing.Size(180, 22);
             this.submnuItm03.Text = "Adfly";
             this.submnuItm03.Click += new System.EventHandler(this.submnuItm03_Click);
             // 
             // submnuItm04
             // 
             this.submnuItm04.Name = "submnuItm04";
-            this.submnuItm04.Size = new System.Drawing.Size(158, 22);
+            this.submnuItm04.Size = new System.Drawing.Size(180, 22);
             this.submnuItm04.Text = "Shortst";
             this.submnuItm04.Click += new System.EventHandler(this.submnuItm04_Click);
             // 
             // submnuItm05
             // 
             this.submnuItm05.Name = "submnuItm05";
-            this.submnuItm05.Size = new System.Drawing.Size(158, 22);
+            this.submnuItm05.Size = new System.Drawing.Size(180, 22);
             this.submnuItm05.Text = "R7URL";
             this.submnuItm05.Click += new System.EventHandler(this.submnuItm05_Click);
             // 
             // submnuItm06
             // 
             this.submnuItm06.Name = "submnuItm06";
-            this.submnuItm06.Size = new System.Drawing.Size(158, 22);
+            this.submnuItm06.Size = new System.Drawing.Size(180, 22);
             this.submnuItm06.Text = "TinyURL";
             this.submnuItm06.Click += new System.EventHandler(this.submnuItm06_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(155, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(177, 6);
             // 
             // submnuItm07
             // 
+            this.submnuItm07.Image = global::ShutupLongLink.Properties.Resources.api_24px;
             this.submnuItm07.Name = "submnuItm07";
-            this.submnuItm07.Size = new System.Drawing.Size(158, 22);
+            this.submnuItm07.Size = new System.Drawing.Size(180, 22);
             this.submnuItm07.Text = "API Key Manger";
             this.submnuItm07.Click += new System.EventHandler(this.submnuItm07_Click);
+            // 
+            // mnuItm03
+            // 
+            this.mnuItm03.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.submnuItm08,
+            this.submnuItm09,
+            this.submnuItm10});
+            this.mnuItm03.Image = global::ShutupLongLink.Properties.Resources.database_administrator_24px;
+            this.mnuItm03.Name = "mnuItm03";
+            this.mnuItm03.Size = new System.Drawing.Size(123, 20);
+            this.mnuItm03.Text = "Mange Database";
+            // 
+            // submnuItm08
+            // 
+            this.submnuItm08.Image = global::ShutupLongLink.Properties.Resources.database_export_24px;
+            this.submnuItm08.Name = "submnuItm08";
+            this.submnuItm08.Size = new System.Drawing.Size(267, 22);
+            this.submnuItm08.Text = "BackUp DataBase";
+            this.submnuItm08.Click += new System.EventHandler(this.submnuItm08_Click);
+            // 
+            // submnuItm09
+            // 
+            this.submnuItm09.Image = global::ShutupLongLink.Properties.Resources.database_restore_24px;
+            this.submnuItm09.Name = "submnuItm09";
+            this.submnuItm09.Size = new System.Drawing.Size(267, 22);
+            this.submnuItm09.Text = "Restore DataBase";
+            this.submnuItm09.Click += new System.EventHandler(this.submnuItm09_Click);
+            // 
+            // submnuItm10
+            // 
+            this.submnuItm10.Image = global::ShutupLongLink.Properties.Resources.delete_database_24px;
+            this.submnuItm10.Name = "submnuItm10";
+            this.submnuItm10.Size = new System.Drawing.Size(267, 22);
+            this.submnuItm10.Text = "Clear All DataBase Data ( Be Careful )";
+            this.submnuItm10.Click += new System.EventHandler(this.submnuItm10_Click);
             // 
             // mnuItm04
             // 
             this.mnuItm04.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.submnuItm02});
-            this.mnuItm04.Image = global::ShutupLongLink.Properties.Resources._1462237880_Help;
+            this.mnuItm04.Image = global::ShutupLongLink.Properties.Resources.inquiry_24px;
             this.mnuItm04.Name = "mnuItm04";
             this.mnuItm04.Size = new System.Drawing.Size(60, 20);
             this.mnuItm04.Text = "&Help";
             // 
             // submnuItm02
             // 
+            this.submnuItm02.Image = global::ShutupLongLink.Properties.Resources.Shutup_Long_Link;
             this.submnuItm02.Name = "submnuItm02";
-            this.submnuItm02.Size = new System.Drawing.Size(107, 22);
+            this.submnuItm02.Size = new System.Drawing.Size(180, 22);
             this.submnuItm02.Text = "&About";
             this.submnuItm02.Click += new System.EventHandler(this.submnuItm02_Click);
             // 

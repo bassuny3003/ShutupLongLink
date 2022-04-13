@@ -115,14 +115,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ShutupLongLink.exe" size="1782264">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ShutupLongLink.exe" size="1794552">
       <assemblyIdentity name="ShutupLongLink" version="1.2.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>IxMu5JZy0R7KsvX+ysVhCj8Kxm8TcRK0b9uBtj1awjI=</dsig:DigestValue>
+        <dsig:DigestValue>SrOdHE4mqGfaLjDAtDzwRo3w1YGNEh19JVarxBO8ByE=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

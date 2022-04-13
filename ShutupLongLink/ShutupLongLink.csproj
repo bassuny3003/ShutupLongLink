@@ -179,7 +179,15 @@
   <ItemGroup>
     <Content Include="InsertHyperlink.ico" />
     <None Include="Resources\Shutup Long Link.png" />
+    <None Include="Resources\database_administrator_24px.png" />
+    <None Include="Resources\database_export_24px.png" />
+    <None Include="Resources\database_restore_24px.png" />
+    <None Include="Resources\delete_database_24px.png" />
     <None Include="Resources\rebrand.ly.png" />
+    <None Include="Resources\inquiry_24px.png" />
+    <None Include="Resources\exit_24px.png" />
+    <None Include="Resources\service_24px.png" />
+    <None Include="Resources\api_24px.png" />
     <Content Include="Shutup Long Link.ico" />
     <None Include="Resources\1471086403_Copy v2.png" />
     <None Include="Resources\Paypal-icon.png" />

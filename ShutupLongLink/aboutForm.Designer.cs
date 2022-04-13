@@ -38,6 +38,7 @@ namespace ShutupLongLink
             this.picBxMessenger = new System.Windows.Forms.PictureBox();
             this.picBxFacebook = new System.Windows.Forms.PictureBox();
             this.picBxLogo = new System.Windows.Forms.PictureBox();
+            this.lblVersion = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.picBxPayPalMe)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBxYoutube)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBxTelegram)).BeginInit();
@@ -136,11 +137,22 @@ namespace ShutupLongLink
             this.picBxLogo.TabIndex = 6;
             this.picBxLogo.TabStop = false;
             // 
+            // lblVersion
+            // 
+            this.lblVersion.AutoSize = true;
+            this.lblVersion.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblVersion.Location = new System.Drawing.Point(12, 475);
+            this.lblVersion.Name = "lblVersion";
+            this.lblVersion.Size = new System.Drawing.Size(67, 16);
+            this.lblVersion.TabIndex = 16;
+            this.lblVersion.Text = "Version : ";
+            // 
             // aboutForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(434, 505);
+            this.Controls.Add(this.lblVersion);
             this.Controls.Add(this.picBxPayPalMe);
             this.Controls.Add(this.picBxYoutube);
             this.Controls.Add(this.picBxTelegram);
@@ -164,6 +176,7 @@ namespace ShutupLongLink
             ((System.ComponentModel.ISupportInitialize)(this.picBxFacebook)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBxLogo)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -177,5 +190,6 @@ namespace ShutupLongLink
         private System.Windows.Forms.PictureBox picBxTelegram;
         private System.Windows.Forms.PictureBox picBxYoutube;
         private System.Windows.Forms.PictureBox picBxPayPalMe;
+        private System.Windows.Forms.Label lblVersion;
     }
 }
