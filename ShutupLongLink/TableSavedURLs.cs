@@ -3,7 +3,6 @@ using System.Data.SQLite;
 
 namespace ShutupLongLink
 {
-
     class TableSavedURLs
     {
         #region Class Properties 
@@ -157,7 +156,6 @@ namespace ShutupLongLink
         }
 
         #endregion Delete Product Data Need ID Only
-
 
         #region Delete All Saved URLs
 

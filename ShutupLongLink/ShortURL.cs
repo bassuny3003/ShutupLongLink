@@ -1,6 +1,11 @@
-﻿using System;
+﻿using BitlyAPI;
+using Newtonsoft.Json;
+using System;
 using System.IO;
 using System.Net;
+using System.Net.Http;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace ShutupLongLink
 {
@@ -97,6 +102,61 @@ namespace ShutupLongLink
 
 
             return myShortURL;
+        }
+
+        #endregion
+
+        #region Rebrandly Shortener
+
+        public static async Task<string> RebrandlyShortenerAsync(string RebrandlyAPIKey, string LongURL)
+        {
+            string ShortURL;
+
+            var payload = new
+            {
+                destination = LongURL,
+                domain = new
+                {
+                    fullName = "rebrand.ly",
+                }
+                //, slashtag = "A_NEW_SLASHTAG"
+                //, title = "Rebrandly YouTube channel"
+            };
+
+            using (var httpClient = new HttpClient { BaseAddress = new Uri("https://api.rebrandly.com") })
+            {
+                httpClient.DefaultRequestHeaders.Add("apikey", RebrandlyAPIKey);
+                //httpClient.DefaultRequestHeaders.Add("workspace", "YOUR_WORKSPACE_ID");
+
+                var body = new StringContent(
+                    JsonConvert.SerializeObject(payload), UnicodeEncoding.UTF8, "application/json");
+
+                using (var response = await httpClient.PostAsync("/v1/links", body))
+                {
+                    response.EnsureSuccessStatusCode();
+
+                    var link = JsonConvert.DeserializeObject<dynamic>(await response.Content.ReadAsStringAsync());
+
+                    //Console.WriteLine($"Long URL was {payload.destination}, short URL is {link.shortUrl}");
+
+                    ShortURL =  "https://" + link.shortUrl;
+                }
+            }
+
+            return ShortURL;
+        }
+
+        #endregion
+
+        #region bitly Shortener
+
+        public static async Task<string> bitlyShortenerAsync(string bitlyAPIKey, string LongURL)
+        {
+            var bitly = new Bitly(bitlyAPIKey);
+            var linkResponse = await bitly.PostShorten(LongURL);
+            var ShortURL = linkResponse.Link;
+
+            return ShortURL;
         }
 
         #endregion

@@ -70,5 +70,29 @@ namespace ShutupLongLink.Properties {
                 this["UserAdflyUID"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("5d4bbf600d064db3a3ccb0e76e9e3180")]
+        public string UserRebrandlyAPIKey {
+            get {
+                return ((string)(this["UserRebrandlyAPIKey"]));
+            }
+            set {
+                this["UserRebrandlyAPIKey"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("544e7626db6de7861adf6e682e380dbff47890d4")]
+        public string UserbitlyAPIKey {
+            get {
+                return ((string)(this["UserbitlyAPIKey"]));
+            }
+            set {
+                this["UserbitlyAPIKey"] = value;
+            }
+        }
     }
 }

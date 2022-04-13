@@ -41,6 +41,10 @@ namespace ShutupLongLink
             this.txtBxAdflyUID = new System.Windows.Forms.TextBox();
             this.lblAdflyUID = new System.Windows.Forms.Label();
             this.btnLoadDefault = new System.Windows.Forms.Button();
+            this.txtBxRebrandly = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtBxBitly = new System.Windows.Forms.TextBox();
+            this.lblbitlyAPI = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblAdfly
@@ -99,7 +103,7 @@ namespace ShutupLongLink
             // 
             // btnClose
             // 
-            this.btnClose.Location = new System.Drawing.Point(375, 215);
+            this.btnClose.Location = new System.Drawing.Point(375, 319);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(97, 34);
             this.btnClose.TabIndex = 11;
@@ -109,7 +113,7 @@ namespace ShutupLongLink
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(272, 215);
+            this.btnSave.Location = new System.Drawing.Point(272, 319);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(97, 34);
             this.btnSave.TabIndex = 12;
@@ -137,7 +141,7 @@ namespace ShutupLongLink
             // 
             // btnLoadDefault
             // 
-            this.btnLoadDefault.Location = new System.Drawing.Point(15, 215);
+            this.btnLoadDefault.Location = new System.Drawing.Point(15, 319);
             this.btnLoadDefault.Name = "btnLoadDefault";
             this.btnLoadDefault.Size = new System.Drawing.Size(97, 34);
             this.btnLoadDefault.TabIndex = 15;
@@ -145,11 +149,51 @@ namespace ShutupLongLink
             this.btnLoadDefault.UseVisualStyleBackColor = true;
             this.btnLoadDefault.Click += new System.EventHandler(this.btnLoadDefault_Click);
             // 
+            // txtBxRebrandly
+            // 
+            this.txtBxRebrandly.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBxRebrandly.Location = new System.Drawing.Point(15, 204);
+            this.txtBxRebrandly.Name = "txtBxRebrandly";
+            this.txtBxRebrandly.Size = new System.Drawing.Size(457, 22);
+            this.txtBxRebrandly.TabIndex = 17;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(12, 185);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(90, 16);
+            this.label1.TabIndex = 16;
+            this.label1.Text = "Rebrandly API";
+            // 
+            // txtBxBitly
+            // 
+            this.txtBxBitly.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBxBitly.Location = new System.Drawing.Point(15, 248);
+            this.txtBxBitly.Name = "txtBxBitly";
+            this.txtBxBitly.Size = new System.Drawing.Size(457, 22);
+            this.txtBxBitly.TabIndex = 19;
+            // 
+            // lblbitlyAPI
+            // 
+            this.lblbitlyAPI.AutoSize = true;
+            this.lblbitlyAPI.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblbitlyAPI.Location = new System.Drawing.Point(12, 229);
+            this.lblbitlyAPI.Name = "lblbitlyAPI";
+            this.lblbitlyAPI.Size = new System.Drawing.Size(58, 16);
+            this.lblbitlyAPI.TabIndex = 18;
+            this.lblbitlyAPI.Text = "Bitly API";
+            // 
             // aPIMangerFrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(484, 261);
+            this.ClientSize = new System.Drawing.Size(484, 365);
+            this.Controls.Add(this.txtBxBitly);
+            this.Controls.Add(this.lblbitlyAPI);
+            this.Controls.Add(this.txtBxRebrandly);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.btnLoadDefault);
             this.Controls.Add(this.txtBxAdflyUID);
             this.Controls.Add(this.lblAdflyUID);
@@ -187,5 +231,9 @@ namespace ShutupLongLink
         private System.Windows.Forms.TextBox txtBxAdflyUID;
         private System.Windows.Forms.Label lblAdflyUID;
         private System.Windows.Forms.Button btnLoadDefault;
+        private System.Windows.Forms.TextBox txtBxRebrandly;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtBxBitly;
+        private System.Windows.Forms.Label lblbitlyAPI;
     }
 }

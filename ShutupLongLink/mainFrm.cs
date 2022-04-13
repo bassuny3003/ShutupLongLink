@@ -64,6 +64,7 @@ namespace ShutupLongLink
                 new { Text = "Shortest", Value = "Shortest" },
                 new { Text = "R7URL", Value = "R7URL" },
                 new { Text = "TinyURL", Value = "TinyURL" },
+                new { Text = "Rebrandly", Value = "Rebrandly" },
                 new { Text = "Bitly", Value = "Bitly" },
             };
 
@@ -261,6 +262,18 @@ namespace ShutupLongLink
                 txtBxR7URLAlias.Visible = false;
 
             }
+            else if (cmbBxService.Text == "Rebrandly")
+            {
+                picBxService.Image = Properties.Resources.rebrand_ly;
+
+                txtBxR7URLAlias.Clear();
+
+                rbAdType1.Visible = false;
+                rbAdType2.Visible = false;
+                lblR7URLAlias.Visible = false;
+                txtBxR7URLAlias.Visible = false;
+
+            }
         }
 
         #endregion
@@ -280,7 +293,7 @@ namespace ShutupLongLink
         #endregion
 
         #region Run Shortner Button
-        private void btnRunShortner_Click(object sender, EventArgs e)
+        private async void btnRunShortner_Click(object sender, EventArgs e)
         {
             if (!string.IsNullOrEmpty(txtBxLongURL.Text))
             {
@@ -414,11 +427,60 @@ namespace ShutupLongLink
                 }
                 else if (cmbBxService.Text == "Bitly")
                 {
+                    if (!string.IsNullOrEmpty(Properties.Settings.Default.UserbitlyAPIKey))
+                    {
+                        txtBxShortURL.Text = await ShortURL.bitlyShortenerAsync(Properties.Settings.Default.UserbitlyAPIKey, txtBxLongURL.Text);
 
-                    //foreach (var item in txtBxLongURL.Lines)
-                    //{
-                    //    txtBxShortURL.Text = txtBxShortURL.Text + item + Environment.NewLine;
-                    //}
+                        TableSavedURLs tableSavedURLs = new TableSavedURLs()
+                        {
+                            UsedService = "https://bit.ly",
+                            LongURL = txtBxLongURL.Text,
+                            ShortURL = txtBxShortURL.Text,
+                            NotesURL = ""
+
+                        };
+
+                        tableSavedURLs.SaveNewURL();
+
+                        GetAllSavedURLs();
+                    }
+                    else
+                    {
+                        MessageBox.Show(this, "Please Add Your APIs Or Load Default First", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                        aPIMangerFrm aPIMangerFrm = new aPIMangerFrm();
+                        aPIMangerFrm.Owner = this;
+                        aPIMangerFrm.ShowDialog();
+                    }
+
+                }
+                else if (cmbBxService.Text == "Rebrandly")
+                {
+                    if (!string.IsNullOrEmpty(Properties.Settings.Default.UserRebrandlyAPIKey))
+                    {
+                        txtBxShortURL.Text = await ShortURL.RebrandlyShortenerAsync(Properties.Settings.Default.UserRebrandlyAPIKey, txtBxLongURL.Text);
+
+                        TableSavedURLs tableSavedURLs = new TableSavedURLs()
+                        {
+                            UsedService = "https://rebrand.ly",
+                            LongURL = txtBxLongURL.Text,
+                            ShortURL = txtBxShortURL.Text,
+                            NotesURL = ""
+
+                        };
+
+                        tableSavedURLs.SaveNewURL();
+
+                        GetAllSavedURLs();
+                    }
+                    else
+                    {
+                        MessageBox.Show(this, "Please Add Your APIs Or Load Default First", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                        aPIMangerFrm aPIMangerFrm = new aPIMangerFrm();
+                        aPIMangerFrm.Owner = this;
+                        aPIMangerFrm.ShowDialog();
+                    }
                 }
 
                 statusLbl01.Text = "Check Your Shorts URLs";

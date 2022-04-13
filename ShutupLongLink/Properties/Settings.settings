@@ -14,5 +14,11 @@
     <Setting Name="UserAdflyUID" Type="System.String" Scope="User">
       <Value Profile="(Default)">1503418</Value>
     </Setting>
+    <Setting Name="UserRebrandlyAPIKey" Type="System.String" Scope="User">
+      <Value Profile="(Default)">5d4bbf600d064db3a3ccb0e76e9e3180</Value>
+    </Setting>
+    <Setting Name="UserbitlyAPIKey" Type="System.String" Scope="User">
+      <Value Profile="(Default)">544e7626db6de7861adf6e682e380dbff47890d4</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

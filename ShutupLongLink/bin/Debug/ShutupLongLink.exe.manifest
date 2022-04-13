@@ -43,6 +43,18 @@
     </dependentAssembly>
   </dependency>
   <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="BitlyAPI.dll" size="19456">
+      <assemblyIdentity name="BitlyAPI" version="4.0.1.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>PWAez/eN3K12ttZSppHT9619QWKJHF4BpapOALCy7j8=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
     <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="EnvDTE.dll" size="254848">
       <assemblyIdentity name="EnvDTE" version="8.0.0.0" publicKeyToken="B03F5F7F11D50A3A" language="neutral" />
       <hash>
@@ -91,14 +103,26 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ShutupLongLink.exe" size="1767928">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Newtonsoft.Json.dll" size="701992">
+      <assemblyIdentity name="Newtonsoft.Json" version="13.0.0.0" publicKeyToken="30AD4FE6B2A6AEED" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>tiSUnfiw46YVP9+3MKfG9JkLZZLuDZIuF4hDPSdmEPM=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ShutupLongLink.exe" size="1782264">
       <assemblyIdentity name="ShutupLongLink" version="1.2.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>GPJVyj+ua5l8DM2buIoyYX7qROms155fq2hUsnEGuXQ=</dsig:DigestValue>
+        <dsig:DigestValue>IxMu5JZy0R7KsvX+ysVhCj8Kxm8TcRK0b9uBtj1awjI=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -180,13 +204,13 @@
       <dsig:DigestValue>ICOi3zi8v+0jP1rT3F4jkbcLB/OMVfFW7EHbkBsevDQ=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="ShutupLongLink.exe.config" size="1421">
+  <file name="ShutupLongLink.exe.config" size="2099">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>kpXg14niCHQEWc8mR9VPyw3Z9lbkpUIzQp+EwKlh+nQ=</dsig:DigestValue>
+      <dsig:DigestValue>w+DKR8duf0GPfMVjkxRYNcW2C63aIfIVm6/YeGEu358=</dsig:DigestValue>
     </hash>
   </file>
 </asmv1:assembly>

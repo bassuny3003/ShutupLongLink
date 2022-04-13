@@ -27,3 +27,6 @@ H:\07- Programming  Projects\03-C Sharp Projects\C Sharp Projects\NetFrame\Windo
 H:\07- Programming  Projects\03-C Sharp Projects\C Sharp Projects\NetFrame\WindowsForm Projects\Short Link Programs\ShutupLongLink\ShutupLongLink\obj\Debug\ShutupLongLink.pdb
 H:\07- Programming  Projects\03-C Sharp Projects\C Sharp Projects\NetFrame\WindowsForm Projects\Short Link Programs\ShutupLongLink\ShutupLongLink\obj\Debug\ShutupLongLink.csprojAssemblyReference.cache
 H:\07- Programming  Projects\03-C Sharp Projects\C Sharp Projects\NetFrame\WindowsForm Projects\Short Link Programs\ShutupLongLink\ShutupLongLink\obj\Debug\ShutupLongLink.restorBackUpFrm.resources
+H:\07- Programming  Projects\03-C Sharp Projects\C Sharp Projects\NetFrame\WindowsForm Projects\Short Link Programs\ShutupLongLink\ShutupLongLink\bin\Debug\Newtonsoft.Json.dll
+H:\07- Programming  Projects\03-C Sharp Projects\C Sharp Projects\NetFrame\WindowsForm Projects\Short Link Programs\ShutupLongLink\ShutupLongLink\bin\Debug\Newtonsoft.Json.xml
+H:\07- Programming  Projects\03-C Sharp Projects\C Sharp Projects\NetFrame\WindowsForm Projects\Short Link Programs\ShutupLongLink\ShutupLongLink\bin\Debug\BitlyAPI.dll

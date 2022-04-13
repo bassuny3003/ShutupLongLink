@@ -65,6 +65,12 @@
     <SignManifests>true</SignManifests>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="BitlyAPI, Version=4.0.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\BitlyAPI.4.0.1\lib\net45\BitlyAPI.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="SQLite.Designer">
       <HintPath>..\..\..\..\..\..\..\..\06- Programming Programs\Database Design\SQLite\SQLite dlls\SQLite DLL Files\SQLite.Designer.dll</HintPath>
     </Reference>
@@ -79,6 +85,7 @@
     <Reference Include="System.Data.SQLite.Linq">
       <HintPath>..\..\..\..\..\..\..\..\06- Programming Programs\Database Design\SQLite\SQLite dlls\SQLite DLL Files\System.Data.SQLite.Linq.dll</HintPath>
     </Reference>
+    <Reference Include="System.Threading.Tasks" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -154,6 +161,7 @@
     <EmbeddedResource Include="restorBackUpFrm.resx">
       <DependentUpon>restorBackUpFrm.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -171,6 +179,7 @@
   <ItemGroup>
     <Content Include="InsertHyperlink.ico" />
     <None Include="Resources\Shutup Long Link.png" />
+    <None Include="Resources\rebrand.ly.png" />
     <Content Include="Shutup Long Link.ico" />
     <None Include="Resources\1471086403_Copy v2.png" />
     <None Include="Resources\Paypal-icon.png" />
