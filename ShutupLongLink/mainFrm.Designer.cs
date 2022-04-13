@@ -61,19 +61,9 @@ namespace ShutupLongLink
             this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.timrCpyShortURL = new System.Windows.Forms.Timer(this.components);
             this.rightClickLstVw = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.EditeNotesURL = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
-            this.CopyWholeRow = new System.Windows.Forms.ToolStripMenuItem();
-            this.CopyLongURL = new System.Windows.Forms.ToolStripMenuItem();
-            this.CopyShortURL = new System.Windows.Forms.ToolStripMenuItem();
-            this.CopyAliasURL = new System.Windows.Forms.ToolStripMenuItem();
-            this.CopyNotesURL = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.GoToServiceWebSite = new System.Windows.Forms.ToolStripMenuItem();
-            this.GoToLongURL = new System.Windows.Forms.ToolStripMenuItem();
-            this.GoToShortURL = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
-            this.DeleteSelectedURL = new System.Windows.Forms.ToolStripMenuItem();
             this.picBxService = new System.Windows.Forms.PictureBox();
             this.mnuItm01 = new System.Windows.Forms.ToolStripMenuItem();
             this.submnuItm01 = new System.Windows.Forms.ToolStripMenuItem();
@@ -90,6 +80,16 @@ namespace ShutupLongLink
             this.submnuItm10 = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuItm04 = new System.Windows.Forms.ToolStripMenuItem();
             this.submnuItm02 = new System.Windows.Forms.ToolStripMenuItem();
+            this.EditeNotesURL = new System.Windows.Forms.ToolStripMenuItem();
+            this.CopyWholeRow = new System.Windows.Forms.ToolStripMenuItem();
+            this.CopyLongURL = new System.Windows.Forms.ToolStripMenuItem();
+            this.CopyShortURL = new System.Windows.Forms.ToolStripMenuItem();
+            this.CopyAliasURL = new System.Windows.Forms.ToolStripMenuItem();
+            this.CopyNotesURL = new System.Windows.Forms.ToolStripMenuItem();
+            this.GoToServiceWebSite = new System.Windows.Forms.ToolStripMenuItem();
+            this.GoToLongURL = new System.Windows.Forms.ToolStripMenuItem();
+            this.GoToShortURL = new System.Windows.Forms.ToolStripMenuItem();
+            this.DeleteSelectedURL = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuStrp.SuspendLayout();
             this.statusStrp.SuspendLayout();
             this.grpBxLongURL.SuspendLayout();
@@ -103,6 +103,7 @@ namespace ShutupLongLink
             // mnuStrp
             // 
             this.mnuStrp.BackColor = System.Drawing.SystemColors.Control;
+            this.mnuStrp.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mnuStrp.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mnuItm01,
             this.mnuItm02,
@@ -110,7 +111,7 @@ namespace ShutupLongLink
             this.mnuItm04});
             this.mnuStrp.Location = new System.Drawing.Point(0, 0);
             this.mnuStrp.Name = "mnuStrp";
-            this.mnuStrp.Size = new System.Drawing.Size(490, 24);
+            this.mnuStrp.Size = new System.Drawing.Size(490, 25);
             this.mnuStrp.TabIndex = 0;
             this.mnuStrp.Text = "mnuStp";
             // 
@@ -205,7 +206,7 @@ namespace ShutupLongLink
             // 
             this.chkBxOnTop.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.chkBxOnTop.AutoSize = true;
-            this.chkBxOnTop.Location = new System.Drawing.Point(380, 7);
+            this.chkBxOnTop.Location = new System.Drawing.Point(385, 7);
             this.chkBxOnTop.Name = "chkBxOnTop";
             this.chkBxOnTop.Size = new System.Drawing.Size(98, 17);
             this.chkBxOnTop.TabIndex = 9;
@@ -270,7 +271,7 @@ namespace ShutupLongLink
             // 
             this.imgLst.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imgLst.ImageStream")));
             this.imgLst.TransparentColor = System.Drawing.Color.Transparent;
-            this.imgLst.Images.SetKeyName(0, "cancel_20px.png");
+            this.imgLst.Images.SetKeyName(0, "copy_24px.png");
             // 
             // panel1
             // 
@@ -381,6 +382,7 @@ namespace ShutupLongLink
             // 
             // rightClickLstVw
             // 
+            this.rightClickLstVw.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.rightClickLstVw.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.EditeNotesURL,
             this.toolStripSeparator4,
@@ -396,92 +398,23 @@ namespace ShutupLongLink
             this.toolStripSeparator3,
             this.DeleteSelectedURL});
             this.rightClickLstVw.Name = "rightClickLstVw";
-            this.rightClickLstVw.Size = new System.Drawing.Size(191, 242);
-            // 
-            // EditeNotesURL
-            // 
-            this.EditeNotesURL.Name = "EditeNotesURL";
-            this.EditeNotesURL.Size = new System.Drawing.Size(190, 22);
-            this.EditeNotesURL.Text = "Edite Notes URL";
-            this.EditeNotesURL.Click += new System.EventHandler(this.EditeNotesURL_Click);
+            this.rightClickLstVw.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
+            this.rightClickLstVw.Size = new System.Drawing.Size(199, 322);
             // 
             // toolStripSeparator4
             // 
             this.toolStripSeparator4.Name = "toolStripSeparator4";
-            this.toolStripSeparator4.Size = new System.Drawing.Size(187, 6);
-            // 
-            // CopyWholeRow
-            // 
-            this.CopyWholeRow.Name = "CopyWholeRow";
-            this.CopyWholeRow.Size = new System.Drawing.Size(190, 22);
-            this.CopyWholeRow.Text = "Copy Whole Row";
-            this.CopyWholeRow.Click += new System.EventHandler(this.CopyWholeRow_Click);
-            // 
-            // CopyLongURL
-            // 
-            this.CopyLongURL.Name = "CopyLongURL";
-            this.CopyLongURL.Size = new System.Drawing.Size(190, 22);
-            this.CopyLongURL.Text = "Copy Long URL";
-            this.CopyLongURL.Click += new System.EventHandler(this.CopyLongURL_Click);
-            // 
-            // CopyShortURL
-            // 
-            this.CopyShortURL.Name = "CopyShortURL";
-            this.CopyShortURL.Size = new System.Drawing.Size(190, 22);
-            this.CopyShortURL.Text = "Copy Short URL";
-            this.CopyShortURL.Click += new System.EventHandler(this.CopyShortURL_Click);
-            // 
-            // CopyAliasURL
-            // 
-            this.CopyAliasURL.Name = "CopyAliasURL";
-            this.CopyAliasURL.Size = new System.Drawing.Size(190, 22);
-            this.CopyAliasURL.Text = "Copy Alias URL";
-            this.CopyAliasURL.Click += new System.EventHandler(this.CopyAliasURL_Click);
-            // 
-            // CopyNotesURL
-            // 
-            this.CopyNotesURL.Name = "CopyNotesURL";
-            this.CopyNotesURL.Size = new System.Drawing.Size(190, 22);
-            this.CopyNotesURL.Text = "Copy Notes URL";
-            this.CopyNotesURL.Click += new System.EventHandler(this.CopyNotesURL_Click);
+            this.toolStripSeparator4.Size = new System.Drawing.Size(195, 6);
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(187, 6);
-            // 
-            // GoToServiceWebSite
-            // 
-            this.GoToServiceWebSite.Name = "GoToServiceWebSite";
-            this.GoToServiceWebSite.Size = new System.Drawing.Size(190, 22);
-            this.GoToServiceWebSite.Text = "Go To Service WebSite";
-            this.GoToServiceWebSite.Click += new System.EventHandler(this.GoToServiceWebSite_Click);
-            // 
-            // GoToLongURL
-            // 
-            this.GoToLongURL.Name = "GoToLongURL";
-            this.GoToLongURL.Size = new System.Drawing.Size(190, 22);
-            this.GoToLongURL.Text = "Go To Long URL";
-            this.GoToLongURL.Click += new System.EventHandler(this.GoToLongURL_Click);
-            // 
-            // GoToShortURL
-            // 
-            this.GoToShortURL.Name = "GoToShortURL";
-            this.GoToShortURL.Size = new System.Drawing.Size(190, 22);
-            this.GoToShortURL.Text = "Go To Short URL";
-            this.GoToShortURL.Click += new System.EventHandler(this.GoToShortURL_Click);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(195, 6);
             // 
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(187, 6);
-            // 
-            // DeleteSelectedURL
-            // 
-            this.DeleteSelectedURL.Name = "DeleteSelectedURL";
-            this.DeleteSelectedURL.Size = new System.Drawing.Size(190, 22);
-            this.DeleteSelectedURL.Text = "Delete Selected URL";
-            this.DeleteSelectedURL.Click += new System.EventHandler(this.DeleteSelectedURL_Click);
+            this.toolStripSeparator3.Size = new System.Drawing.Size(195, 6);
             // 
             // picBxService
             // 
@@ -499,14 +432,14 @@ namespace ShutupLongLink
             this.submnuItm01});
             this.mnuItm01.Image = global::ShutupLongLink.Properties.Resources.exit_24px;
             this.mnuItm01.Name = "mnuItm01";
-            this.mnuItm01.Size = new System.Drawing.Size(53, 20);
+            this.mnuItm01.Size = new System.Drawing.Size(62, 22);
             this.mnuItm01.Text = "&File";
             // 
             // submnuItm01
             // 
             this.submnuItm01.Image = global::ShutupLongLink.Properties.Resources.cancel_20px;
             this.submnuItm01.Name = "submnuItm01";
-            this.submnuItm01.Size = new System.Drawing.Size(93, 22);
+            this.submnuItm01.Size = new System.Drawing.Size(102, 22);
             this.submnuItm01.Text = "&Exit";
             this.submnuItm01.Click += new System.EventHandler(this.submnuItm01_Click);
             // 
@@ -521,47 +454,47 @@ namespace ShutupLongLink
             this.submnuItm07});
             this.mnuItm02.Image = global::ShutupLongLink.Properties.Resources.service_24px;
             this.mnuItm02.Name = "mnuItm02";
-            this.mnuItm02.Size = new System.Drawing.Size(77, 20);
+            this.mnuItm02.Size = new System.Drawing.Size(97, 22);
             this.mnuItm02.Text = "&Services";
             // 
             // submnuItm03
             // 
             this.submnuItm03.Name = "submnuItm03";
-            this.submnuItm03.Size = new System.Drawing.Size(180, 22);
+            this.submnuItm03.Size = new System.Drawing.Size(189, 22);
             this.submnuItm03.Text = "Adfly";
             this.submnuItm03.Click += new System.EventHandler(this.submnuItm03_Click);
             // 
             // submnuItm04
             // 
             this.submnuItm04.Name = "submnuItm04";
-            this.submnuItm04.Size = new System.Drawing.Size(180, 22);
+            this.submnuItm04.Size = new System.Drawing.Size(189, 22);
             this.submnuItm04.Text = "Shortst";
             this.submnuItm04.Click += new System.EventHandler(this.submnuItm04_Click);
             // 
             // submnuItm05
             // 
             this.submnuItm05.Name = "submnuItm05";
-            this.submnuItm05.Size = new System.Drawing.Size(180, 22);
+            this.submnuItm05.Size = new System.Drawing.Size(189, 22);
             this.submnuItm05.Text = "R7URL";
             this.submnuItm05.Click += new System.EventHandler(this.submnuItm05_Click);
             // 
             // submnuItm06
             // 
             this.submnuItm06.Name = "submnuItm06";
-            this.submnuItm06.Size = new System.Drawing.Size(180, 22);
+            this.submnuItm06.Size = new System.Drawing.Size(189, 22);
             this.submnuItm06.Text = "TinyURL";
             this.submnuItm06.Click += new System.EventHandler(this.submnuItm06_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(177, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(186, 6);
             // 
             // submnuItm07
             // 
             this.submnuItm07.Image = global::ShutupLongLink.Properties.Resources.api_24px;
             this.submnuItm07.Name = "submnuItm07";
-            this.submnuItm07.Size = new System.Drawing.Size(180, 22);
+            this.submnuItm07.Size = new System.Drawing.Size(189, 22);
             this.submnuItm07.Text = "API Key Manger";
             this.submnuItm07.Click += new System.EventHandler(this.submnuItm07_Click);
             // 
@@ -573,14 +506,14 @@ namespace ShutupLongLink
             this.submnuItm10});
             this.mnuItm03.Image = global::ShutupLongLink.Properties.Resources.database_administrator_24px;
             this.mnuItm03.Name = "mnuItm03";
-            this.mnuItm03.Size = new System.Drawing.Size(123, 20);
+            this.mnuItm03.Size = new System.Drawing.Size(157, 22);
             this.mnuItm03.Text = "Mange Database";
             // 
             // submnuItm08
             // 
             this.submnuItm08.Image = global::ShutupLongLink.Properties.Resources.database_export_24px;
             this.submnuItm08.Name = "submnuItm08";
-            this.submnuItm08.Size = new System.Drawing.Size(267, 22);
+            this.submnuItm08.Size = new System.Drawing.Size(343, 22);
             this.submnuItm08.Text = "BackUp DataBase";
             this.submnuItm08.Click += new System.EventHandler(this.submnuItm08_Click);
             // 
@@ -588,7 +521,7 @@ namespace ShutupLongLink
             // 
             this.submnuItm09.Image = global::ShutupLongLink.Properties.Resources.database_restore_24px;
             this.submnuItm09.Name = "submnuItm09";
-            this.submnuItm09.Size = new System.Drawing.Size(267, 22);
+            this.submnuItm09.Size = new System.Drawing.Size(343, 22);
             this.submnuItm09.Text = "Restore DataBase";
             this.submnuItm09.Click += new System.EventHandler(this.submnuItm09_Click);
             // 
@@ -596,7 +529,7 @@ namespace ShutupLongLink
             // 
             this.submnuItm10.Image = global::ShutupLongLink.Properties.Resources.delete_database_24px;
             this.submnuItm10.Name = "submnuItm10";
-            this.submnuItm10.Size = new System.Drawing.Size(267, 22);
+            this.submnuItm10.Size = new System.Drawing.Size(343, 22);
             this.submnuItm10.Text = "Clear All DataBase Data ( Be Careful )";
             this.submnuItm10.Click += new System.EventHandler(this.submnuItm10_Click);
             // 
@@ -606,16 +539,96 @@ namespace ShutupLongLink
             this.submnuItm02});
             this.mnuItm04.Image = global::ShutupLongLink.Properties.Resources.inquiry_24px;
             this.mnuItm04.Name = "mnuItm04";
-            this.mnuItm04.Size = new System.Drawing.Size(60, 20);
+            this.mnuItm04.Size = new System.Drawing.Size(68, 22);
             this.mnuItm04.Text = "&Help";
             // 
             // submnuItm02
             // 
             this.submnuItm02.Image = global::ShutupLongLink.Properties.Resources.Shutup_Long_Link;
             this.submnuItm02.Name = "submnuItm02";
-            this.submnuItm02.Size = new System.Drawing.Size(180, 22);
+            this.submnuItm02.Size = new System.Drawing.Size(117, 22);
             this.submnuItm02.Text = "&About";
             this.submnuItm02.Click += new System.EventHandler(this.submnuItm02_Click);
+            // 
+            // EditeNotesURL
+            // 
+            this.EditeNotesURL.Image = global::ShutupLongLink.Properties.Resources.edit_property_24px;
+            this.EditeNotesURL.Name = "EditeNotesURL";
+            this.EditeNotesURL.Size = new System.Drawing.Size(198, 30);
+            this.EditeNotesURL.Text = "Edite Notes URL";
+            this.EditeNotesURL.Click += new System.EventHandler(this.EditeNotesURL_Click);
+            // 
+            // CopyWholeRow
+            // 
+            this.CopyWholeRow.Image = global::ShutupLongLink.Properties.Resources.copy_24px;
+            this.CopyWholeRow.Name = "CopyWholeRow";
+            this.CopyWholeRow.Size = new System.Drawing.Size(198, 30);
+            this.CopyWholeRow.Text = "Copy Whole Row";
+            this.CopyWholeRow.Click += new System.EventHandler(this.CopyWholeRow_Click);
+            // 
+            // CopyLongURL
+            // 
+            this.CopyLongURL.Image = global::ShutupLongLink.Properties.Resources.copy_link_24px;
+            this.CopyLongURL.Name = "CopyLongURL";
+            this.CopyLongURL.Size = new System.Drawing.Size(198, 30);
+            this.CopyLongURL.Text = "Copy Long URL";
+            this.CopyLongURL.Click += new System.EventHandler(this.CopyLongURL_Click);
+            // 
+            // CopyShortURL
+            // 
+            this.CopyShortURL.Image = global::ShutupLongLink.Properties.Resources.shorten_urls_24px;
+            this.CopyShortURL.Name = "CopyShortURL";
+            this.CopyShortURL.Size = new System.Drawing.Size(198, 30);
+            this.CopyShortURL.Text = "Copy Short URL";
+            this.CopyShortURL.Click += new System.EventHandler(this.CopyShortURL_Click);
+            // 
+            // CopyAliasURL
+            // 
+            this.CopyAliasURL.Image = global::ShutupLongLink.Properties.Resources.inscription_24px;
+            this.CopyAliasURL.Name = "CopyAliasURL";
+            this.CopyAliasURL.Size = new System.Drawing.Size(198, 30);
+            this.CopyAliasURL.Text = "Copy Alias URL";
+            this.CopyAliasURL.Click += new System.EventHandler(this.CopyAliasURL_Click);
+            // 
+            // CopyNotesURL
+            // 
+            this.CopyNotesURL.Image = global::ShutupLongLink.Properties.Resources.note_24px;
+            this.CopyNotesURL.Name = "CopyNotesURL";
+            this.CopyNotesURL.Size = new System.Drawing.Size(198, 30);
+            this.CopyNotesURL.Text = "Copy Notes URL";
+            this.CopyNotesURL.Click += new System.EventHandler(this.CopyNotesURL_Click);
+            // 
+            // GoToServiceWebSite
+            // 
+            this.GoToServiceWebSite.Image = global::ShutupLongLink.Properties.Resources.website_24px;
+            this.GoToServiceWebSite.Name = "GoToServiceWebSite";
+            this.GoToServiceWebSite.Size = new System.Drawing.Size(198, 30);
+            this.GoToServiceWebSite.Text = "Go To Service WebSite";
+            this.GoToServiceWebSite.Click += new System.EventHandler(this.GoToServiceWebSite_Click);
+            // 
+            // GoToLongURL
+            // 
+            this.GoToLongURL.Image = global::ShutupLongLink.Properties.Resources.internet_24px;
+            this.GoToLongURL.Name = "GoToLongURL";
+            this.GoToLongURL.Size = new System.Drawing.Size(198, 30);
+            this.GoToLongURL.Text = "Go To Long URL";
+            this.GoToLongURL.Click += new System.EventHandler(this.GoToLongURL_Click);
+            // 
+            // GoToShortURL
+            // 
+            this.GoToShortURL.Image = global::ShutupLongLink.Properties.Resources.shorten_urls_24px;
+            this.GoToShortURL.Name = "GoToShortURL";
+            this.GoToShortURL.Size = new System.Drawing.Size(198, 30);
+            this.GoToShortURL.Text = "Go To Short URL";
+            this.GoToShortURL.Click += new System.EventHandler(this.GoToShortURL_Click);
+            // 
+            // DeleteSelectedURL
+            // 
+            this.DeleteSelectedURL.Image = global::ShutupLongLink.Properties.Resources.delete_link_24px;
+            this.DeleteSelectedURL.Name = "DeleteSelectedURL";
+            this.DeleteSelectedURL.Size = new System.Drawing.Size(198, 30);
+            this.DeleteSelectedURL.Text = "Delete Selected URL";
+            this.DeleteSelectedURL.Click += new System.EventHandler(this.DeleteSelectedURL_Click);
             // 
             // MainFrm
             // 

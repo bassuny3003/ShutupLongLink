@@ -154,9 +154,6 @@
   <data name="FacebookMessenger" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\FacebookMessenger.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="1471086403_Copy v2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\1471086403_Copy v2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Shutup_Long_Link" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Shutup Long Link.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -178,13 +175,40 @@
   <data name="api_24px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\api_24px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="copy_24px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\copy_24px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="copy_link_24px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\copy_link_24px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="delete_link_24px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\delete_link_24px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="edit_property_24px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\edit_property_24px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="exit_24px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\exit_24px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="inquiry_24px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\inquiry_24px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="inscription_24px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\inscription_24px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="internet_24px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\internet_24px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="note_24px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\note_24px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="service_24px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\service_24px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="shorten_urls_24px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\shorten_urls_24px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="website_24px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\website_24px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

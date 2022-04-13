@@ -63,16 +63,6 @@ namespace ShutupLongLink.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _1471086403_Copy_v2 {
-            get {
-                object obj = ResourceManager.GetObject("1471086403_Copy v2", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap adfly {
             get {
                 object obj = ResourceManager.GetObject("adfly", resourceCulture);
@@ -106,6 +96,26 @@ namespace ShutupLongLink.Properties {
         internal static System.Drawing.Bitmap cancel_20px {
             get {
                 object obj = ResourceManager.GetObject("cancel_20px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap copy_24px {
+            get {
+                object obj = ResourceManager.GetObject("copy_24px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap copy_link_24px {
+            get {
+                object obj = ResourceManager.GetObject("copy_link_24px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -153,6 +163,26 @@ namespace ShutupLongLink.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap delete_link_24px {
+            get {
+                object obj = ResourceManager.GetObject("delete_link_24px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap edit_property_24px {
+            get {
+                object obj = ResourceManager.GetObject("edit_property_24px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap exit_24px {
             get {
                 object obj = ResourceManager.GetObject("exit_24px", resourceCulture);
@@ -193,9 +223,29 @@ namespace ShutupLongLink.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap inscription_24px {
+            get {
+                object obj = ResourceManager.GetObject("inscription_24px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Insert_hyperlink_icon {
             get {
                 object obj = ResourceManager.GetObject("Insert_hyperlink_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap internet_24px {
+            get {
+                object obj = ResourceManager.GetObject("internet_24px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -216,6 +266,16 @@ namespace ShutupLongLink.Properties {
         internal static System.Drawing.Bitmap logo_shortest {
             get {
                 object obj = ResourceManager.GetObject("logo_shortest", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap note_24px {
+            get {
+                object obj = ResourceManager.GetObject("note_24px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -253,6 +313,16 @@ namespace ShutupLongLink.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap shorten_urls_24px {
+            get {
+                object obj = ResourceManager.GetObject("shorten_urls_24px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Shutup_Long_Link {
             get {
                 object obj = ResourceManager.GetObject("Shutup_Long_Link", resourceCulture);
@@ -276,6 +346,16 @@ namespace ShutupLongLink.Properties {
         internal static System.Drawing.Bitmap TinyURL_logo {
             get {
                 object obj = ResourceManager.GetObject("TinyURL_logo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap website_24px {
+            get {
+                object obj = ResourceManager.GetObject("website_24px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
