@@ -128,8 +128,7 @@ namespace ShutupLongLink
                 httpClient.DefaultRequestHeaders.Add("apikey", RebrandlyAPIKey);
                 //httpClient.DefaultRequestHeaders.Add("workspace", "YOUR_WORKSPACE_ID");
 
-                var body = new StringContent(
-                    JsonConvert.SerializeObject(payload), UnicodeEncoding.UTF8, "application/json");
+                var body = new StringContent(JsonConvert.SerializeObject(payload), UnicodeEncoding.UTF8, "application/json");
 
                 using (var response = await httpClient.PostAsync("/v1/links", body))
                 {

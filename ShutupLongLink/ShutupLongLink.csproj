@@ -91,6 +91,7 @@
       <HintPath>..\..\..\..\..\..\..\..\06- Programming Programs\Database Design\SQLite\SQLite dlls\SQLite DLL Files\System.Data.SQLite.Linq.dll</HintPath>
     </Reference>
     <Reference Include="System.Threading.Tasks" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
