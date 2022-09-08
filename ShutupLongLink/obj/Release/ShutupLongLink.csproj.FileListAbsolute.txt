@@ -26,3 +26,5 @@ H:\07- Programming  Projects\03-C Sharp Projects\C Sharp Projects\NetFrame\Windo
 H:\07- Programming  Projects\03-C Sharp Projects\C Sharp Projects\NetFrame\WindowsForm Projects\Short Link Programs\ShutupLongLink\ShutupLongLink\obj\Release\ShutupLongLink.exe
 H:\07- Programming  Projects\03-C Sharp Projects\C Sharp Projects\NetFrame\WindowsForm Projects\Short Link Programs\ShutupLongLink\ShutupLongLink\obj\Release\ShutupLongLink.pdb
 H:\07- Programming  Projects\03-C Sharp Projects\C Sharp Projects\NetFrame\WindowsForm Projects\Short Link Programs\ShutupLongLink\ShutupLongLink\obj\Release\ShutupLongLink.csprojAssemblyReference.cache
+H:\07- Programming  Projects\03-C Sharp Projects\C Sharp Projects\NetFrame\WindowsForm Projects\Short Link Programs\ShutupLongLink\ShutupLongLink\bin\Release\AdFlyAPIv1.dll
+H:\07- Programming  Projects\03-C Sharp Projects\C Sharp Projects\NetFrame\WindowsForm Projects\Short Link Programs\ShutupLongLink\ShutupLongLink\bin\Release\DSoft.RestService.dll

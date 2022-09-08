@@ -72,5 +72,19 @@ namespace ShutupLongLink
 
         #endregion
 
+        #region Clear All API Keys Button
+
+        private void btnClearAPIs_Click(object sender, EventArgs e)
+        {
+            txtBxAdfly.Text = string.Empty;
+            txtBxAdflyUID.Text = string.Empty;
+            txtBxShortest.Text = string.Empty;
+            txtBxR7URL.Text = string.Empty;
+            txtBxRebrandly.Text = string.Empty;
+            txtBxBitly.Text = string.Empty;
+
+        }
+
+        #endregion
     }
 }

@@ -70,8 +70,14 @@
     <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AdFlyAPIv1">
+      <HintPath>..\..\..\..\..\..\..\Online Repository\AdFlyAPIv1\src\SharpFly\bin\Debug\AdFlyAPIv1.dll</HintPath>
+    </Reference>
     <Reference Include="BitlyAPI, Version=4.0.1.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\BitlyAPI.4.0.1\lib\net45\BitlyAPI.dll</HintPath>
+    </Reference>
+    <Reference Include="DSoft.RestService">
+      <HintPath>..\..\..\..\..\..\..\Online Repository\AdFlyAPIv1\src\SharpFly\bin\Debug\DSoft.RestService.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
@@ -130,6 +136,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ResponseData.cs" />
     <Compile Include="restorBackUpFrm.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -1,4 +1,7 @@
-﻿using System;
+﻿using AdFlyAPIv1;
+using Newtonsoft.Json.Linq;
+using System;
+using System.Collections.Generic;
 using System.Data;
 using System.Diagnostics;
 using System.Drawing;
@@ -76,6 +79,19 @@ namespace ShutupLongLink
 
             #endregion
 
+            #region Set Combo Box Defult Value AdFly Domains
+
+            var itemsDomains = new[] {
+                new { Text = "j.gs",     Value = "j.gs" },
+                new { Text = "q.gs",  Value = "q.gs" }
+            };
+
+            cmbBxAdFlyDomains.DataSource = itemsDomains;
+            cmbBxAdFlyDomains.DisplayMember = "Text";
+            cmbBxAdFlyDomains.ValueMember = "Value";
+
+            #endregion
+
             #region Set App Version In App Titel
 
             this.Text = Text + " Version: " + Application.ProductVersion;
@@ -139,6 +155,14 @@ namespace ShutupLongLink
         {
             cmbBxService.SelectedIndex = 3;
 
+        }
+        private void submnuItm11_Click(object sender, EventArgs e)
+        {
+            cmbBxService.SelectedIndex = 4;
+        }
+        private void submnuItm12_Click(object sender, EventArgs e)
+        {
+            cmbBxService.SelectedIndex = 5;
         }
 
         private void submnuItm07_Click(object sender, EventArgs e)
@@ -227,6 +251,8 @@ namespace ShutupLongLink
 
                 rbAdType1.Visible       = true;
                 rbAdType2.Visible       = true;
+                lblAdFlyDomains.Visible = true;
+                cmbBxAdFlyDomains.Visible = true;
                 lblR7URLAlias.Visible   = false;
                 txtBxR7URLAlias.Visible = false;
 
@@ -239,6 +265,8 @@ namespace ShutupLongLink
 
                 rbAdType1.Visible       = false;
                 rbAdType2.Visible       = false;
+                lblAdFlyDomains.Visible = false;
+                cmbBxAdFlyDomains.Visible = false;
                 lblR7URLAlias.Visible   = false;
                 txtBxR7URLAlias.Visible = false;
 
@@ -248,6 +276,8 @@ namespace ShutupLongLink
                 picBxService.Image      = Properties.Resources.logo;
                 rbAdType1.Visible       = false;
                 rbAdType2.Visible       = false;
+                lblAdFlyDomains.Visible = false;
+                cmbBxAdFlyDomains.Visible = false;
                 lblR7URLAlias.Visible   = true;
                 txtBxR7URLAlias.Visible = true;
 
@@ -259,6 +289,8 @@ namespace ShutupLongLink
                 picBxService.Image      = Properties.Resources.TinyURL_logo;
                 rbAdType1.Visible       = false;
                 rbAdType2.Visible       = false;
+                lblAdFlyDomains.Visible = false;
+                cmbBxAdFlyDomains.Visible = false;
                 lblR7URLAlias.Visible   = false;
                 txtBxR7URLAlias.Visible = false;
 
@@ -270,6 +302,8 @@ namespace ShutupLongLink
                 picBxService.Image      = Properties.Resources.Bit_ly_Logo_svg;
                 rbAdType1.Visible       = false;
                 rbAdType2.Visible       = false;
+                lblAdFlyDomains.Visible = false;
+                cmbBxAdFlyDomains.Visible = false;
                 lblR7URLAlias.Visible   = false;
                 txtBxR7URLAlias.Visible = false;
 
@@ -281,6 +315,8 @@ namespace ShutupLongLink
                 picBxService.Image      = Properties.Resources.rebrand_ly;
                 rbAdType1.Visible       = false;
                 rbAdType2.Visible       = false;
+                lblAdFlyDomains.Visible = false;
+                cmbBxAdFlyDomains.Visible = false;
                 lblR7URLAlias.Visible   = false;
                 txtBxR7URLAlias.Visible = false;
 
@@ -306,11 +342,12 @@ namespace ShutupLongLink
         #region Run Shortner Button
         private async void btnRunShortner_Click(object sender, EventArgs e)
         {
+            txtBxShortURL.Clear();
+
             if (!string.IsNullOrEmpty(txtBxLongURL.Text))
             {
                 if (cmbBxService.Text == "Adfly")
                 {
-
                     string AdType;
 
                     if (rbAdType1.Checked)
@@ -318,24 +355,50 @@ namespace ShutupLongLink
                     else
                         AdType = "banner";
 
+                    List<string> LongURLs = new List<string>();
+
+                    foreach (var Line in txtBxLongURL.Lines)
+                    {
+                        LongURLs.Add(Line);
+                    }
+
                     if (!string.IsNullOrEmpty(Properties.Settings.Default.UserAdflyAPIKey) || !string.IsNullOrEmpty(Properties.Settings.Default.UserAdflyUID))
                     {
-                        txtBxShortURL.Text = ShortURL.AdflyURLShortener(Properties.Settings.Default.UserAdflyAPIKey, Properties.Settings.Default.UserAdflyUID, AdType, txtBxLongURL.Text);
-
-                        TableSavedURLs tableSavedURLs = new TableSavedURLs()
+                        try
                         {
-                            AliasURL = txtBxR7URLAlias.Text,
-                            UsedService = "https://adf.ly",
-                            LongURL = txtBxLongURL.Text,
-                            ShortURL = txtBxShortURL.Text,
-                            NotesURL = ""
+                            AdflyApi adflyApi = new AdflyApi(Properties.Settings.Default.UserAdflyAPIKey, Convert.ToUInt64(Properties.Settings.Default.UserAdflyUID));
 
-                        };
+                            string JSONResponce = adflyApi.Shorten(LongURLs, cmbBxAdFlyDomains.Text, AdType, 0);
 
-                        tableSavedURLs.SaveNewURL();
+                            JObject JSONObject = JObject.Parse(JSONResponce);
 
-                        GetAllSavedURLs();
+                            JArray JSONArray = (JArray)JSONObject["data"];
 
+                            List<ResponseData> Response = JSONArray.ToObject<List<ResponseData>>();
+
+                            for (int i = 0; i < Response.Count; i++)
+                            {
+                                txtBxShortURL.Text += Response[i].short_url + Environment.NewLine;
+
+                                TableSavedURLs tableSavedURLs = new TableSavedURLs()
+                                {
+                                    AliasURL = "",
+                                    UsedService = "https://adf.ly",
+                                    LongURL = Response[i].url,
+                                    ShortURL = Response[i].short_url,
+                                    NotesURL = ""
+
+                                };
+
+                                tableSavedURLs.SaveNewURL();
+                            }
+
+                            GetAllSavedURLs();
+                        }
+                        catch (Exception)
+                        {
+
+                        }
                     }
                     else
                     {
@@ -494,7 +557,7 @@ namespace ShutupLongLink
                     }
                 }
 
-                statusLbl01.Text = "Check Your Shorts URLs";
+                statusLbl01.Text = "Check Your Short URLs";
                 timrCpyShortURL.Interval = 5000;
                 timrCpyShortURL.Start();
 
@@ -691,5 +754,7 @@ namespace ShutupLongLink
 
 
         }
+
+
     }
 }

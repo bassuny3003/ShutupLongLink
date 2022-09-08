@@ -45,6 +45,7 @@ namespace ShutupLongLink
             this.label1 = new System.Windows.Forms.Label();
             this.txtBxBitly = new System.Windows.Forms.TextBox();
             this.lblbitlyAPI = new System.Windows.Forms.Label();
+            this.btnClearAPIs = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblAdfly
@@ -185,11 +186,22 @@ namespace ShutupLongLink
             this.lblbitlyAPI.TabIndex = 18;
             this.lblbitlyAPI.Text = "Bitly API";
             // 
+            // btnClearAPIs
+            // 
+            this.btnClearAPIs.Location = new System.Drawing.Point(118, 319);
+            this.btnClearAPIs.Name = "btnClearAPIs";
+            this.btnClearAPIs.Size = new System.Drawing.Size(97, 34);
+            this.btnClearAPIs.TabIndex = 20;
+            this.btnClearAPIs.Text = "&Clear All APIs";
+            this.btnClearAPIs.UseVisualStyleBackColor = true;
+            this.btnClearAPIs.Click += new System.EventHandler(this.btnClearAPIs_Click);
+            // 
             // aPIMangerFrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(484, 365);
+            this.Controls.Add(this.btnClearAPIs);
             this.Controls.Add(this.txtBxBitly);
             this.Controls.Add(this.lblbitlyAPI);
             this.Controls.Add(this.txtBxRebrandly);
@@ -235,5 +247,6 @@ namespace ShutupLongLink
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtBxBitly;
         private System.Windows.Forms.Label lblbitlyAPI;
+        private System.Windows.Forms.Button btnClearAPIs;
     }
 }
