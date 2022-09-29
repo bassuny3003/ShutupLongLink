@@ -1,6 +1,7 @@
 ﻿using BitlyAPI;
 using Newtonsoft.Json;
 using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Net;
 using System.Net.Http;
@@ -104,11 +105,47 @@ namespace ShutupLongLink
             return myShortURL;
         }
 
+        public static async Task<string> TinyURLShortenerAsync(string TinyURLAPIKey, string LongURL)
+        {
+            var url = "https://api.tinyurl.com/create?api_token=" + TinyURLAPIKey;
+
+            HttpClient client = new HttpClient();
+
+            var BaseBodyData = new Dictionary<string, string>
+            {
+                { "url", LongURL },
+                { "domain", "tiny.one" },
+                { "alias", "mohamed5a111aa"}
+
+            };
+
+            StringContent body = new StringContent(JsonConvert.SerializeObject(BaseBodyData), UnicodeEncoding.UTF8, "application/json");
+
+            var responseMessage = await client.PostAsync(url, body);
+
+            var link = JsonConvert.DeserializeObject<dynamic>(await responseMessage.Content.ReadAsStringAsync());
+
+            try
+            {
+                return link.data.tiny_url;
+            }
+            catch (Exception)
+            {
+                string respons = await responseMessage.Content.ReadAsStringAsync();
+
+                respons = respons.Replace("{\"data\":[],\"code\":5,", "");
+                respons = respons.Replace("\"errors\":[\"", "");
+                respons = respons.Replace("\"]}", "");
+
+                return respons;
+            }
+        }
+
         #endregion
 
         #region Rebrandly Shortener
 
-        public static async Task<string> RebrandlyShortenerAsync(string RebrandlyAPIKey, string LongURL)
+            public static async Task<string> RebrandlyShortenerAsync(string RebrandlyAPIKey, string LongURL)
         {
             string ShortURL;
 
@@ -156,6 +193,135 @@ namespace ShutupLongLink
             var ShortURL = linkResponse.Link;
 
             return ShortURL;
+        }
+
+        #endregion
+
+        #region Picsee.io Shortener
+
+        public static async Task<string> PicseeShortenerAsync(string PicseeAPIKey, string LongURL)
+        {
+            var url = "https://api.pics.ee/v1/links/?access_token=" + PicseeAPIKey;
+
+            HttpClient client = new HttpClient();
+
+            var BaseBodyData = new Dictionary<string, string>
+            {
+                {"url", LongURL},
+                {"externalId","customer_test_1" }
+            };
+
+            StringContent body = new StringContent(JsonConvert.SerializeObject(BaseBodyData), UnicodeEncoding.UTF8, "application/json");
+
+            var responseMessage = await client.PostAsync(url, body);
+
+            var link = JsonConvert.DeserializeObject<dynamic>(await responseMessage.Content.ReadAsStringAsync());
+
+
+            return link.data.picseeUrl;
+        }
+
+        #endregion
+
+        #region BL.ink Shortener
+
+
+        public static string Email { get; set; }
+
+        public static string Password { get; set; }
+
+        public static string RefreshToken { get; set; }
+
+        public static string Authorization { get; private set; }
+
+        public static string DomainID { get; set; }
+
+
+        public static async Task<string> GetAuthorizationByRefreshTokenAsync()
+        {
+            var url = "https://app.bl.ink/api/v4/access_token";
+
+            HttpClient client = new HttpClient();
+
+            var BaseBodyData = new Dictionary<string, string>
+            {
+                {"email", Email},
+                {"refresh_token", RefreshToken}
+
+            };
+
+            StringContent body = new StringContent(JsonConvert.SerializeObject(BaseBodyData), UnicodeEncoding.UTF8, "application/json");
+
+            var responseMessage = await client.PostAsync(url, body);
+
+            var link = JsonConvert.DeserializeObject<dynamic>(await responseMessage.Content.ReadAsStringAsync());
+
+
+            return Authorization = "Bearer " + Convert.ToString(link.access_token);
+        }
+
+        public static async Task<string> GetAuthorizationByPassword()
+        {
+            var url = "https://app.bl.ink/api/v4/access_token";
+
+            HttpClient client = new HttpClient();
+
+            var BaseBodyData = new Dictionary<string, string>
+            {
+                {"email", Email},
+                {"refresh_token", Password}
+
+            };
+
+            StringContent body = new StringContent(JsonConvert.SerializeObject(BaseBodyData), UnicodeEncoding.UTF8, "application/json");
+
+            var responseMessage = await client.PostAsync(url, body);
+
+            var link = JsonConvert.DeserializeObject<dynamic>(await responseMessage.Content.ReadAsStringAsync());
+
+
+            return Authorization = "Bearer " + Convert.ToString(link.access_token);
+        }
+
+        public static async Task<string> GetListDomainID()
+        {
+            var url = "https://app.bl.ink/api/v4/domains";
+
+            HttpClient client = new HttpClient();
+
+            client.DefaultRequestHeaders.Add("Authorization", Authorization);
+
+            var responseMessage = await client.GetAsync(url);
+
+            var link = JsonConvert.DeserializeObject<dynamic>(await responseMessage.Content.ReadAsStringAsync());
+
+
+            return DomainID = Convert.ToString(link["objects"][0]["id"]);
+        }
+
+
+        public static async Task<string> CreateBLink(string LongURL)
+        {
+            var url = "https://app.bl.ink/api/v4/" + DomainID + "/links";
+
+            HttpClient client = new HttpClient();
+
+            client.DefaultRequestHeaders.Add("Authorization", Authorization);
+
+
+            var BaseBodyData = new Dictionary<string, string>
+            {
+                {"url", LongURL}
+            };
+
+            StringContent body = new StringContent(JsonConvert.SerializeObject(BaseBodyData), UnicodeEncoding.UTF8, "application/json");
+
+            var responseMessage = await client.PostAsync(url, body);
+
+            var link = JsonConvert.DeserializeObject<dynamic>(await responseMessage.Content.ReadAsStringAsync());
+
+
+            return link["objects"][0]["short_link"];
         }
 
         #endregion

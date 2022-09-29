@@ -39,6 +39,8 @@ namespace ShutupLongLink
             this.submnuItm04 = new System.Windows.Forms.ToolStripMenuItem();
             this.submnuItm05 = new System.Windows.Forms.ToolStripMenuItem();
             this.submnuItm06 = new System.Windows.Forms.ToolStripMenuItem();
+            this.submnuItm11 = new System.Windows.Forms.ToolStripMenuItem();
+            this.submnuItm12 = new System.Windows.Forms.ToolStripMenuItem();
             this.Separator1 = new System.Windows.Forms.ToolStripSeparator();
             this.submnuItm07 = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuItm03 = new System.Windows.Forms.ToolStripMenuItem();
@@ -46,6 +48,10 @@ namespace ShutupLongLink
             this.submnuItm09 = new System.Windows.Forms.ToolStripMenuItem();
             this.submnuItm10 = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuItm04 = new System.Windows.Forms.ToolStripMenuItem();
+            this.submnuItm15 = new System.Windows.Forms.ToolStripMenuItem();
+            this.submnuItm14 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.submnuItm13 = new System.Windows.Forms.ToolStripMenuItem();
             this.submnuItm02 = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrp = new System.Windows.Forms.StatusStrip();
             this.statusLbl01 = new System.Windows.Forms.ToolStripStatusLabel();
@@ -91,9 +97,6 @@ namespace ShutupLongLink
             this.GoToShortURL = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.DeleteSelectedURL = new System.Windows.Forms.ToolStripMenuItem();
-            this.submnuItm11 = new System.Windows.Forms.ToolStripMenuItem();
-            this.submnuItm12 = new System.Windows.Forms.ToolStripMenuItem();
-            this.submnuItm13 = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuStrp.SuspendLayout();
             this.statusStrp.SuspendLayout();
             this.grpBxLongURL.SuspendLayout();
@@ -155,41 +158,55 @@ namespace ShutupLongLink
             // submnuItm03
             // 
             this.submnuItm03.Name = "submnuItm03";
-            this.submnuItm03.Size = new System.Drawing.Size(180, 22);
+            this.submnuItm03.Size = new System.Drawing.Size(179, 22);
             this.submnuItm03.Text = "Adfly";
             this.submnuItm03.Click += new System.EventHandler(this.submnuItm03_Click);
             // 
             // submnuItm04
             // 
             this.submnuItm04.Name = "submnuItm04";
-            this.submnuItm04.Size = new System.Drawing.Size(180, 22);
+            this.submnuItm04.Size = new System.Drawing.Size(179, 22);
             this.submnuItm04.Text = "Shortst";
             this.submnuItm04.Click += new System.EventHandler(this.submnuItm04_Click);
             // 
             // submnuItm05
             // 
             this.submnuItm05.Name = "submnuItm05";
-            this.submnuItm05.Size = new System.Drawing.Size(180, 22);
+            this.submnuItm05.Size = new System.Drawing.Size(179, 22);
             this.submnuItm05.Text = "R7URL";
             this.submnuItm05.Click += new System.EventHandler(this.submnuItm05_Click);
             // 
             // submnuItm06
             // 
             this.submnuItm06.Name = "submnuItm06";
-            this.submnuItm06.Size = new System.Drawing.Size(180, 22);
+            this.submnuItm06.Size = new System.Drawing.Size(179, 22);
             this.submnuItm06.Text = "TinyURL";
             this.submnuItm06.Click += new System.EventHandler(this.submnuItm06_Click);
+            // 
+            // submnuItm11
+            // 
+            this.submnuItm11.Name = "submnuItm11";
+            this.submnuItm11.Size = new System.Drawing.Size(179, 22);
+            this.submnuItm11.Text = "Rebrandly";
+            this.submnuItm11.Click += new System.EventHandler(this.submnuItm11_Click);
+            // 
+            // submnuItm12
+            // 
+            this.submnuItm12.Name = "submnuItm12";
+            this.submnuItm12.Size = new System.Drawing.Size(179, 22);
+            this.submnuItm12.Text = "Bitly";
+            this.submnuItm12.Click += new System.EventHandler(this.submnuItm12_Click);
             // 
             // Separator1
             // 
             this.Separator1.Name = "Separator1";
-            this.Separator1.Size = new System.Drawing.Size(177, 6);
+            this.Separator1.Size = new System.Drawing.Size(176, 6);
             // 
             // submnuItm07
             // 
             this.submnuItm07.Image = global::ShutupLongLink.Properties.Resources.api_24px;
             this.submnuItm07.Name = "submnuItm07";
-            this.submnuItm07.Size = new System.Drawing.Size(180, 22);
+            this.submnuItm07.Size = new System.Drawing.Size(179, 22);
             this.submnuItm07.Text = "API Key Manger";
             this.submnuItm07.Click += new System.EventHandler(this.submnuItm07_Click);
             // 
@@ -231,6 +248,9 @@ namespace ShutupLongLink
             // mnuItm04
             // 
             this.mnuItm04.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.submnuItm15,
+            this.submnuItm14,
+            this.toolStripSeparator1,
             this.submnuItm13,
             this.submnuItm02});
             this.mnuItm04.Image = global::ShutupLongLink.Properties.Resources.inquiry_24px;
@@ -238,11 +258,37 @@ namespace ShutupLongLink
             this.mnuItm04.Size = new System.Drawing.Size(65, 21);
             this.mnuItm04.Text = "&Help";
             // 
+            // submnuItm15
+            // 
+            this.submnuItm15.Name = "submnuItm15";
+            this.submnuItm15.Size = new System.Drawing.Size(194, 22);
+            this.submnuItm15.Text = "Check For Update";
+            this.submnuItm15.Click += new System.EventHandler(this.submnuItm15_Click);
+            // 
+            // submnuItm14
+            // 
+            this.submnuItm14.Name = "submnuItm14";
+            this.submnuItm14.Size = new System.Drawing.Size(194, 22);
+            this.submnuItm14.Text = "Github Project";
+            this.submnuItm14.Click += new System.EventHandler(this.submnuItm14_Click);
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(191, 6);
+            // 
+            // submnuItm13
+            // 
+            this.submnuItm13.Name = "submnuItm13";
+            this.submnuItm13.Size = new System.Drawing.Size(194, 22);
+            this.submnuItm13.Text = "Change Log";
+            this.submnuItm13.Click += new System.EventHandler(this.submnuItm13_Click);
+            // 
             // submnuItm02
             // 
             this.submnuItm02.Image = global::ShutupLongLink.Properties.Resources.Shutup_Long_Link;
             this.submnuItm02.Name = "submnuItm02";
-            this.submnuItm02.Size = new System.Drawing.Size(180, 22);
+            this.submnuItm02.Size = new System.Drawing.Size(194, 22);
             this.submnuItm02.Text = "&About";
             this.submnuItm02.Click += new System.EventHandler(this.submnuItm02_Click);
             // 
@@ -518,7 +564,7 @@ namespace ShutupLongLink
             // 
             // columnHeader5
             // 
-            this.columnHeader5.Text = "Alias URL";
+            this.columnHeader5.Text = "URL Alias";
             this.columnHeader5.Width = 80;
             // 
             // columnHeader6
@@ -647,26 +693,6 @@ namespace ShutupLongLink
             this.DeleteSelectedURL.Text = "Delete Selected URL";
             this.DeleteSelectedURL.Click += new System.EventHandler(this.DeleteSelectedURL_Click);
             // 
-            // submnuItm11
-            // 
-            this.submnuItm11.Name = "submnuItm11";
-            this.submnuItm11.Size = new System.Drawing.Size(180, 22);
-            this.submnuItm11.Text = "Rebrandly";
-            this.submnuItm11.Click += new System.EventHandler(this.submnuItm11_Click);
-            // 
-            // submnuItm12
-            // 
-            this.submnuItm12.Name = "submnuItm12";
-            this.submnuItm12.Size = new System.Drawing.Size(180, 22);
-            this.submnuItm12.Text = "Bitly";
-            this.submnuItm12.Click += new System.EventHandler(this.submnuItm12_Click);
-            // 
-            // submnuItm13
-            // 
-            this.submnuItm13.Name = "submnuItm13";
-            this.submnuItm13.Size = new System.Drawing.Size(180, 22);
-            this.submnuItm13.Text = "Change Log";
-            // 
             // MainFrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -770,6 +796,9 @@ namespace ShutupLongLink
         private System.Windows.Forms.ToolStripMenuItem submnuItm11;
         private System.Windows.Forms.ToolStripMenuItem submnuItm12;
         private System.Windows.Forms.ToolStripMenuItem submnuItm13;
+        private System.Windows.Forms.ToolStripMenuItem submnuItm15;
+        private System.Windows.Forms.ToolStripMenuItem submnuItm14;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
     }
 }
 

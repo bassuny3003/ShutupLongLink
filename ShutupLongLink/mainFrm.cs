@@ -220,6 +220,46 @@ namespace ShutupLongLink
             }
         }
 
+        private void submnuItm15_Click(object sender, EventArgs e)
+        {
+            StartURLInBrowser.Url = "https://github.com/bassuny3003/ShutupLongLink/releases";
+            StartURLInBrowser.StartDefualtBrowser();
+        }
+
+        private void submnuItm14_Click(object sender, EventArgs e)
+        {
+            // github project link
+
+            StartURLInBrowser.Url = "https://github.com/bassuny3003/ShutupLongLink";
+            StartURLInBrowser.StartDefualtBrowser();
+        }
+
+        private void submnuItm13_Click(object sender, EventArgs e)
+        {
+            //change log form
+
+            chkBxOnTop.Checked = false;
+
+            changLogFrm changLogFrm = new changLogFrm();
+            changLogFrm.Owner = this;
+            changLogFrm.ShowDialog();
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         #endregion
 
         #region Form Closing Event
