@@ -22,6 +22,12 @@ namespace ShutupLongLink
 
             txtBxBitly.Text = Properties.Settings.Default.UserbitlyAPIKey;
 
+            txtBxPicsee.Text = Properties.Settings.Default.UserPicSeeAPIKey;
+
+            txtBxBlinkEmail.Text = Properties.Settings.Default.UserBlinkEmail;
+
+            txtBxBlinkAPI.Text = Properties.Settings.Default.UserBlinkAPI;
+
 
             #endregion
         }
@@ -49,6 +55,12 @@ namespace ShutupLongLink
 
             Properties.Settings.Default.UserbitlyAPIKey = txtBxBitly.Text;
 
+            Properties.Settings.Default.UserPicSeeAPIKey = txtBxPicsee.Text;
+
+            Properties.Settings.Default.UserBlinkEmail = txtBxBlinkEmail.Text;
+
+            Properties.Settings.Default.UserBlinkAPI = txtBxBlinkAPI.Text;
+
             Properties.Settings.Default.Save();
 
             Close();
@@ -63,10 +75,20 @@ namespace ShutupLongLink
         {
             txtBxAdfly.Text = "4035c8e1d3931ac1fec5f8d1cec122c1";
             txtBxAdflyUID.Text = "1503418";
+
             txtBxShortest.Text = "b38880d274a8bd8e710bf1c47369242b";
+
             txtBxR7URL.Text = "81ec9a87936f0b502f75cb6df8e71512aacddd6e";
+
             txtBxRebrandly.Text = "5d4bbf600d064db3a3ccb0e76e9e3180";
+
             txtBxBitly.Text = "544e7626db6de7861adf6e682e380dbff47890d4";
+
+            txtBxPicsee.Text = "20f07f91f3303b2f66ab6f61698d977d69b83d64";
+
+            txtBxBlinkEmail.Text ="";
+
+            txtBxBlinkAPI.Text = "";
 
         }
 

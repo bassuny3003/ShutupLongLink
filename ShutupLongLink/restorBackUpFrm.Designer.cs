@@ -43,7 +43,7 @@ namespace ShutupLongLink
             this.lblBackUpPath.AutoSize = true;
             this.lblBackUpPath.Location = new System.Drawing.Point(12, 9);
             this.lblBackUpPath.Name = "lblBackUpPath";
-            this.lblBackUpPath.Size = new System.Drawing.Size(166, 13);
+            this.lblBackUpPath.Size = new System.Drawing.Size(163, 13);
             this.lblBackUpPath.TabIndex = 0;
             this.lblBackUpPath.Text = "Choose BackUp File To Restore :";
             // 
@@ -54,9 +54,11 @@ namespace ShutupLongLink
             this.txtBxBackUpPath.Name = "txtBxBackUpPath";
             this.txtBxBackUpPath.Size = new System.Drawing.Size(454, 22);
             this.txtBxBackUpPath.TabIndex = 1;
+            this.txtBxBackUpPath.TextChanged += new System.EventHandler(this.txtBxBackUpPath_TextChanged);
             // 
             // btnRestore
             // 
+            this.btnRestore.Enabled = false;
             this.btnRestore.Location = new System.Drawing.Point(372, 65);
             this.btnRestore.Name = "btnRestore";
             this.btnRestore.Size = new System.Drawing.Size(97, 34);

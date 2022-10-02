@@ -70,6 +70,7 @@ namespace ShutupLongLink
             this.txtBxR7URLAlias = new System.Windows.Forms.TextBox();
             this.imgLst = new System.Windows.Forms.ImageList(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lblPicsee = new System.Windows.Forms.Label();
             this.lblAdFlyDomains = new System.Windows.Forms.Label();
             this.cmbBxAdFlyDomains = new System.Windows.Forms.ComboBox();
             this.picBxService = new System.Windows.Forms.PictureBox();
@@ -97,6 +98,7 @@ namespace ShutupLongLink
             this.GoToShortURL = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.DeleteSelectedURL = new System.Windows.Forms.ToolStripMenuItem();
+            this.submnuItm16 = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuStrp.SuspendLayout();
             this.statusStrp.SuspendLayout();
             this.grpBxLongURL.SuspendLayout();
@@ -148,6 +150,7 @@ namespace ShutupLongLink
             this.submnuItm06,
             this.submnuItm11,
             this.submnuItm12,
+            this.submnuItm16,
             this.Separator1,
             this.submnuItm07});
             this.mnuItm02.Image = global::ShutupLongLink.Properties.Resources.service_24px;
@@ -158,55 +161,55 @@ namespace ShutupLongLink
             // submnuItm03
             // 
             this.submnuItm03.Name = "submnuItm03";
-            this.submnuItm03.Size = new System.Drawing.Size(179, 22);
+            this.submnuItm03.Size = new System.Drawing.Size(180, 22);
             this.submnuItm03.Text = "Adfly";
             this.submnuItm03.Click += new System.EventHandler(this.submnuItm03_Click);
             // 
             // submnuItm04
             // 
             this.submnuItm04.Name = "submnuItm04";
-            this.submnuItm04.Size = new System.Drawing.Size(179, 22);
+            this.submnuItm04.Size = new System.Drawing.Size(180, 22);
             this.submnuItm04.Text = "Shortst";
             this.submnuItm04.Click += new System.EventHandler(this.submnuItm04_Click);
             // 
             // submnuItm05
             // 
             this.submnuItm05.Name = "submnuItm05";
-            this.submnuItm05.Size = new System.Drawing.Size(179, 22);
+            this.submnuItm05.Size = new System.Drawing.Size(180, 22);
             this.submnuItm05.Text = "R7URL";
             this.submnuItm05.Click += new System.EventHandler(this.submnuItm05_Click);
             // 
             // submnuItm06
             // 
             this.submnuItm06.Name = "submnuItm06";
-            this.submnuItm06.Size = new System.Drawing.Size(179, 22);
+            this.submnuItm06.Size = new System.Drawing.Size(180, 22);
             this.submnuItm06.Text = "TinyURL";
             this.submnuItm06.Click += new System.EventHandler(this.submnuItm06_Click);
             // 
             // submnuItm11
             // 
             this.submnuItm11.Name = "submnuItm11";
-            this.submnuItm11.Size = new System.Drawing.Size(179, 22);
+            this.submnuItm11.Size = new System.Drawing.Size(180, 22);
             this.submnuItm11.Text = "Rebrandly";
             this.submnuItm11.Click += new System.EventHandler(this.submnuItm11_Click);
             // 
             // submnuItm12
             // 
             this.submnuItm12.Name = "submnuItm12";
-            this.submnuItm12.Size = new System.Drawing.Size(179, 22);
+            this.submnuItm12.Size = new System.Drawing.Size(180, 22);
             this.submnuItm12.Text = "Bitly";
             this.submnuItm12.Click += new System.EventHandler(this.submnuItm12_Click);
             // 
             // Separator1
             // 
             this.Separator1.Name = "Separator1";
-            this.Separator1.Size = new System.Drawing.Size(176, 6);
+            this.Separator1.Size = new System.Drawing.Size(177, 6);
             // 
             // submnuItm07
             // 
             this.submnuItm07.Image = global::ShutupLongLink.Properties.Resources.api_24px;
             this.submnuItm07.Name = "submnuItm07";
-            this.submnuItm07.Size = new System.Drawing.Size(179, 22);
+            this.submnuItm07.Size = new System.Drawing.Size(180, 22);
             this.submnuItm07.Text = "API Key Manger";
             this.submnuItm07.Click += new System.EventHandler(this.submnuItm07_Click);
             // 
@@ -452,6 +455,7 @@ namespace ShutupLongLink
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.lblPicsee);
             this.panel1.Controls.Add(this.lblAdFlyDomains);
             this.panel1.Controls.Add(this.cmbBxAdFlyDomains);
             this.panel1.Controls.Add(this.picBxService);
@@ -469,6 +473,18 @@ namespace ShutupLongLink
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(478, 705);
             this.panel1.TabIndex = 29;
+            // 
+            // lblPicsee
+            // 
+            this.lblPicsee.AutoSize = true;
+            this.lblPicsee.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPicsee.ForeColor = System.Drawing.Color.Red;
+            this.lblPicsee.Location = new System.Drawing.Point(91, 158);
+            this.lblPicsee.Name = "lblPicsee";
+            this.lblPicsee.Size = new System.Drawing.Size(275, 23);
+            this.lblPicsee.TabIndex = 31;
+            this.lblPicsee.Text = "This Link Will Expired in One HOUR";
+            this.lblPicsee.Visible = false;
             // 
             // lblAdFlyDomains
             // 
@@ -693,6 +709,13 @@ namespace ShutupLongLink
             this.DeleteSelectedURL.Text = "Delete Selected URL";
             this.DeleteSelectedURL.Click += new System.EventHandler(this.DeleteSelectedURL_Click);
             // 
+            // submnuItm16
+            // 
+            this.submnuItm16.Name = "submnuItm16";
+            this.submnuItm16.Size = new System.Drawing.Size(180, 22);
+            this.submnuItm16.Text = "Picsee";
+            this.submnuItm16.Click += new System.EventHandler(this.submnuItm16_Click);
+            // 
             // MainFrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -799,6 +822,8 @@ namespace ShutupLongLink
         private System.Windows.Forms.ToolStripMenuItem submnuItm15;
         private System.Windows.Forms.ToolStripMenuItem submnuItm14;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.Label lblPicsee;
+        private System.Windows.Forms.ToolStripMenuItem submnuItm16;
     }
 }
 

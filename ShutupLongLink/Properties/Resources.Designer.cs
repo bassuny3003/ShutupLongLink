@@ -93,6 +93,16 @@ namespace ShutupLongLink.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap blink {
+            get {
+                object obj = ResourceManager.GetObject("blink", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap cancel_20px {
             get {
                 object obj = ResourceManager.GetObject("cancel_20px", resourceCulture);
@@ -286,6 +296,16 @@ namespace ShutupLongLink.Properties {
         internal static System.Drawing.Bitmap Paypal_icon {
             get {
                 object obj = ResourceManager.GetObject("Paypal_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap PicSee {
+            get {
+                object obj = ResourceManager.GetObject("PicSee", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

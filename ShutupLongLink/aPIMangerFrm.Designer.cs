@@ -46,6 +46,15 @@ namespace ShutupLongLink
             this.txtBxBitly = new System.Windows.Forms.TextBox();
             this.lblbitlyAPI = new System.Windows.Forms.Label();
             this.btnClearAPIs = new System.Windows.Forms.Button();
+            this.txtBxPicsee = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.picBxService = new System.Windows.Forms.PictureBox();
+            this.cmbBxService = new System.Windows.Forms.ComboBox();
+            this.txtBxBlinkEmail = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtBxBlinkAPI = new System.Windows.Forms.TextBox();
+            this.lblsss = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.picBxService)).BeginInit();
             this.SuspendLayout();
             // 
             // lblAdfly
@@ -104,7 +113,7 @@ namespace ShutupLongLink
             // 
             // btnClose
             // 
-            this.btnClose.Location = new System.Drawing.Point(375, 319);
+            this.btnClose.Location = new System.Drawing.Point(375, 412);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(97, 34);
             this.btnClose.TabIndex = 11;
@@ -114,7 +123,7 @@ namespace ShutupLongLink
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(272, 319);
+            this.btnSave.Location = new System.Drawing.Point(272, 412);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(97, 34);
             this.btnSave.TabIndex = 12;
@@ -142,7 +151,7 @@ namespace ShutupLongLink
             // 
             // btnLoadDefault
             // 
-            this.btnLoadDefault.Location = new System.Drawing.Point(15, 319);
+            this.btnLoadDefault.Location = new System.Drawing.Point(15, 412);
             this.btnLoadDefault.Name = "btnLoadDefault";
             this.btnLoadDefault.Size = new System.Drawing.Size(97, 34);
             this.btnLoadDefault.TabIndex = 15;
@@ -188,7 +197,7 @@ namespace ShutupLongLink
             // 
             // btnClearAPIs
             // 
-            this.btnClearAPIs.Location = new System.Drawing.Point(118, 319);
+            this.btnClearAPIs.Location = new System.Drawing.Point(118, 412);
             this.btnClearAPIs.Name = "btnClearAPIs";
             this.btnClearAPIs.Size = new System.Drawing.Size(97, 34);
             this.btnClearAPIs.TabIndex = 20;
@@ -196,11 +205,93 @@ namespace ShutupLongLink
             this.btnClearAPIs.UseVisualStyleBackColor = true;
             this.btnClearAPIs.Click += new System.EventHandler(this.btnClearAPIs_Click);
             // 
+            // txtBxPicsee
+            // 
+            this.txtBxPicsee.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBxPicsee.Location = new System.Drawing.Point(19, 292);
+            this.txtBxPicsee.Name = "txtBxPicsee";
+            this.txtBxPicsee.Size = new System.Drawing.Size(457, 22);
+            this.txtBxPicsee.TabIndex = 22;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(16, 273);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(72, 16);
+            this.label2.TabIndex = 21;
+            this.label2.Text = "Picsee API";
+            // 
+            // picBxService
+            // 
+            this.picBxService.Image = global::ShutupLongLink.Properties.Resources.adfly;
+            this.picBxService.Location = new System.Drawing.Point(592, 18);
+            this.picBxService.Name = "picBxService";
+            this.picBxService.Size = new System.Drawing.Size(280, 120);
+            this.picBxService.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picBxService.TabIndex = 23;
+            this.picBxService.TabStop = false;
+            // 
+            // cmbBxService
+            // 
+            this.cmbBxService.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbBxService.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbBxService.FormattingEnabled = true;
+            this.cmbBxService.Location = new System.Drawing.Point(592, 144);
+            this.cmbBxService.Name = "cmbBxService";
+            this.cmbBxService.Size = new System.Drawing.Size(280, 24);
+            this.cmbBxService.TabIndex = 24;
+            // 
+            // txtBxBlinkEmail
+            // 
+            this.txtBxBlinkEmail.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBxBlinkEmail.Location = new System.Drawing.Point(19, 336);
+            this.txtBxBlinkEmail.Name = "txtBxBlinkEmail";
+            this.txtBxBlinkEmail.Size = new System.Drawing.Size(457, 22);
+            this.txtBxBlinkEmail.TabIndex = 26;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(16, 317);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(103, 16);
+            this.label3.TabIndex = 25;
+            this.label3.Text = "blink User Email";
+            // 
+            // txtBxBlinkAPI
+            // 
+            this.txtBxBlinkAPI.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBxBlinkAPI.Location = new System.Drawing.Point(19, 380);
+            this.txtBxBlinkAPI.Name = "txtBxBlinkAPI";
+            this.txtBxBlinkAPI.Size = new System.Drawing.Size(457, 22);
+            this.txtBxBlinkAPI.TabIndex = 28;
+            // 
+            // lblsss
+            // 
+            this.lblsss.AutoSize = true;
+            this.lblsss.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblsss.Location = new System.Drawing.Point(16, 362);
+            this.lblsss.Name = "lblsss";
+            this.lblsss.Size = new System.Drawing.Size(61, 16);
+            this.lblsss.TabIndex = 27;
+            this.lblsss.Text = "Blink API";
+            // 
             // aPIMangerFrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(484, 365);
+            this.ClientSize = new System.Drawing.Size(961, 461);
+            this.Controls.Add(this.txtBxBlinkAPI);
+            this.Controls.Add(this.lblsss);
+            this.Controls.Add(this.txtBxBlinkEmail);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.cmbBxService);
+            this.Controls.Add(this.picBxService);
+            this.Controls.Add(this.txtBxPicsee);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.btnClearAPIs);
             this.Controls.Add(this.txtBxBitly);
             this.Controls.Add(this.lblbitlyAPI);
@@ -225,6 +316,7 @@ namespace ShutupLongLink
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "API Key Manger";
+            ((System.ComponentModel.ISupportInitialize)(this.picBxService)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -248,5 +340,13 @@ namespace ShutupLongLink
         private System.Windows.Forms.TextBox txtBxBitly;
         private System.Windows.Forms.Label lblbitlyAPI;
         private System.Windows.Forms.Button btnClearAPIs;
+        private System.Windows.Forms.TextBox txtBxPicsee;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.PictureBox picBxService;
+        private System.Windows.Forms.ComboBox cmbBxService;
+        private System.Windows.Forms.TextBox txtBxBlinkEmail;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox txtBxBlinkAPI;
+        private System.Windows.Forms.Label lblsss;
     }
 }

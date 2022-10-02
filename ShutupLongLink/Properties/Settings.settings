@@ -20,5 +20,14 @@
     <Setting Name="UserbitlyAPIKey" Type="System.String" Scope="User">
       <Value Profile="(Default)">544e7626db6de7861adf6e682e380dbff47890d4</Value>
     </Setting>
+    <Setting Name="UserPicSeeAPIKey" Type="System.String" Scope="User">
+      <Value Profile="(Default)">20f07f91f3303b2f66ab6f61698d977d69b83d64</Value>
+    </Setting>
+    <Setting Name="UserBlinkEmail" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="UserBlinkAPI" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
   </Settings>
 </SettingsFile>

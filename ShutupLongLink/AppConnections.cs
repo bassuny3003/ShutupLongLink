@@ -42,7 +42,7 @@ namespace ShutupLongLink
         /// 
         /// </summary>
         /// <returns>Retern "True or False"</returns>
-        public static bool CheckInternetAvailable()
+        public bool CheckInternetAvailable()
         {
             int Desc;
             bool CheckInternetResult;

@@ -225,7 +225,6 @@ namespace ShutupLongLink
 
         #region BL.ink Shortener
 
-
         public static string Email { get; set; }
 
         public static string Password { get; set; }
@@ -299,8 +298,7 @@ namespace ShutupLongLink
             return DomainID = Convert.ToString(link["objects"][0]["id"]);
         }
 
-
-        public static async Task<string> CreateBLink(string LongURL)
+        public static async Task<string> BLinkShortenerAsync(string LongURL)
         {
             var url = "https://app.bl.ink/api/v4/" + DomainID + "/links";
 

@@ -51,6 +51,22 @@ namespace ShutupLongLink
 
         #endregion
 
+        #region Check If Choosed BackUp File is Exists
+
+        private void txtBxBackUpPath_TextChanged(object sender, EventArgs e)
+        {
+            if (File.Exists(txtBxBackUpPath.Text))
+            {
+                btnRestore.Enabled = true;
+            }
+            else
+            {
+                btnRestore.Enabled = false;
+            }
+        }
+
+        #endregion
+
         #region Restore DataBase File Evnet
 
         private void btnRestore_Click(object sender, EventArgs e)
@@ -58,6 +74,7 @@ namespace ShutupLongLink
             switch (MessageBox.Show(this, "You Are About To Restore DataBase File\n( " + lblChoosedFileName.Text + " )\nAre You Sure? ", "Restore DataBase", MessageBoxButtons.YesNo, MessageBoxIcon.Question))
             {
                 case DialogResult.Yes:
+                    
                     File.Copy(ChoosedBackUp, AppConnections.DataBaseFolderPath + "SavedURLs.db", true);
 
                     MyParent.GetType().GetMethod("GetAllSavedURLs").Invoke(MyParent, null);
@@ -80,5 +97,8 @@ namespace ShutupLongLink
         }
 
         #endregion
+
+
+
     }
 }

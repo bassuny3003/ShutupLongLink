@@ -12,7 +12,7 @@ namespace ShutupLongLink.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "16.8.1.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "16.10.0.0")]
     internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
         
         private static Settings defaultInstance = ((Settings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Settings())));
@@ -92,6 +92,42 @@ namespace ShutupLongLink.Properties {
             }
             set {
                 this["UserbitlyAPIKey"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("20f07f91f3303b2f66ab6f61698d977d69b83d64")]
+        public string UserPicSeeAPIKey {
+            get {
+                return ((string)(this["UserPicSeeAPIKey"]));
+            }
+            set {
+                this["UserPicSeeAPIKey"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string UserBlinkEmail {
+            get {
+                return ((string)(this["UserBlinkEmail"]));
+            }
+            set {
+                this["UserBlinkEmail"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string UserBlinkAPI {
+            get {
+                return ((string)(this["UserBlinkAPI"]));
+            }
+            set {
+                this["UserBlinkAPI"] = value;
             }
         }
     }

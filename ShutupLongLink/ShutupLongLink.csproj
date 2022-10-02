@@ -220,6 +220,8 @@
     <None Include="Resources\internet_24px.png" />
     <None Include="Resources\delete_link_24px.png" />
     <None Include="Resources\edit_property_24px.png" />
+    <None Include="Resources\PicSee.png" />
+    <None Include="Resources\blink.png" />
     <Content Include="Shutup Long Link.ico" />
     <None Include="Resources\1471086403_Copy v2.png" />
     <None Include="Resources\Paypal-icon.png" />

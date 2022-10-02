@@ -71,6 +71,8 @@ namespace ShutupLongLink
                 new { Text = "TinyURL",   Value = "TinyURL" },
                 new { Text = "Rebrandly", Value = "Rebrandly" },
                 new { Text = "Bitly",     Value = "Bitly" },
+                new { Text = "PicSee",    Value = "PicSee" },
+                new { Text = "Blink",     Value = "Blink" },
             };
 
             cmbBxService.DataSource = itemsService;
@@ -163,6 +165,11 @@ namespace ShutupLongLink
         private void submnuItm12_Click(object sender, EventArgs e)
         {
             cmbBxService.SelectedIndex = 5;
+        }
+
+        private void submnuItm16_Click(object sender, EventArgs e)
+        {
+            cmbBxService.SelectedIndex = 6;
         }
 
         private void submnuItm07_Click(object sender, EventArgs e)
@@ -295,6 +302,8 @@ namespace ShutupLongLink
                 cmbBxAdFlyDomains.Visible = true;
                 lblR7URLAlias.Visible   = false;
                 txtBxR7URLAlias.Visible = false;
+                lblPicsee.Visible = false;
+
 
             }
             else if (cmbBxService.Text == "Shortest")
@@ -309,6 +318,8 @@ namespace ShutupLongLink
                 cmbBxAdFlyDomains.Visible = false;
                 lblR7URLAlias.Visible   = false;
                 txtBxR7URLAlias.Visible = false;
+                lblPicsee.Visible = false;
+
 
             }
             else if (cmbBxService.Text == "R7URL")
@@ -320,6 +331,8 @@ namespace ShutupLongLink
                 cmbBxAdFlyDomains.Visible = false;
                 lblR7URLAlias.Visible   = true;
                 txtBxR7URLAlias.Visible = true;
+                lblPicsee.Visible = false;
+
 
             }
             else if (cmbBxService.Text == "TinyURL")
@@ -333,6 +346,8 @@ namespace ShutupLongLink
                 cmbBxAdFlyDomains.Visible = false;
                 lblR7URLAlias.Visible   = false;
                 txtBxR7URLAlias.Visible = false;
+                lblPicsee.Visible = false;
+
 
             }
             else if (cmbBxService.Text == "Bitly")
@@ -346,6 +361,8 @@ namespace ShutupLongLink
                 cmbBxAdFlyDomains.Visible = false;
                 lblR7URLAlias.Visible   = false;
                 txtBxR7URLAlias.Visible = false;
+                lblPicsee.Visible = false;
+
 
             }
             else if (cmbBxService.Text == "Rebrandly")
@@ -359,6 +376,36 @@ namespace ShutupLongLink
                 cmbBxAdFlyDomains.Visible = false;
                 lblR7URLAlias.Visible   = false;
                 txtBxR7URLAlias.Visible = false;
+                lblPicsee.Visible = false;
+
+
+            }
+            else if (cmbBxService.Text == "PicSee")
+            {
+                txtBxR7URLAlias.Clear();
+
+                picBxService.Image = Properties.Resources.PicSee;
+                rbAdType1.Visible = false;
+                rbAdType2.Visible = false;
+                lblAdFlyDomains.Visible = false;
+                cmbBxAdFlyDomains.Visible = false;
+                lblR7URLAlias.Visible = false;
+                txtBxR7URLAlias.Visible = false;
+                lblPicsee.Visible = true;
+
+            }
+            else if (cmbBxService.Text == "Blink")
+            {
+                txtBxR7URLAlias.Clear();
+
+                picBxService.Image = Properties.Resources.blink;
+                rbAdType1.Visible = false;
+                rbAdType2.Visible = false;
+                lblAdFlyDomains.Visible = false;
+                cmbBxAdFlyDomains.Visible = false;
+                lblR7URLAlias.Visible = false;
+                txtBxR7URLAlias.Visible = false;
+                lblPicsee.Visible = false;
 
             }
         }
@@ -382,122 +429,89 @@ namespace ShutupLongLink
         #region Run Shortner Button
         private async void btnRunShortner_Click(object sender, EventArgs e)
         {
-            txtBxShortURL.Clear();
+            AppConnections appConnections = new AppConnections();
 
-            if (!string.IsNullOrEmpty(txtBxLongURL.Text))
+            if (appConnections.CheckInternetAvailable())
             {
-                if (cmbBxService.Text == "Adfly")
+                txtBxShortURL.Clear();
+
+                if (!string.IsNullOrEmpty(txtBxLongURL.Text))
                 {
-                    string AdType;
-
-                    if (rbAdType1.Checked)
-                        AdType = "int";
-                    else
-                        AdType = "banner";
-
-                    List<string> LongURLs = new List<string>();
-
-                    foreach (var Line in txtBxLongURL.Lines)
+                    if (cmbBxService.Text == "Adfly")
                     {
-                        LongURLs.Add(Line);
-                    }
+                        string AdType;
 
-                    if (!string.IsNullOrEmpty(Properties.Settings.Default.UserAdflyAPIKey) || !string.IsNullOrEmpty(Properties.Settings.Default.UserAdflyUID))
-                    {
-                        try
+                        if (rbAdType1.Checked)
+                            AdType = "int";
+                        else
+                            AdType = "banner";
+
+                        List<string> LongURLs = new List<string>();
+
+                        foreach (var Line in txtBxLongURL.Lines)
                         {
-                            AdflyApi adflyApi = new AdflyApi(Properties.Settings.Default.UserAdflyAPIKey, Convert.ToUInt64(Properties.Settings.Default.UserAdflyUID));
+                            LongURLs.Add(Line);
+                        }
 
-                            string JSONResponce = adflyApi.Shorten(LongURLs, cmbBxAdFlyDomains.Text, AdType, 0);
-
-                            JObject JSONObject = JObject.Parse(JSONResponce);
-
-                            JArray JSONArray = (JArray)JSONObject["data"];
-
-                            List<ResponseData> Response = JSONArray.ToObject<List<ResponseData>>();
-
-                            for (int i = 0; i < Response.Count; i++)
+                        if (!string.IsNullOrEmpty(Properties.Settings.Default.UserAdflyAPIKey) || !string.IsNullOrEmpty(Properties.Settings.Default.UserAdflyUID))
+                        {
+                            try
                             {
-                                txtBxShortURL.Text += Response[i].short_url + Environment.NewLine;
+                                AdflyApi adflyApi = new AdflyApi(Properties.Settings.Default.UserAdflyAPIKey, Convert.ToUInt64(Properties.Settings.Default.UserAdflyUID));
 
-                                TableSavedURLs tableSavedURLs = new TableSavedURLs()
+                                string JSONResponce = adflyApi.Shorten(LongURLs, cmbBxAdFlyDomains.Text, AdType, 0);
+
+                                JObject JSONObject = JObject.Parse(JSONResponce);
+
+                                JArray JSONArray = (JArray)JSONObject["data"];
+
+                                List<ResponseData> Response = JSONArray.ToObject<List<ResponseData>>();
+
+                                for (int i = 0; i < Response.Count; i++)
                                 {
-                                    AliasURL = "",
-                                    UsedService = "https://adf.ly",
-                                    LongURL = Response[i].url,
-                                    ShortURL = Response[i].short_url,
-                                    NotesURL = ""
+                                    txtBxShortURL.Text += Response[i].short_url + Environment.NewLine;
 
-                                };
+                                    TableSavedURLs tableSavedURLs = new TableSavedURLs()
+                                    {
+                                        AliasURL = "",
+                                        UsedService = "https://adf.ly",
+                                        LongURL = Response[i].url,
+                                        ShortURL = Response[i].short_url,
+                                        NotesURL = ""
 
-                                tableSavedURLs.SaveNewURL();
+                                    };
+
+                                    tableSavedURLs.SaveNewURL();
+                                }
+
+                                GetAllSavedURLs();
                             }
+                            catch (Exception)
+                            {
 
-                            GetAllSavedURLs();
-                        }
-                        catch (Exception)
-                        {
-
-                        }
-                    }
-                    else
-                    {
-                        MessageBox.Show(this, "Please Add Your APIs Or Load Default First", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-                        aPIMangerFrm aPIMangerFrm = new aPIMangerFrm();
-                        aPIMangerFrm.Owner = this;
-                        aPIMangerFrm.ShowDialog();
-                    }
-
-                }
-                else if (cmbBxService.Text == "Shortest")
-                {
-
-                    if (!string.IsNullOrEmpty(Properties.Settings.Default.UserShortestAPIKey))
-                    {
-                        txtBxShortURL.Text = ShortURL.ShortestURLShortener(Properties.Settings.Default.UserShortestAPIKey, txtBxLongURL.Text);
-
-                        TableSavedURLs tableSavedURLs = new TableSavedURLs()
-                        {
-                            AliasURL = txtBxR7URLAlias.Text,
-                            UsedService = "https://shorte.st",
-                            LongURL = txtBxLongURL.Text,
-                            ShortURL = txtBxShortURL.Text,
-                            NotesURL = ""
-
-                        };
-
-                        tableSavedURLs.SaveNewURL();
-
-                        GetAllSavedURLs();
-                    }
-                    else
-                    {
-                        MessageBox.Show(this, "Please Add Your APIs Or Load Default First", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-                        aPIMangerFrm aPIMangerFrm = new aPIMangerFrm();
-                        aPIMangerFrm.Owner = this;
-                        aPIMangerFrm.ShowDialog();
-                    }
-                }
-                else if (cmbBxService.Text == "R7URL")
-                {
-
-                    if (!string.IsNullOrEmpty(Properties.Settings.Default.UserR7APIKey))
-                    {
-                        if (string.IsNullOrEmpty(txtBxR7URLAlias.Text))
-                        {
-                            MessageBox.Show(this, "Please Check Alias Text", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            return;
+                            }
                         }
                         else
                         {
-                            txtBxShortURL.Text = ShortURL.R7URLShortener(Properties.Settings.Default.UserR7APIKey, txtBxR7URLAlias.Text, txtBxLongURL.Text);
+                            MessageBox.Show(this, "Please Add Your APIs Or Load Default First", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                            aPIMangerFrm aPIMangerFrm = new aPIMangerFrm();
+                            aPIMangerFrm.Owner = this;
+                            aPIMangerFrm.ShowDialog();
+                        }
+
+                    }
+                    else if (cmbBxService.Text == "Shortest")
+                    {
+
+                        if (!string.IsNullOrEmpty(Properties.Settings.Default.UserShortestAPIKey))
+                        {
+                            txtBxShortURL.Text = ShortURL.ShortestURLShortener(Properties.Settings.Default.UserShortestAPIKey, txtBxLongURL.Text);
 
                             TableSavedURLs tableSavedURLs = new TableSavedURLs()
                             {
                                 AliasURL = txtBxR7URLAlias.Text,
-                                UsedService = "https://7r6.com",
+                                UsedService = "https://shorte.st",
                                 LongURL = txtBxLongURL.Text,
                                 ShortURL = txtBxShortURL.Text,
                                 NotesURL = ""
@@ -508,46 +522,62 @@ namespace ShutupLongLink
 
                             GetAllSavedURLs();
                         }
+                        else
+                        {
+                            MessageBox.Show(this, "Please Add Your APIs Or Load Default First", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                            aPIMangerFrm aPIMangerFrm = new aPIMangerFrm();
+                            aPIMangerFrm.Owner = this;
+                            aPIMangerFrm.ShowDialog();
+                        }
                     }
-                    else
+                    else if (cmbBxService.Text == "R7URL")
                     {
-                        MessageBox.Show(this, "Please Add Your APIs Or Load Default First", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
-                        aPIMangerFrm aPIMangerFrm = new aPIMangerFrm();
-                        aPIMangerFrm.Owner = this;
-                        aPIMangerFrm.ShowDialog();
+                        if (!string.IsNullOrEmpty(Properties.Settings.Default.UserR7APIKey))
+                        {
+                            if (string.IsNullOrEmpty(txtBxR7URLAlias.Text))
+                            {
+                                MessageBox.Show(this, "Please Check Alias Text", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                return;
+                            }
+                            else
+                            {
+                                txtBxShortURL.Text = ShortURL.R7URLShortener(Properties.Settings.Default.UserR7APIKey, txtBxR7URLAlias.Text, txtBxLongURL.Text);
+
+                                TableSavedURLs tableSavedURLs = new TableSavedURLs()
+                                {
+                                    AliasURL = txtBxR7URLAlias.Text,
+                                    UsedService = "https://7r6.com",
+                                    LongURL = txtBxLongURL.Text,
+                                    ShortURL = txtBxShortURL.Text,
+                                    NotesURL = ""
+
+                                };
+
+                                tableSavedURLs.SaveNewURL();
+
+                                GetAllSavedURLs();
+                            }
+                        }
+                        else
+                        {
+                            MessageBox.Show(this, "Please Add Your APIs Or Load Default First", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                            aPIMangerFrm aPIMangerFrm = new aPIMangerFrm();
+                            aPIMangerFrm.Owner = this;
+                            aPIMangerFrm.ShowDialog();
+                        }
                     }
-                }
-                else if (cmbBxService.Text == "TinyURL")
-                {
-
-                    txtBxShortURL.Text = ShortURL.TinyURLShortener(txtBxLongURL.Text);
-
-                    TableSavedURLs tableSavedURLs = new TableSavedURLs()
+                    else if (cmbBxService.Text == "TinyURL")
                     {
-                        AliasURL = txtBxR7URLAlias.Text,
-                        UsedService = "https://tinyurl.com",
-                        LongURL = txtBxLongURL.Text,
-                        ShortURL = txtBxShortURL.Text,
-                        NotesURL = ""
 
-                    };
-
-                    tableSavedURLs.SaveNewURL();
-
-                    GetAllSavedURLs();
-
-
-                }
-                else if (cmbBxService.Text == "Bitly")
-                {
-                    if (!string.IsNullOrEmpty(Properties.Settings.Default.UserbitlyAPIKey))
-                    {
-                        txtBxShortURL.Text = await ShortURL.bitlyShortenerAsync(Properties.Settings.Default.UserbitlyAPIKey, txtBxLongURL.Text);
+                        txtBxShortURL.Text = ShortURL.TinyURLShortener(txtBxLongURL.Text);
 
                         TableSavedURLs tableSavedURLs = new TableSavedURLs()
                         {
-                            UsedService = "https://bit.ly",
+                            AliasURL = txtBxR7URLAlias.Text,
+                            UsedService = "https://tinyurl.com",
                             LongURL = txtBxLongURL.Text,
                             ShortURL = txtBxShortURL.Text,
                             NotesURL = ""
@@ -557,61 +587,153 @@ namespace ShutupLongLink
                         tableSavedURLs.SaveNewURL();
 
                         GetAllSavedURLs();
+
+
                     }
-                    else
+                    else if (cmbBxService.Text == "Bitly")
                     {
-                        MessageBox.Show(this, "Please Add Your APIs Or Load Default First", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-                        aPIMangerFrm aPIMangerFrm = new aPIMangerFrm();
-                        aPIMangerFrm.Owner = this;
-                        aPIMangerFrm.ShowDialog();
-                    }
-
-                }
-                else if (cmbBxService.Text == "Rebrandly")
-                {
-                    if (!string.IsNullOrEmpty(Properties.Settings.Default.UserRebrandlyAPIKey))
-                    {
-                        txtBxShortURL.Text = await ShortURL.RebrandlyShortenerAsync(Properties.Settings.Default.UserRebrandlyAPIKey, txtBxLongURL.Text);
-
-                        TableSavedURLs tableSavedURLs = new TableSavedURLs()
+                        if (!string.IsNullOrEmpty(Properties.Settings.Default.UserbitlyAPIKey))
                         {
-                            UsedService = "https://rebrand.ly",
-                            LongURL = txtBxLongURL.Text,
-                            ShortURL = txtBxShortURL.Text,
-                            NotesURL = ""
+                            txtBxShortURL.Text = await ShortURL.bitlyShortenerAsync(Properties.Settings.Default.UserbitlyAPIKey, txtBxLongURL.Text);
 
-                        };
+                            TableSavedURLs tableSavedURLs = new TableSavedURLs()
+                            {
+                                UsedService = "https://bit.ly",
+                                LongURL = txtBxLongURL.Text,
+                                ShortURL = txtBxShortURL.Text,
+                                NotesURL = ""
 
-                        tableSavedURLs.SaveNewURL();
+                            };
 
-                        GetAllSavedURLs();
+                            tableSavedURLs.SaveNewURL();
+
+                            GetAllSavedURLs();
+                        }
+                        else
+                        {
+                            MessageBox.Show(this, "Please Add Your APIs Or Load Default First", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                            aPIMangerFrm aPIMangerFrm = new aPIMangerFrm();
+                            aPIMangerFrm.Owner = this;
+                            aPIMangerFrm.ShowDialog();
+                        }
+
                     }
-                    else
+                    else if (cmbBxService.Text == "Rebrandly")
                     {
-                        MessageBox.Show(this, "Please Add Your APIs Or Load Default First", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        if (!string.IsNullOrEmpty(Properties.Settings.Default.UserRebrandlyAPIKey))
+                        {
+                            txtBxShortURL.Text = await ShortURL.RebrandlyShortenerAsync(Properties.Settings.Default.UserRebrandlyAPIKey, txtBxLongURL.Text);
 
-                        aPIMangerFrm aPIMangerFrm = new aPIMangerFrm();
-                        aPIMangerFrm.Owner = this;
-                        aPIMangerFrm.ShowDialog();
+                            TableSavedURLs tableSavedURLs = new TableSavedURLs()
+                            {
+                                UsedService = "https://rebrand.ly",
+                                LongURL = txtBxLongURL.Text,
+                                ShortURL = txtBxShortURL.Text,
+                                NotesURL = ""
+
+                            };
+
+                            tableSavedURLs.SaveNewURL();
+
+                            GetAllSavedURLs();
+                        }
+                        else
+                        {
+                            MessageBox.Show(this, "Please Add Your APIs Or Load Default First", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                            aPIMangerFrm aPIMangerFrm = new aPIMangerFrm();
+                            aPIMangerFrm.Owner = this;
+                            aPIMangerFrm.ShowDialog();
+                        }
                     }
+                    else if (cmbBxService.Text == "PicSee")
+                    {
+                        if (!string.IsNullOrEmpty(Properties.Settings.Default.UserPicSeeAPIKey))
+                        {
+                            txtBxShortURL.Text = await ShortURL.PicseeShortenerAsync(Properties.Settings.Default.UserPicSeeAPIKey, txtBxLongURL.Text);
+
+                            TableSavedURLs tableSavedURLs = new TableSavedURLs()
+                            {
+                                UsedService = "https://picsee.io",
+                                LongURL = txtBxLongURL.Text,
+                                ShortURL = txtBxShortURL.Text,
+                                NotesURL = ""
+
+                            };
+
+                            tableSavedURLs.SaveNewURL();
+
+                            GetAllSavedURLs();
+                        }
+                        else
+                        {
+                            MessageBox.Show(this, "Please Add Your APIs Or Load Default First", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                            aPIMangerFrm aPIMangerFrm = new aPIMangerFrm();
+                            aPIMangerFrm.Owner = this;
+                            aPIMangerFrm.ShowDialog();
+                        }
+                    }
+                    else if (cmbBxService.Text == "Blink")
+                    {
+                        if (!string.IsNullOrEmpty(Properties.Settings.Default.UserBlinkAPI) || !string.IsNullOrEmpty(Properties.Settings.Default.UserBlinkEmail))
+                        {
+
+                            ShortURL.Email = Properties.Settings.Default.UserBlinkEmail;
+                            ShortURL.RefreshToken = Properties.Settings.Default.UserBlinkAPI;
+
+                            await ShortURL.GetAuthorizationByRefreshTokenAsync();
+                            await ShortURL.GetListDomainID();
+
+                            txtBxShortURL.Text = await ShortURL.BLinkShortenerAsync(txtBxLongURL.Text);
+
+                            TableSavedURLs tableSavedURLs = new TableSavedURLs()
+                            {
+                                UsedService = "https://www.bl.ink",
+                                LongURL = txtBxLongURL.Text,
+                                ShortURL = txtBxShortURL.Text,
+                                NotesURL = ""
+
+                            };
+
+                            tableSavedURLs.SaveNewURL();
+
+                            GetAllSavedURLs();
+                        }
+                        else
+                        {
+                            MessageBox.Show(this, "Please Add Your APIs Or Load Default First", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                            aPIMangerFrm aPIMangerFrm = new aPIMangerFrm();
+                            aPIMangerFrm.Owner = this;
+                            aPIMangerFrm.ShowDialog();
+                        }
+                    }
+
+                    statusLbl01.Text = "Check Your Short URLs";
+                    timrCpyShortURL.Interval = 5000;
+                    timrCpyShortURL.Start();
+
+                    btnCpyShortURL.Enabled = true;
                 }
+                else
+                {
+                    statusLbl01.Text = "Please Add URLs First";
+                    timrCpyShortURL.Interval = 5000;
+                    timrCpyShortURL.Start();
 
-                statusLbl01.Text = "Check Your Short URLs";
-                timrCpyShortURL.Interval = 5000;
-                timrCpyShortURL.Start();
+                    MessageBox.Show(this, "Please Add URLs First", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
-                btnCpyShortURL.Enabled = true;
+                }
             }
             else
             {
-                statusLbl01.Text = "Please Add URLs First";
-                timrCpyShortURL.Interval = 5000;
-                timrCpyShortURL.Start();
-
-                MessageBox.Show(this, "Please Add URLs First", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
+                MessageBox.Show(this, "Please Check Your Internet Connection First !!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+
+
+
 
         }
 
@@ -691,7 +813,7 @@ namespace ShutupLongLink
             {
                 for (int i = 1; i < item.SubItems.Count; i++)
                 {
-                    WholeRowText += "\" " + item.SubItems[i].Text + "\" ";
+                    WholeRowText += "\" " + item.SubItems[i].Text + " \" ";
                 }
             }
 
