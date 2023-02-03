@@ -32,19 +32,21 @@ but it became clear to me that it would be confusing to develop in more than one
 
 ## Used Service's 
 | # | Service  | Website                          |Need API Keys |
-| ------------ |---------------|---------------------------|---------------------------|
-| 1 | Bitly | https://bitly.com ||
-| 2 | Blink        |   https://www.bl.ink ||
-| 3 | TinyCC        |    https://tiny.cc ||
-| 4 | Rebrandly        |    https://www.rebrandly.com ||
-| 5 | TinyURL        |    https://tinyurl.com ||
-| 6 | Cuttly        |    https://cutt.ly ||
-| 7 | RecutIn        |    https://recut.in ||
-| 8 | Picsee        |    https://picsee.io/en ||
-| 9 | R7        |    https://7r6.com ||
-| 10 | Shortest        |    https://shorte.st ||
-| 11 | Short Jambo        |    https://short-jambo.com ||
-| 12 | Adfly        |    https://adf.ly/ ||
+|: ------------ :|:---------------:|:---------------------------:|:---------------------------:|
+| 1 | Bitly | https://bitly.com |         :tw-2705:      |
+| 2 | Blink        |   https://www.bl.ink | :tw-2705:|
+| 3 | TinyCC        |    https://tiny.cc | :tw-2705:|
+| 4 | Rebrandly        |    https://www.rebrandly.com | :tw-2705:|
+| 5 | TinyURL        |    https://tinyurl.com | :tw-2705:|
+| 6 | Cuttly        |    https://cutt.ly | :tw-2705:|
+| 7 | RecutIn        |    https://recut.in | :tw-2705:|
+| 8 | Picsee        |    https://picsee.io/en | :tw-2705:|
+| 9 | R7        |    https://7r6.com | :tw-2705:|
+| 10 | Shortest        |    https://shorte.st | :tw-2705:|
+| 11 | Short Jambo        |    https://short-jambo.com | :tw-2705:|
+| 12 | Adfly        |    https://adf.ly | :tw-2705:|
+| 13 | Isgd        |    https://is.gd |:tw-274c:|
+| 14 | N9cl        |   https://n9.cl/en |:tw-274c:|
 
 
 
