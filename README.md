@@ -33,7 +33,7 @@ but it became clear to me that it would be confusing to develop in more than one
 ## Used Service's 
 
 | # | Service  | Website                          |
-|: ------------ :|:---------------:|:---------------------------:|
+|:------------:|:---------------:|:---------------------------:|
 | 1 | Bitly | https://bitly.com |
 | 2 | Blink        |   https://www.bl.ink |
 | 3 | TinyCC        |    https://tiny.cc |
