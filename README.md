@@ -48,8 +48,8 @@ but it became clear to me that it would be confusing to develop in more than one
 | 10 | Shortest        |    https://shorte.st | ✅|
 | 11 | Short Jambo        |    https://short-jambo.com | ✅|
 | 12 | Adfly        |    https://adf.ly | ✅|
-| 13 | Isgd        |    https://is.gd |❎|
-| 14 | N9cl        |   https://n9.cl/en |❎|
+| 13 | Isgd        |    https://is.gd |❌|
+| 14 | N9cl        |   https://n9.cl/en |❌|
 
 
 
