@@ -32,22 +32,22 @@ but it became clear to me that it would be confusing to develop in more than one
 
 ## Used Service's 
 
-| # | Service  | Website                          |
-|:------------:|:---------------:|:---------------------------:|
-| 1 | Bitly | https://bitly.com |
-| 2 | Blink        |   https://www.bl.ink |
-| 3 | TinyCC        |    https://tiny.cc |
-| 4 | Rebrandly        |    https://www.rebrandly.com |
-| 5 | TinyURL        |    https://tinyurl.com |
-| 6 | Cuttly        |    https://cutt.ly |
-| 7 | RecutIn        |    https://recut.in |
-| 8 | Picsee        |    https://picsee.io/en |
-| 9 | R7        |    https://7r6.com |
-| 10 | Shortest        |    https://shorte.st |
-| 11 | Short Jambo        |    https://short-jambo.com |
-| 12 | Adfly        |    https://adf.ly |
-| 13 | Isgd        |    https://is.gd |
-| 14 | N9cl        |   https://n9.cl/en |
+| # | Service  | Website                          |Need API Keys |
+|:------------:|:---------------:|:---------------------------:|:---------------------------:|
+| 1 | Bitly | https://bitly.com |        ✅     |
+| 2 | Blink        |   https://www.bl.ink |✅|
+| 3 | TinyCC        |    https://tiny.cc | ✅|
+| 4 | Rebrandly        |    https://www.rebrandly.com | ✅|
+| 5 | TinyURL        |    https://tinyurl.com | ✅|
+| 6 | Cuttly        |    https://cutt.ly | ✅|
+| 7 | RecutIn        |    https://recut.in | ✅|
+| 8 | Picsee        |    https://picsee.io/en | ✅|
+| 9 | R7        |    https://7r6.com | ✅|
+| 10 | Shortest        |    https://shorte.st | ✅|
+| 11 | Short Jambo        |    https://short-jambo.com | ✅|
+| 12 | Adfly        |    https://adf.ly | ✅|
+| 13 | Isgd        |    https://is.gd |❎|
+| 14 | N9cl        |   https://n9.cl/en |❎|
 
 
 
