@@ -52,13 +52,14 @@ but it became clear to me that it would be confusing to develop in more than one
 | 14 | N9cl        |   https://n9.cl/en |❌|❌||
 
 
+##And my goals in creating the program:
 
+1. That there be a software interface for all link shortening services, it started by sending the long link, and the user returns the short link in his service
 
+2. That the interface be open, anyone can open the kout and develop it and help me in developing it if possible
 
-و أهدافي من صناعة البرنامج:
-1- ان يكون هناك واجهة برمجية لجميع خدمات تقصير الروابط بدات بارسال الرابط الطوير و يرجع للمستخدم الرابط القصير في الخدمة الخاصه به
-2- ان تكون الواجهة مفتوحة يمكن اي حد فتح الكوت و تطويرة و مساعدتي في تطويرة ان امكن
-3- البرنامج نتج عن تجميعي لخدمات كثيرة و تطوير لها من "GitHub" 
-4- ليس الهدم من البرنامج بيعه ولكن لتحري الدقة استخدم مفاتيح الخدمات الخاصه بي لمن لا يستطيع ولا يملك حسابات لتقصير الروابط 
-5- كل خدمة مجانية تبقي مجانية كل خمة لها اعلانات يظل لها اعلانات و ان استخدمت مفاتيح خدماتي ف لي الحق في التربح من الينكات المستخدمة كتعويض لمجهودي في عمل البرنامج
-6- يمكنك استخدام مفاتيحك الخاصه وحفظها و التعامل بها في حساباتك دون اي ضرر او تتبع او حتي ارسال المفاتيح الي اي جه
+4. The program is not intended to be sold, but to verify accuracy, I use my service keys for those who cannot and do not have accounts to shorten links
+
+5. Every free service remains free, every service that has ads will still have ads, and if I use my service keys, I have the right to profit from the links used as compensation for my efforts in making the program
+
+6. You can use your private keys, save them, and deal with them in your accounts without any damage or tracking, or even send the keys to any party.
