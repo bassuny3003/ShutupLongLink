@@ -31,7 +31,8 @@ but it became clear to me that it would be confusing to develop in more than one
 6. The ability to read a database from any other user and save it locally
 
 ## Used Service's 
-| # | Service  | Website                          |
+
+| # | Service  | Website   |
 |: ------------ :|:---------------:|:---------------------------:|
 | 1 | Bitly | https://bitly.com |  
 | 2 | Blink        |   https://www.bl.ink |
