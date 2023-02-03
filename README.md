@@ -1,8 +1,10 @@
-#ShutUp Long Link
+ShutUp Long Link
+=============
 
 [![ShutUp Long Link Icon](https://i.imgur.com/M5WHGvI.png "ShutUp Long Link Icon")](https://i.imgur.com/M5WHGvI.png "ShutUp Long Link Icon")
 
-##About "ShutUp Long Link"
+About:
+=============
 
 I started this program as a small project to learning  the C# language and learn APIs.
 so my programming method may be primitive and not sufficiently developed, 
@@ -13,13 +15,20 @@ I search for each service and try to create a software code for it to facilitate
 
 but it became clear to me that it would be confusing to develop in more than one project, so I combined them in.
 
-##Old Apps Images
+Old Apps Images:
+=============
 
 [![](https://i.imgur.com/l2EIhCK.png)](https://i.imgur.com/l2EIhCK.png)
 
 [![](https://i.imgur.com/xe39mn2.png)](https://i.imgur.com/xe39mn2.png)
 
-##Features
+New App Images:
+=============
+
+[![](https://i.imgur.com/wWOhm71.png)](https://i.imgur.com/wWOhm71.png)
+
+Features:
+=============
 1. Simple, easy and beautiful interface
 
 2. More than 10 services to shorten bonds
@@ -32,7 +41,8 @@ but it became clear to me that it would be confusing to develop in more than one
 
 6. The ability to read a database from any other user and save it locally
 
-## Used Service's 
+Used Service's:
+=============
 
 | # | Service  | Website |Need API Keys |Support Alias|Notes 
 |:------:|:--------:|:----------:|:--------:|:-------:|:-------:|
@@ -52,7 +62,8 @@ but it became clear to me that it would be confusing to develop in more than one
 | 14 | N9cl        |   https://n9.cl/en |❌|❌||
 
 
-##And my goals in creating the program:
+My Goals:
+=============
 
 1. That there be a software interface for all link shortening services, it started by sending the long link, and the user returns the short link in his service
 
