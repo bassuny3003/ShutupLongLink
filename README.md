@@ -33,20 +33,21 @@ but it became clear to me that it would be confusing to develop in more than one
 ## Used Service's 
 | # | Service  | Website                          |Need API Keys |
 |: ------------ :|:---------------:|:---------------------------:|:---------------------------:|
-| 1 | Bitly | https://bitly.com |         :tw-2705:      |
-| 2 | Blink        |   https://www.bl.ink | :tw-2705:|
-| 3 | TinyCC        |    https://tiny.cc | :tw-2705:|
-| 4 | Rebrandly        |    https://www.rebrandly.com | :tw-2705:|
-| 5 | TinyURL        |    https://tinyurl.com | :tw-2705:|
-| 6 | Cuttly        |    https://cutt.ly | :tw-2705:|
-| 7 | RecutIn        |    https://recut.in | :tw-2705:|
-| 8 | Picsee        |    https://picsee.io/en | :tw-2705:|
-| 9 | R7        |    https://7r6.com | :tw-2705:|
-| 10 | Shortest        |    https://shorte.st | :tw-2705:|
-| 11 | Short Jambo        |    https://short-jambo.com | :tw-2705:|
-| 12 | Adfly        |    https://adf.ly | :tw-2705:|
-| 13 | Isgd        |    https://is.gd |:tw-274c:|
-| 14 | N9cl        |   https://n9.cl/en |:tw-274c:|
+| 1 | Bitly | https://bitly.com |        [![](https://cdn.jsdelivr.net/gh/twitter/twemoji@v11.0.0/36x36/2705.png)](https://cdn.jsdelivr.net/gh/twitter/twemoji@v11.0.0/36x36/2705.png)     |
+| 2 | Blink        |   https://www.bl.ink | [![](https://cdn.jsdelivr.net/gh/twitter/twemoji@v11.0.0/36x36/2705.png)](https://cdn.jsdelivr.net/gh/twitter/twemoji@v11.0.0/36x36/2705.png) |
+| 3 | TinyCC        |    https://tiny.cc |[![](https://cdn.jsdelivr.net/gh/twitter/twemoji@v11.0.0/36x36/2705.png)](https://cdn.jsdelivr.net/gh/twitter/twemoji@v11.0.0/36x36/2705.png) |
+| 4 | Rebrandly        |    https://www.rebrandly.com | [![](https://cdn.jsdelivr.net/gh/twitter/twemoji@v11.0.0/36x36/2705.png)](https://cdn.jsdelivr.net/gh/twitter/twemoji@v11.0.0/36x36/2705.png) |
+| 5 | TinyURL        |    https://tinyurl.com | [![](https://cdn.jsdelivr.net/gh/twitter/twemoji@v11.0.0/36x36/2705.png)](https://cdn.jsdelivr.net/gh/twitter/twemoji@v11.0.0/36x36/2705.png) |
+| 6 | Cuttly        |    https://cutt.ly | [![](https://cdn.jsdelivr.net/gh/twitter/twemoji@v11.0.0/36x36/2705.png)](https://cdn.jsdelivr.net/gh/twitter/twemoji@v11.0.0/36x36/2705.png) |
+| 7 | RecutIn        |    https://recut.in |[![](https://cdn.jsdelivr.net/gh/twitter/twemoji@v11.0.0/36x36/2705.png)](https://cdn.jsdelivr.net/gh/twitter/twemoji@v11.0.0/36x36/2705.png) |
+| 8 | Picsee        |    https://picsee.io/en | [![](https://cdn.jsdelivr.net/gh/twitter/twemoji@v11.0.0/36x36/2705.png)](https://cdn.jsdelivr.net/gh/twitter/twemoji@v11.0.0/36x36/2705.png) |
+| 9 | R7        |    https://7r6.com | [![](https://cdn.jsdelivr.net/gh/twitter/twemoji@v11.0.0/36x36/2705.png)](https://cdn.jsdelivr.net/gh/twitter/twemoji@v11.0.0/36x36/2705.png) |
+| 10 | Shortest        |    https://shorte.st | [![](https://cdn.jsdelivr.net/gh/twitter/twemoji@v11.0.0/36x36/2705.png)](https://cdn.jsdelivr.net/gh/twitter/twemoji@v11.0.0/36x36/2705.png) |
+| 11 | Short Jambo        |    https://short-jambo.com |[![](https://cdn.jsdelivr.net/gh/twitter/twemoji@v11.0.0/36x36/2705.png)](https://cdn.jsdelivr.net/gh/twitter/twemoji@v11.0.0/36x36/2705.png) |
+| 12 | Adfly        |    https://adf.ly | [![](https://cdn.jsdelivr.net/gh/twitter/twemoji@v11.0.0/36x36/2705.png)](https://cdn.jsdelivr.net/gh/twitter/twemoji@v11.0.0/36x36/2705.png) |
+| 13 | Isgd        |    https://is.gd |[![](https://cdn.jsdelivr.net/gh/twitter/twemoji@v11.0.0/36x36/274c.png)](https://cdn.jsdelivr.net/gh/twitter/twemoji@v11.0.0/36x36/274c.png)|
+| 14 | N9cl        |   https://n9.cl/en |[![](https://cdn.jsdelivr.net/gh/twitter/twemoji@v11.0.0/36x36/274c.png)](https://cdn.jsdelivr.net/gh/twitter/twemoji@v11.0.0/36x36/274c.png)|
+
 
 
 
