@@ -31,7 +31,7 @@ Features:
 =============
 1. Simple, easy and beautiful interface
 
-2. More than 10 services to shorten bonds
+2. More than 10 services to shorten Links
 
 3. Save the converted links in a local database that you can control later and not always return to the site
 
@@ -53,13 +53,15 @@ Used Service's:
 | 5 | TinyURL        |    https://tinyurl.com | ✅|✅||
 | 6 | Cuttly        |    https://cutt.ly | ✅|✅||
 | 7 | RecutIn        |    https://recut.in | ✅|❌||
-| 8 | Picsee        |    https://picsee.io/en | ✅|❌||
-| 9 | R7        |    https://7r6.com | ✅|✅||
-| 10 | Shortest        |    https://shorte.st | ✅|❌||
-| 11 | Short Jambo        |    https://short-jambo.com | ✅|✅||
-| 12 | Adfly        |    https://adf.ly | ✅|❌|Going to End 😓|
-| 13 | Isgd        |    https://is.gd |❌|❌||
-| 14 | N9cl        |   https://n9.cl/en |❌|❌||
+| 8 | CuttUs        |    https://cutt.us | ✅|✅||
+| 9 | Asrim        |    https://asr.im | ✅|✅||
+| 10 | Picsee        |    https://picsee.io/en | ✅|❌||
+| 11 | R7        |    https://7r6.com | ✅|✅||
+| 12 | Shortest        |    https://shorte.st | ✅|❌||
+| 13 | Short Jambo        |    https://short-jambo.com | ✅|✅||
+| 14 | Adfly        |    https://adf.ly | ✅|❌|Going to End 😓|
+| 15 | Isgd        |    https://is.gd |❌|❌||
+| 16 | N9cl        |   https://n9.cl/en |❌|❌||
 
 
 My Goals:
