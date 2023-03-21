@@ -25,7 +25,14 @@ Old Apps Images:
 New App Images:
 =============
 
-[![](https://i.imgur.com/wWOhm71.png)](https://i.imgur.com/wWOhm71.png)
+[![](https://i.imgur.com/Wg2xzgH.png)](https://i.imgur.com/Wg2xzgH.png)
+
+[![](https://i.imgur.com/4j6wVje.png)](https://i.imgur.com/4j6wVje.png)
+
+[![](https://i.imgur.com/JnLcsfJ.png)](https://i.imgur.com/JnLcsfJ.png)
+
+[![](https://i.imgur.com/MpbreRP.png)](https://i.imgur.com/MpbreRP.png)
+
 
 Features:
 =============
@@ -59,9 +66,11 @@ Used Service's:
 | 11 | R7        |    https://7r6.com | ✅|✅||
 | 12 | Shortest        |    https://shorte.st | ✅|❌||
 | 13 | Short Jambo        |    https://short-jambo.com | ✅|✅||
-| 14 | Adfly        |    https://adf.ly | ✅|❌|Going to End 😓|
-| 15 | Isgd        |    https://is.gd |❌|❌||
-| 16 | N9cl        |   https://n9.cl/en |❌|❌||
+| 14 | CutPaid        |    https://cutpaid.com | ✅|✅||
+| 15 | CutPaidAd        |    https://cutpaidad.com | ✅|✅||
+| 16 | Adfly        |    https://adf.ly | ✅|❌|Going to End 😓|
+| 17 | Isgd        |    https://is.gd |❌|❌||
+| 18 | N9cl        |   https://n9.cl/en |❌|❌||
 
 
 My Goals:
