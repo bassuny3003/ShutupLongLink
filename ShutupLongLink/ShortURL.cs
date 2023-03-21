@@ -324,5 +324,77 @@ namespace ShutupLongLink
 
         #endregion
 
+        #region TinyCC Shortener
+
+        public static async Task<string> TinyCCShortenerAsync(string UserName, string APIKey, string LongURL)
+        {
+            string EncodedAuthorization = Convert.ToBase64String(Encoding.GetEncoding("ISO-8859-1").GetBytes(UserName + ":" + APIKey));
+            string Authorization = "Basic " + EncodedAuthorization;
+
+            var url = "https://tiny.cc/tiny/api/3/urls/";
+
+            HttpClient client = new HttpClient();
+
+            client.DefaultRequestHeaders.Add("Authorization", Authorization);
+
+            var BaseBodyData = "{\"urls\": [{\"long_url\": \"" + LongURL + "\"}]}";
+
+
+            StringContent body = new StringContent(BaseBodyData, UnicodeEncoding.UTF8, "application/json");
+
+            var responseMessage = await client.PostAsync(url, body);
+
+            var link = JsonConvert.DeserializeObject<dynamic>(await responseMessage.Content.ReadAsStringAsync());
+
+
+            return Convert.ToString(link["urls"][0]["short_url_with_protocol"]);
+
+            //Console.WriteLine(await TinyCCShortenerAsync("bassuny3003", "57f7dea1-d55e-4228-9246-4863b75e3abe", "https://www.google.com.eg"));
+
+        }
+
+        #endregion
+
+        #region Short Jambo Shortener
+
+        public static string ShortJamboShortener(string ShortJamboAPIKey, string Alias, string LongURL)
+        {
+            Uri requestUri = new Uri("https://short-jambo.com/api?api=" + ShortJamboAPIKey + "&url=" + LongURL + "&alias=" + Alias);
+
+            string respondjoson = new WebClient().DownloadString(requestUri);
+
+            respondjoson = respondjoson.Replace("{\"status\":\"", "");
+
+            if (respondjoson.StartsWith("error"))
+            {
+                respondjoson = respondjoson.Replace("error\",\"message\":[\"", "");
+
+                if (respondjoson.StartsWith("URL is invalid."))
+                {
+                    respondjoson = "URL is invalid.";
+                }
+                else if (respondjoson.StartsWith("Alias already exists."))
+                {
+                    respondjoson = "Alias already exists.";
+
+                }
+                else if (respondjoson.StartsWith("This domain is not allowed on our system."))
+                {
+                    respondjoson = "This domain is not allowed on Short Jambo system.";
+                }
+            }
+            else
+            {
+                respondjoson = respondjoson.Replace("success\",", "");
+                respondjoson = respondjoson.Replace("\"message\":\"\",", "");
+                respondjoson = respondjoson.Replace("\"shortenedUrl\":\"", "");
+                respondjoson = respondjoson.Replace("\\", "");
+                respondjoson = respondjoson.Replace("\"}", "");
+            }
+
+            return respondjoson;
+        }
+
+        #endregion
     }
 }

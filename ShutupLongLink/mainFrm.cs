@@ -65,7 +65,7 @@ namespace ShutupLongLink
             #region Set Combo Box Defult Value Service
 
             var itemsService = new[] {
-                new { Text = "Adfly",     Value = "Adfly" },
+                new { Text = "Adfly 'Going To END'",     Value = "Adfly" },
                 new { Text = "Shortest",  Value = "Shortest" },
                 new { Text = "R7URL",     Value = "R7URL" },
                 new { Text = "TinyURL",   Value = "TinyURL" },
@@ -73,6 +73,7 @@ namespace ShutupLongLink
                 new { Text = "Bitly",     Value = "Bitly" },
                 new { Text = "PicSee",    Value = "PicSee" },
                 new { Text = "Blink",     Value = "Blink" },
+                new { Text = "TinyCC",     Value = "TinyCC" },
             };
 
             cmbBxService.DataSource = itemsService;
@@ -170,6 +171,16 @@ namespace ShutupLongLink
         private void submnuItm16_Click(object sender, EventArgs e)
         {
             cmbBxService.SelectedIndex = 6;
+        }
+
+        private void submnuItm17_Click(object sender, EventArgs e)
+        {
+            cmbBxService.SelectedIndex = 7;
+        }
+
+        private void submnuItm18_Click(object sender, EventArgs e)
+        {
+            cmbBxService.SelectedIndex = 8;
         }
 
         private void submnuItm07_Click(object sender, EventArgs e)
@@ -399,6 +410,20 @@ namespace ShutupLongLink
                 txtBxR7URLAlias.Clear();
 
                 picBxService.Image = Properties.Resources.blink;
+                rbAdType1.Visible = false;
+                rbAdType2.Visible = false;
+                lblAdFlyDomains.Visible = false;
+                cmbBxAdFlyDomains.Visible = false;
+                lblR7URLAlias.Visible = false;
+                txtBxR7URLAlias.Visible = false;
+                lblPicsee.Visible = false;
+
+            }
+            else if (cmbBxService.Text == "TinyCC")
+            {
+                txtBxR7URLAlias.Clear();
+
+                picBxService.Image = Properties.Resources.tinycc;
                 rbAdType1.Visible = false;
                 rbAdType2.Visible = false;
                 lblAdFlyDomains.Visible = false;
@@ -710,6 +735,35 @@ namespace ShutupLongLink
                             aPIMangerFrm.ShowDialog();
                         }
                     }
+                    else if(cmbBxService.Text == "TinyCC")
+                    {
+                        if (!string.IsNullOrEmpty(Properties.Settings.Default.UserTinyCCUserName) || !string.IsNullOrEmpty(Properties.Settings.Default.UserTinyCCAPIKey))
+                        {
+
+                            txtBxShortURL.Text = await ShortURL.TinyCCShortenerAsync(Properties.Settings.Default.UserTinyCCUserName, Properties.Settings.Default.UserTinyCCAPIKey, txtBxLongURL.Text);
+
+                            TableSavedURLs tableSavedURLs = new TableSavedURLs()
+                            {
+                                UsedService = "https://tiny.cc",
+                                LongURL = txtBxLongURL.Text,
+                                ShortURL = txtBxShortURL.Text,
+                                NotesURL = ""
+
+                            };
+
+                            tableSavedURLs.SaveNewURL();
+
+                            GetAllSavedURLs();
+                        }
+                        else
+                        {
+                            MessageBox.Show(this, "Please Add Your APIs Or Load Default First", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                            aPIMangerFrm aPIMangerFrm = new aPIMangerFrm();
+                            aPIMangerFrm.Owner = this;
+                            aPIMangerFrm.ShowDialog();
+                        }
+                    }
 
                     statusLbl01.Text = "Check Your Short URLs";
                     timrCpyShortURL.Interval = 5000;
@@ -917,6 +971,9 @@ namespace ShutupLongLink
 
         }
 
+        private void rightClickLstVw_Opening(object sender, System.ComponentModel.CancelEventArgs e)
+        {
 
+        }
     }
 }

@@ -3,30 +3,39 @@
   <Profiles />
   <Settings>
     <Setting Name="UserShortestAPIKey" Type="System.String" Scope="User">
-      <Value Profile="(Default)">b38880d274a8bd8e710bf1c47369242b</Value>
+      <Value Profile="(Default)" />
     </Setting>
     <Setting Name="UserAdflyAPIKey" Type="System.String" Scope="User">
-      <Value Profile="(Default)">4035c8e1d3931ac1fec5f8d1cec122c1</Value>
+      <Value Profile="(Default)" />
     </Setting>
     <Setting Name="UserR7APIKey" Type="System.String" Scope="User">
-      <Value Profile="(Default)">81ec9a87936f0b502f75cb6df8e71512aacddd6e</Value>
+      <Value Profile="(Default)" />
     </Setting>
     <Setting Name="UserAdflyUID" Type="System.String" Scope="User">
-      <Value Profile="(Default)">1503418</Value>
+      <Value Profile="(Default)" />
     </Setting>
     <Setting Name="UserRebrandlyAPIKey" Type="System.String" Scope="User">
-      <Value Profile="(Default)">5d4bbf600d064db3a3ccb0e76e9e3180</Value>
+      <Value Profile="(Default)" />
     </Setting>
     <Setting Name="UserbitlyAPIKey" Type="System.String" Scope="User">
-      <Value Profile="(Default)">544e7626db6de7861adf6e682e380dbff47890d4</Value>
+      <Value Profile="(Default)" />
     </Setting>
     <Setting Name="UserPicSeeAPIKey" Type="System.String" Scope="User">
-      <Value Profile="(Default)">20f07f91f3303b2f66ab6f61698d977d69b83d64</Value>
+      <Value Profile="(Default)" />
     </Setting>
     <Setting Name="UserBlinkEmail" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
     <Setting Name="UserBlinkAPI" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="UserTinyCCUserName" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="UserTinyCCAPIKey" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="UserShortJamboAPIKey" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
   </Settings>

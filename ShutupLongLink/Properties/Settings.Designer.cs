@@ -25,7 +25,7 @@ namespace ShutupLongLink.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("b38880d274a8bd8e710bf1c47369242b")]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
         public string UserShortestAPIKey {
             get {
                 return ((string)(this["UserShortestAPIKey"]));
@@ -37,7 +37,7 @@ namespace ShutupLongLink.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("4035c8e1d3931ac1fec5f8d1cec122c1")]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
         public string UserAdflyAPIKey {
             get {
                 return ((string)(this["UserAdflyAPIKey"]));
@@ -49,7 +49,7 @@ namespace ShutupLongLink.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("81ec9a87936f0b502f75cb6df8e71512aacddd6e")]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
         public string UserR7APIKey {
             get {
                 return ((string)(this["UserR7APIKey"]));
@@ -61,7 +61,7 @@ namespace ShutupLongLink.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("1503418")]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
         public string UserAdflyUID {
             get {
                 return ((string)(this["UserAdflyUID"]));
@@ -73,7 +73,7 @@ namespace ShutupLongLink.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("5d4bbf600d064db3a3ccb0e76e9e3180")]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
         public string UserRebrandlyAPIKey {
             get {
                 return ((string)(this["UserRebrandlyAPIKey"]));
@@ -85,7 +85,7 @@ namespace ShutupLongLink.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("544e7626db6de7861adf6e682e380dbff47890d4")]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
         public string UserbitlyAPIKey {
             get {
                 return ((string)(this["UserbitlyAPIKey"]));
@@ -97,7 +97,7 @@ namespace ShutupLongLink.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("20f07f91f3303b2f66ab6f61698d977d69b83d64")]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
         public string UserPicSeeAPIKey {
             get {
                 return ((string)(this["UserPicSeeAPIKey"]));
@@ -128,6 +128,42 @@ namespace ShutupLongLink.Properties {
             }
             set {
                 this["UserBlinkAPI"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string UserTinyCCUserName {
+            get {
+                return ((string)(this["UserTinyCCUserName"]));
+            }
+            set {
+                this["UserTinyCCUserName"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string UserTinyCCAPIKey {
+            get {
+                return ((string)(this["UserTinyCCAPIKey"]));
+            }
+            set {
+                this["UserTinyCCAPIKey"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string UserShortJamboAPIKey {
+            get {
+                return ((string)(this["UserShortJamboAPIKey"]));
+            }
+            set {
+                this["UserShortJamboAPIKey"] = value;
             }
         }
     }

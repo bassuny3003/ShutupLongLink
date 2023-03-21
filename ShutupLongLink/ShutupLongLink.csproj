@@ -70,14 +70,16 @@
     <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="AdFlyAPIv1">
-      <HintPath>..\..\..\..\..\..\..\Online Repository\AdFlyAPIv1\src\SharpFly\bin\Debug\AdFlyAPIv1.dll</HintPath>
+    <Reference Include="AdFlyAPIv1, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\AdFlyAPIv1.dll</HintPath>
     </Reference>
     <Reference Include="BitlyAPI, Version=4.0.1.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\BitlyAPI.4.0.1\lib\net45\BitlyAPI.dll</HintPath>
     </Reference>
-    <Reference Include="DSoft.RestService">
-      <HintPath>..\..\..\..\..\..\..\Online Repository\AdFlyAPIv1\src\SharpFly\bin\Debug\DSoft.RestService.dll</HintPath>
+    <Reference Include="DSoft.RestService, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\DSoft.RestService.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
@@ -222,6 +224,8 @@
     <None Include="Resources\edit_property_24px.png" />
     <None Include="Resources\PicSee.png" />
     <None Include="Resources\blink.png" />
+    <None Include="Resources\tinycc-logo.png" />
+    <None Include="Resources\ShortJambo.jpg" />
     <Content Include="Shutup Long Link.ico" />
     <None Include="Resources\1471086403_Copy v2.png" />
     <None Include="Resources\Paypal-icon.png" />

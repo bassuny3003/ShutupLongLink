@@ -343,6 +343,16 @@ namespace ShutupLongLink.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ShortJambo {
+            get {
+                object obj = ResourceManager.GetObject("ShortJambo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Shutup_Long_Link {
             get {
                 object obj = ResourceManager.GetObject("Shutup_Long_Link", resourceCulture);
@@ -356,6 +366,16 @@ namespace ShutupLongLink.Properties {
         internal static System.Drawing.Bitmap Telegram {
             get {
                 object obj = ResourceManager.GetObject("Telegram", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tinycc {
+            get {
+                object obj = ResourceManager.GetObject("tinycc", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

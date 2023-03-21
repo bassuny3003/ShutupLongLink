@@ -1,13 +1,59 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Drawing;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace ShutupLongLink
 {
     public partial class aPIMangerFrm : Form
     {
+
+        #region Choose Service From Combo Box To Show Service GroupBox
+
+        void ChooseService(GroupBox groupBoxName)
+        {
+            List<Control> GroupBoxCollection = Controls.OfType<GroupBox>().Cast<Control>().ToList();
+
+            foreach (var GroupBox in GroupBoxCollection)
+            {
+                //GroupBox.Visible = false;
+
+                if (GroupBox.Name == groupBoxName.Name)
+                {
+                    GroupBox.Visible = true;
+                }
+                else
+                {
+                    GroupBox.Visible = false;
+                }
+            }
+        } 
+
+        #endregion
+
         public aPIMangerFrm()
         {
             InitializeComponent();
+
+            #region Set Combo Box Defult Value Service
+
+            var itemsService = new[] {
+                new { Text = "Adfly",     Value = "Adfly" },
+                new { Text = "Shortest",  Value = "Shortest" },
+                new { Text = "R7URL",     Value = "R7URL" },
+                new { Text = "Rebrandly", Value = "Rebrandly" },
+                new { Text = "Bitly",     Value = "Bitly" },
+                new { Text = "PicSee",    Value = "PicSee" },
+                new { Text = "Blink",     Value = "Blink" },
+                new { Text = "TinyCC",     Value = "TinyCC" }
+            };
+
+            cmbBxService.DataSource = itemsService;
+            cmbBxService.DisplayMember = "Text";
+            cmbBxService.ValueMember = "Value";
+
+            #endregion
 
             #region Get All API Keys From Settings
 
@@ -31,6 +77,145 @@ namespace ShutupLongLink
 
             #endregion
         }
+
+        #region ComboBox Service
+
+        private void cmbBxService_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cmbBxService.Text == "Adfly")
+            {
+                //grBxAdfly.Visible = true;
+                //grBxAdfly.Location = new Point(10,60);
+
+                //grBxShortest.Visible = false;
+                //grBxRebrandly.Visible = false;
+                //grBxBitly.Visible = false;
+                //grBxR7URL.Visible = false;
+                //grBxPicsee.Visible = false;
+                //grBxBlink.Visible = false;
+
+                ChooseService(grBxAdfly);
+
+            }
+            else if (cmbBxService.Text == "Shortest")
+            {
+                //grBxShortest.Visible = true;
+                //grBxShortest.Location = new Point(10, 60);
+
+                //grBxAdfly.Visible = false;
+                //grBxRebrandly.Visible = false;
+                //grBxBitly.Visible = false;
+                //grBxR7URL.Visible = false;
+                //grBxPicsee.Visible = false;
+                //grBxBlink.Visible = false;
+
+                ChooseService(grBxShortest);
+
+            }
+            else if (cmbBxService.Text == "R7URL")
+            {
+                //grBxR7URL.Visible = true;
+                //grBxR7URL.Location = new Point(10, 60);
+
+                //grBxAdfly.Visible = false;
+                //grBxShortest.Visible = false;
+                //grBxRebrandly.Visible = false;
+                //grBxBitly.Visible = false;
+                //grBxPicsee.Visible = false;
+                //grBxBlink.Visible = false;
+
+                ChooseService(grBxR7URL);
+
+            }
+            else if (cmbBxService.Text == "Bitly")
+            {
+                //grBxBitly.Visible = true;
+                //grBxBitly.Location = new Point(10, 60);
+
+                //grBxAdfly.Visible = false;
+                //grBxShortest.Visible = false;
+                //grBxRebrandly.Visible = false;
+                //grBxPicsee.Visible = false;
+                //grBxBlink.Visible = false;
+                //grBxR7URL.Visible = false;
+
+                ChooseService(grBxBitly);
+
+
+            }
+            else if (cmbBxService.Text == "Rebrandly")
+            {
+                //grBxRebrandly.Visible = true;
+                //grBxRebrandly.Location = new Point(10, 60);
+
+                //grBxAdfly.Visible = false;
+                //grBxShortest.Visible = false;
+                //grBxPicsee.Visible = false;
+                //grBxBlink.Visible = false;
+                //grBxR7URL.Visible = false;
+                //grBxBitly.Visible = false;
+
+
+                ChooseService(grBxRebrandly);
+
+
+            }
+            else if (cmbBxService.Text == "PicSee")
+            {
+                //grBxPicsee.Visible = true;
+                //grBxPicsee.Location = new Point(10, 60);
+
+                //grBxAdfly.Visible = false;
+                //grBxShortest.Visible = false;
+                //grBxBlink.Visible = false;
+                //grBxR7URL.Visible = false;
+                //grBxBitly.Visible = false;
+                //grBxRebrandly.Visible = false;
+
+                ChooseService(grBxPicsee);
+
+
+            }
+            else if (cmbBxService.Text == "Blink")
+            {
+                //grBxBlink.Visible = true;
+                //grBxBlink.Location = new Point(10, 60);
+
+                //grBxAdfly.Visible = false;
+                //grBxShortest.Visible = false;
+                //grBxR7URL.Visible = false;
+                //grBxBitly.Visible = false;
+                //grBxRebrandly.Visible = false;
+                //grBxPicsee.Visible = false;
+
+                ChooseService(grBxBlink);
+
+
+            }
+            else if (cmbBxService.Text == "TinyCC")
+            {
+                //grBxTinyCC.Visible = true;
+                //grBxTinyCC.Location = new Point(10, 60);
+
+                //grBxAdfly.Visible = false;
+                //grBxShortest.Visible = false;
+                //grBxR7URL.Visible = false;
+                //grBxBitly.Visible = false;
+                //grBxRebrandly.Visible = false;
+                //grBxPicsee.Visible = false;
+
+                //grBxTinyCC.BringToFront();
+                //grBxTinyCC.Invalidate();
+
+                ChooseService(grBxTinyCC);
+
+            }
+
+        }
+
+
+
+        #endregion
 
         #region Close API Manger Form
 
@@ -58,8 +243,10 @@ namespace ShutupLongLink
             Properties.Settings.Default.UserPicSeeAPIKey = txtBxPicsee.Text;
 
             Properties.Settings.Default.UserBlinkEmail = txtBxBlinkEmail.Text;
-
             Properties.Settings.Default.UserBlinkAPI = txtBxBlinkAPI.Text;
+
+            Properties.Settings.Default.UserTinyCCUserName = txtBxTinyCCUserName.Text;
+            Properties.Settings.Default.UserTinyCCAPIKey = txtBxTinyCCAPIKey.Text;
 
             Properties.Settings.Default.Save();
 
@@ -87,9 +274,10 @@ namespace ShutupLongLink
             txtBxPicsee.Text = "20f07f91f3303b2f66ab6f61698d977d69b83d64";
 
             txtBxBlinkEmail.Text ="";
-
             txtBxBlinkAPI.Text = "";
 
+            txtBxTinyCCUserName.Text = "";
+            txtBxTinyCCAPIKey.Text = "";
         }
 
         #endregion
@@ -100,13 +288,42 @@ namespace ShutupLongLink
         {
             txtBxAdfly.Text = string.Empty;
             txtBxAdflyUID.Text = string.Empty;
+
             txtBxShortest.Text = string.Empty;
+
             txtBxR7URL.Text = string.Empty;
+
             txtBxRebrandly.Text = string.Empty;
+            
             txtBxBitly.Text = string.Empty;
+
+            txtBxPicsee.Text = string.Empty;
+
+            txtBxBlinkEmail.Text = string.Empty;
+            txtBxBlinkAPI.Text = string.Empty;
+
+            txtBxTinyCCUserName.Text = string.Empty;
+            txtBxTinyCCAPIKey.Text = string.Empty;
 
         }
 
         #endregion
+
+
+
+
+
+
+
+
+        private void aPIMangerFrm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

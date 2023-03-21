@@ -217,4 +217,10 @@
   <data name="blink" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\blink.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="tinycc" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tinycc-logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ShortJambo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ShortJambo.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>
