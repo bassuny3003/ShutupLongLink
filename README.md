@@ -51,7 +51,7 @@ Features:
 Used Service's:
 =============
 
-| # | Service  | Website |Need API Keys |Support Alias|Notes 
+| # | Service  | Website |Need API Key |Support Alias|Notes 
 |:------:|:--------:|:----------:|:--------:|:-------:|:-------:|
 | 1 | Bitly | https://bitly.com |        ✅     | ❌ ||
 | 2 | Blink        |   https://www.bl.ink |✅| ❌ ||
