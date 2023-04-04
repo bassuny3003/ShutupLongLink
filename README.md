@@ -48,7 +48,7 @@ Features:
 
 6. The ability to read a database from any other user and save it locally
 
-Used Service's:
+Supported Service's:
 =============
 
 | # | Service  | Website |Need API Key |Support Alias|Notes 
