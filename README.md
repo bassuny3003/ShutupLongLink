@@ -25,7 +25,14 @@ Old Apps Images:
 New App Images:
 =============
 
-[![](https://i.imgur.com/wWOhm71.png)](https://i.imgur.com/wWOhm71.png)
+[![](https://i.imgur.com/Wg2xzgH.png)](https://i.imgur.com/Wg2xzgH.png)
+
+[![](https://i.imgur.com/4j6wVje.png)](https://i.imgur.com/4j6wVje.png)
+
+[![](https://i.imgur.com/JnLcsfJ.png)](https://i.imgur.com/JnLcsfJ.png)
+
+[![](https://i.imgur.com/MpbreRP.png)](https://i.imgur.com/MpbreRP.png)
+
 
 Features:
 =============
@@ -41,10 +48,10 @@ Features:
 
 6. The ability to read a database from any other user and save it locally
 
-Used Service's:
+Supported Service's:
 =============
 
-| # | Service  | Website |Need API Keys |Support Alias|Notes 
+| # | Service  | Website |Need API Key |Support Alias|Notes 
 |:------:|:--------:|:----------:|:--------:|:-------:|:-------:|
 | 1 | Bitly | https://bitly.com |        ✅     | ❌ ||
 | 2 | Blink        |   https://www.bl.ink |✅| ❌ ||
@@ -55,13 +62,18 @@ Used Service's:
 | 7 | RecutIn        |    https://recut.in | ✅|❌||
 | 8 | CuttUs        |    https://cutt.us | ✅|✅||
 | 9 | Asrim        |    https://asr.im | ✅|✅||
-| 10 | Picsee        |    https://picsee.io/en | ✅|❌||
-| 11 | R7        |    https://7r6.com | ✅|✅||
-| 12 | Shortest        |    https://shorte.st | ✅|❌||
-| 13 | Short Jambo        |    https://short-jambo.com | ✅|✅||
-| 14 | Adfly        |    https://adf.ly | ✅|❌|Going to End 😓|
-| 15 | Isgd        |    https://is.gd |❌|❌||
-| 16 | N9cl        |   https://n9.cl/en |❌|❌||
+| 10 | ShortenRest        |    https://www.shorten.rest | ✅|✅||
+| 11 | SnaplinkTK        |    https://snaplink.tk | ✅|✅||
+| 12 | Picsee        |    https://picsee.io/en | ✅|❌||
+| 13 | R7        |    https://7r6.com | ✅|✅||
+| 14 | Shortest        |    https://shorte.st | ✅|❌||
+| 15 | Short Jambo        |    https://short-jambo.com | ✅|✅||
+| 16 | CutPaid        |    https://cutpaid.com | ✅|✅||
+| 17 | CutPaidAd        |    https://cutpaidad.com | ✅|✅||
+| 18 | Adfly        |    https://adf.ly | ✅|❌|Going to End 😓|
+| 19 | Isgd        |    https://is.gd |❌|✅||
+| 20 | vgd        |    https://v.gd |❌|✅||
+| 21 | N9cl        |   https://n9.cl/en |❌|❌||
 
 
 My Goals:
