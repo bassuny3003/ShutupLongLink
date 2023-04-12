@@ -74,7 +74,7 @@ Supported Service's:
 | 19 | Isgd        |    https://is.gd |❌|✅||
 | 20 | vgd        |    https://v.gd |❌|✅||
 | 21 | N9cl        |   https://n9.cl/en |❌|❌||
-
+| 22 | CleanUri        |   https://cleanuri.com |❌|❌||
 
 My Goals:
 =============
