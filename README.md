@@ -51,35 +51,35 @@ Features:
 Supported Service's:
 =============
 
-| # | Service  | Website |Need API Key |Support Alias|Notes 
-|:------:|:--------:|:----------:|:--------:|:-------:|:-------:|
-| 1 | Bitly | https://bitly.com |        ✅     | ❌ ||
-| 2 | Blink        |   https://www.bl.ink |✅| ❌ ||
-| 3 | TinyCC        |    https://tiny.cc | ✅| ✅ ||
-| 4 | Rebrandly        |    https://www.rebrandly.com | ✅|✅||
-| 5 | TinyURL        |    https://tinyurl.com | ✅|✅||
-| 6 | Cuttly        |    https://cutt.ly | ✅|✅||
-| 7 | RecutIn        |    https://recut.in | ✅|❌||
-| 8 | CuttUs        |    https://cutt.us | ✅|✅||
-| 9 | Asrim        |    https://asr.im | ✅|✅||
-| 10 | ShortenRest        |    https://www.shorten.rest | ✅|✅||
-| 11 | SnaplinkTK        |    https://snaplink.tk | ✅|✅||
-| 12 | Picsee        |    https://picsee.io/en | ✅|❌||
-| 13 | R7        |    https://7r6.com | ✅|✅||
-| 14 | Shortest        |    https://shorte.st | ✅|❌||
-| 15 | Short Jambo        |    https://short-jambo.com | ✅|✅||
-| 16 | CutPaid        |    https://cutpaid.com | ✅|✅||
-| 17 | CutPaidAd        |    https://cutpaidad.com | ✅|✅||
-| 18 | Adfly        |    https://adf.ly | ✅|❌|Going to End 😓|
-| 19 | Isgd        |    https://is.gd |❌|✅||
-| 20 | vgd        |    https://v.gd |❌|✅||
-| 21 | N9cl        |   https://n9.cl/en |❌|❌||
-| 22 | CleanUri        |   https://cleanuri.com |❌|❌||
-| 23 | ShrtCode        |   https://shrtco.de |❌|❌||
-| 24 | Vurl        |   https://vurl.com |❌|❌||
-| 25 | ChilpIt       |   http://chilp.it |❌|❌||
-| 26 | UrlzFr       |   https://urlz.fr |❌|❌||
-| 27 | RluRu       |   http://rlu.ru |❌|❌||
+| # | Service  | Website |Need API Key |Support Alias|Support Ads|Notes|
+|:------:|:--------:|:----------:|:--------:|:-------:|:-------:|:-------:|
+| 1 | Bitly | https://bitly.com |        ✅     | ❌ |❌||
+| 2 | Blink        |   https://www.bl.ink |✅| ❌ |❌||
+| 3 | TinyCC        |    https://tiny.cc | ✅| ✅ |❌||
+| 4 | Rebrandly        |    https://www.rebrandly.com | ✅|✅|❌||
+| 5 | TinyURL        |    https://tinyurl.com | ✅|✅|❌||
+| 6 | Cuttly        |    https://cutt.ly | ✅|✅|❌||
+| 7 | RecutIn        |    https://recut.in | ✅|❌|❌||
+| 8 | CuttUs        |    https://cutt.us | ✅|✅|❌||
+| 9 | Asrim        |    https://asr.im | ✅|✅|❌||
+| 10 | ShortenRest        |    https://www.shorten.rest | ✅|✅|❌||
+| 11 | SnaplinkTK        |    https://snaplink.tk | ✅|✅|❌||
+| 12 | Picsee        |    https://picsee.io/en | ✅|❌|❌||
+| 13 | R7        |    https://7r6.com | ✅|✅|✅||
+| 14 | Shortest        |    https://shorte.st | ✅|❌|✅||
+| 15 | Short Jambo        |    https://short-jambo.com | ✅|✅|✅||
+| 16 | CutPaid        |    https://cutpaid.com | ✅|✅|✅||
+| 17 | CutPaidAd        |    https://cutpaidad.com | ✅|✅|✅||
+| 18 | Adfly        |    https://adf.ly | ✅|❌|✅|Going to End 😓|
+| 19 | Isgd        |    https://is.gd |❌|✅|❌||
+| 20 | vgd        |    https://v.gd |❌|✅|❌||
+| 21 | N9cl        |   https://n9.cl/en |❌|❌|❌||
+| 22 | CleanUri        |   https://cleanuri.com |❌|❌|❌||
+| 23 | ShrtCode        |   https://shrtco.de |❌|❌|❌||
+| 24 | Vurl        |   https://vurl.com |❌|❌|❌||
+| 25 | ChilpIt       |   http://chilp.it |❌|❌|❌||
+| 26 | UrlzFr       |   https://urlz.fr |❌|❌|❌||
+| 27 | RluRu       |   http://rlu.ru |❌|❌|❌||
 
 My Goals:
 =============
