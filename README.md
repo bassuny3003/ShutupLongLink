@@ -51,19 +51,19 @@ Features:
 Supported Service's:
 =============
 
-| # | Service  | Website |Need API Key |Support Alias|Support Ads|Notes|
-|:------:|:--------:|:----------:|:--------:|:-------:|:-------:|:-------:|
-| 1 | Bitly | [Bitly](https://bitly.com) |        ✅     | ❌ |❌||
-| 2 | Blink        |   https://www.bl.ink |✅| ❌ |❌||
-| 3 | TinyCC        |    https://tiny.cc | ✅| ✅ |❌||
-| 4 | Rebrandly        |    https://www.rebrandly.com | ✅|✅|❌||
-| 5 | TinyURL        |    https://tinyurl.com | ✅|✅|❌||
-| 6 | Cuttly        |    https://cutt.ly | ✅|✅|❌||
-| 7 | RecutIn        |    https://recut.in | ✅|❌|❌||
-| 8 | CuttUs        |    https://cutt.us | ✅|✅|❌||
-| 9 | Asrim        |    https://asr.im | ✅|✅|❌||
-| 10 | ShortenRest        |    https://www.shorten.rest | ✅|✅|❌||
-| 11 | SnaplinkTK        |    https://snaplink.tk | ✅|✅|❌||
+| # | Service Website |Need API Key |Support Alias|Support Ads|Notes|
+|:--------:|:----------:|:--------:|:-------:|:-------:|:-------:|
+| 1 | [Bitly.com](https://bitly.com) |        ✅     | ❌ |❌||
+| 2 | [Bl.ink](https://www.bl.ink) |✅| ❌ |❌||
+| 3 | [Tiny.CC](https://tiny.cc) | ✅| ✅ |❌||
+| 4 | [Rebrandly.com](https://www.rebrandly.com) | ✅|✅|❌||
+| 5 | [TinyURL](https://tinyurl.com) | ✅|✅|❌||
+| 6 | [Cutt.ly](https://cutt.ly) | ✅|✅|❌||
+| 7 | [Recut.in](https://recut.in) | ✅|❌|❌||
+| 8 | [Cutt.us](https://cutt.us) | ✅|✅|❌||
+| 9 | [Asr.im](https://asr.im) | ✅|✅|❌||
+| 10 |[Shorten.rest](https://www.shorten.rest) | ✅|✅|❌||
+| 11 |[Snaplink.tk](https://snaplink.tk) | ✅|✅|❌||
 | 12 | Picsee        |    https://picsee.io/en | ✅|❌|❌||
 | 13 | R7        |    https://7r6.com | ✅|✅|✅||
 | 14 | Shortest        |    https://shorte.st | ✅|❌|✅||
