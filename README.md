@@ -76,6 +76,7 @@ Supported Service's:
 | 21 | N9cl        |   https://n9.cl/en |❌|❌||
 | 22 | CleanUri        |   https://cleanuri.com |❌|❌||
 | 23 | ShrtCode        |   https://shrtco.de |❌|❌||
+| 24 | Vurl        |   https://vurl.com |❌|❌||
 
 My Goals:
 =============
