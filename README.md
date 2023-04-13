@@ -77,6 +77,7 @@ Supported Service's:
 | 22 | CleanUri        |   https://cleanuri.com |❌|❌||
 | 23 | ShrtCode        |   https://shrtco.de |❌|❌||
 | 24 | Vurl        |   https://vurl.com |❌|❌||
+| 25 | ChilpIt       |   http://chilp.it |❌|❌||
 
 My Goals:
 =============
