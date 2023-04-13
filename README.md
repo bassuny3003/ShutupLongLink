@@ -79,6 +79,7 @@ Supported Service's:
 | 24 | Vurl        |   https://vurl.com |❌|❌||
 | 25 | ChilpIt       |   http://chilp.it |❌|❌||
 | 26 | UrlzFr       |   https://urlz.fr |❌|❌||
+| 27 | RluRu       |   http://rlu.ru |❌|❌||
 
 My Goals:
 =============
