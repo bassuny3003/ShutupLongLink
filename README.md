@@ -75,6 +75,7 @@ Supported Service's:
 | 20 | vgd        |    https://v.gd |❌|✅||
 | 21 | N9cl        |   https://n9.cl/en |❌|❌||
 | 22 | CleanUri        |   https://cleanuri.com |❌|❌||
+| 23 | ShrtCode        |   https://shrtco.de |❌|❌||
 
 My Goals:
 =============
