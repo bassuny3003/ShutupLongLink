@@ -53,7 +53,7 @@ Supported Service's:
 
 | # | Service  | Website |Need API Key |Support Alias|Support Ads|Notes|
 |:------:|:--------:|:----------:|:--------:|:-------:|:-------:|:-------:|
-| 1 | Bitly | https://bitly.com |        ✅     | ❌ |❌||
+| 1 | Bitly | [Bitly](https://bitly.com) |        ✅     | ❌ |❌||
 | 2 | Blink        |   https://www.bl.ink |✅| ❌ |❌||
 | 3 | TinyCC        |    https://tiny.cc | ✅| ✅ |❌||
 | 4 | Rebrandly        |    https://www.rebrandly.com | ✅|✅|❌||
