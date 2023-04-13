@@ -78,6 +78,7 @@ Supported Service's:
 | 23 | ShrtCode        |   https://shrtco.de |❌|❌||
 | 24 | Vurl        |   https://vurl.com |❌|❌||
 | 25 | ChilpIt       |   http://chilp.it |❌|❌||
+| 26 | UrlzFr       |   https://urlz.fr |❌|❌||
 
 My Goals:
 =============
