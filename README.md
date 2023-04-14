@@ -1,7 +1,9 @@
 ShutUp Long Link
 =============
 
-[![ShutUp Long Link Icon](https://i.imgur.com/M5WHGvI.png "ShutUp Long Link Icon")](https://i.imgur.com/M5WHGvI.png "ShutUp Long Link Icon")
+[![ShutUp Long Link Icon](https://i.imgur.com/W5ZXM3z.png "ShutUp Long Link Icon")](https://i.imgur.com/W5ZXM3z.png "ShutUp Long Link Icon")
+
+
 
 About:
 =============
