@@ -64,22 +64,22 @@ Supported Service's:
 | 9 | [Asr.im](https://asr.im) | ✅|✅|❌||
 | 10 |[Shorten.rest](https://www.shorten.rest) | ✅|✅|❌||
 | 11 |[Snaplink.tk](https://snaplink.tk) | ✅|✅|❌||
-| 12 |[Picsee](https://picsee.io/en) | ✅|❌|❌||
-| 13 |[R7](https://7r6.com) | ✅|✅|✅||
-| 14 |[Shortest](https://shorte.st) | ✅|❌|✅||
-| 15 |[Short Jambo](https://short-jambo.com) | ✅|✅|✅||
-| 16 |[CutPaid](https://cutpaid.com) | ✅|✅|✅||
-| 17 |[CutPaidAd](https://cutpaidad.com) | ✅|✅|✅||
-| 18 |[Adfly](https://adf.ly) | ✅|❌|✅|Going to End 😓|
-| 19 |[Isgd](https://is.gd) |❌|✅|❌||
-| 20 |[vgd](https://v.gd) |❌|✅|❌||
-| 21 |[N9cl](https://n9.cl/en) |❌|❌|❌||
-| 22 |[CleanUri](https://cleanuri.com) |❌|❌|❌||
-| 23 |[ShrtCode](https://shrtco.de) |❌|❌|❌||
-| 24 |[Vurl](https://vurl.com) |❌|❌|❌||
-| 25 |[ChilpIt](http://chilp.it) |❌|❌|❌||
-| 26 |[UrlzFr](https://urlz.fr) |❌|❌|❌||
-| 27 |[RluRu](http://rlu.ru) |❌|❌|❌||
+| 12 |[Picsee.io](https://picsee.io/en) | ✅|❌|❌||
+| 13 |[7r6.com](https://7r6.com) | ✅|✅|✅||
+| 14 |[Shorte.st](https://shorte.st) | ✅|❌|✅||
+| 15 |[Short-Jambo.com](https://short-jambo.com) | ✅|✅|✅||
+| 16 |[CutPaid.com](https://cutpaid.com) | ✅|✅|✅||
+| 17 |[CutPaidAd.com](https://cutpaidad.com) | ✅|✅|✅||
+| 18 |[Adf.ly](https://adf.ly) | ✅|❌|✅|Going to End 😓|
+| 19 |[Is.gd](https://is.gd) |❌|✅|❌||
+| 20 |[v.gd](https://v.gd) |❌|✅|❌||
+| 21 |[N9.cl](https://n9.cl/en) |❌|❌|❌||
+| 22 |[CleanUri.com](https://cleanuri.com) |❌|❌|❌||
+| 23 |[ShrtCo.de](https://shrtco.de) |❌|❌|❌||
+| 24 |[Vurl.com](https://vurl.com) |❌|❌|❌||
+| 25 |[Chilp.It](http://chilp.it) |❌|❌|❌||
+| 26 |[Urlz.Fr](https://urlz.fr) |❌|❌|❌||
+| 27 |[Rlu.Ru](http://rlu.ru) |❌|❌|❌||
 
 My Goals:
 =============
