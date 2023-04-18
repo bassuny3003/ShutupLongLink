@@ -72,16 +72,17 @@ Supported Service's:
 | 15 |[Short-Jambo.com](https://short-jambo.com) | ✅|✅|✅||
 | 16 |[CutPaid.com](https://cutpaid.com) | ✅|✅|✅||
 | 17 |[CutPaidAd.com](https://cutpaidad.com) | ✅|✅|✅||
-| 18 |[Adf.ly](https://adf.ly) | ✅|❌|✅|Going to End 😓|
-| 19 |[Is.gd](https://is.gd) |❌|✅|❌||
-| 20 |[v.gd](https://v.gd) |❌|✅|❌||
-| 21 |[N9.cl](https://n9.cl/en) |❌|❌|❌||
-| 22 |[CleanUri.com](https://cleanuri.com) |❌|❌|❌||
-| 23 |[ShrtCo.de](https://shrtco.de) |❌|❌|❌||
-| 24 |[Vurl.com](https://vurl.com) |❌|❌|❌||
-| 25 |[Chilp.It](http://chilp.it) |❌|❌|❌||
-| 26 |[Urlz.Fr](https://urlz.fr) |❌|❌|❌||
-| 27 |[Rlu.Ru](http://rlu.ru) |❌|❌|❌||
+| 18 |[Shrtfly.com](https://shrtfly.com) | ✅|✅|✅||
+| 19 |[Adf.ly](https://adf.ly) | ✅|❌|✅|Going to End 😓|
+| 20 |[Is.gd](https://is.gd) |❌|✅|❌||
+| 21 |[v.gd](https://v.gd) |❌|✅|❌||
+| 22 |[N9.cl](https://n9.cl/en) |❌|❌|❌||
+| 23 |[CleanUri.com](https://cleanuri.com) |❌|❌|❌||
+| 24 |[ShrtCo.de](https://shrtco.de) |❌|❌|❌||
+| 25 |[Vurl.com](https://vurl.com) |❌|❌|❌||
+| 26 |[Chilp.It](http://chilp.it) |❌|❌|❌||
+| 27 |[Urlz.Fr](https://urlz.fr) |❌|❌|❌||
+| 28 |[Rlu.Ru](http://rlu.ru) |❌|❌|❌||
 
 My Goals:
 =============
