@@ -73,16 +73,21 @@ Supported Service's:
 | 16 |[CutPaid.com](https://cutpaid.com) | ✅|✅|✅||
 | 17 |[CutPaidAd.com](https://cutpaidad.com) | ✅|✅|✅||
 | 18 |[Shrtfly.com](https://shrtfly.com) | ✅|✅|✅||
-| 19 |[Adf.ly](https://adf.ly) | ✅|❌|✅|Going to End 😓|
-| 20 |[Is.gd](https://is.gd) |❌|✅|❌||
-| 21 |[v.gd](https://v.gd) |❌|✅|❌||
-| 22 |[N9.cl](https://n9.cl/en) |❌|❌|❌||
-| 23 |[CleanUri.com](https://cleanuri.com) |❌|❌|❌||
-| 24 |[ShrtCo.de](https://shrtco.de) |❌|❌|❌||
-| 25 |[Vurl.com](https://vurl.com) |❌|❌|❌||
-| 26 |[Chilp.It](http://chilp.it) |❌|❌|❌||
-| 27 |[Urlz.Fr](https://urlz.fr) |❌|❌|❌||
-| 28 |[Rlu.Ru](http://rlu.ru) |❌|❌|❌||
+| 19 |[Linkshortify.com](https://linkshortify.com) | ✅|✅|✅||
+| 20 |[Shortox.com](https://shortox.com) | ✅|✅|✅||
+| 21 |[Linkrex.net](https://linkrex.net) | ✅|✅|✅||
+| 22 |[Exe.io](https://exe.io) | ✅|✅|✅||
+| 23 |[Cuty.io](https://cuty.io) | ✅|✅|✅||
+| 24 |[Adf.ly](https://adf.ly) | ✅|❌|✅|Going to End 😓|
+| 25 |[Is.gd](https://is.gd) |❌|✅|❌||
+| 26 |[v.gd](https://v.gd) |❌|✅|❌||
+| 27 |[N9.cl](https://n9.cl/en) |❌|❌|❌||
+| 28 |[CleanUri.com](https://cleanuri.com) |❌|❌|❌||
+| 29 |[ShrtCo.de](https://shrtco.de) |❌|❌|❌||
+| 30 |[Vurl.com](https://vurl.com) |❌|❌|❌||
+| 31 |[Chilp.It](http://chilp.it) |❌|❌|❌||
+| 32 |[Urlz.Fr](https://urlz.fr) |❌|❌|❌||
+| 33 |[Rlu.Ru](http://rlu.ru) |❌|❌|❌||
 
 My Goals:
 =============
