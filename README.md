@@ -78,16 +78,17 @@ Supported Service's:
 | 21 |[Linkrex.net](https://linkrex.net) | ✅|✅|✅||
 | 22 |[Exe.io](https://exe.io) | ✅|✅|✅||
 | 23 |[Cuty.io](https://cuty.io) | ✅|✅|✅||
-| 24 |[Adf.ly](https://adf.ly) | ✅|❌|✅|Going to End 😓|
-| 25 |[Is.gd](https://is.gd) |❌|✅|❌||
-| 26 |[v.gd](https://v.gd) |❌|✅|❌||
-| 27 |[N9.cl](https://n9.cl/en) |❌|❌|❌||
-| 28 |[CleanUri.com](https://cleanuri.com) |❌|❌|❌||
-| 29 |[ShrtCo.de](https://shrtco.de) |❌|❌|❌||
-| 30 |[Vurl.com](https://vurl.com) |❌|❌|❌||
-| 31 |[Chilp.It](http://chilp.it) |❌|❌|❌||
-| 32 |[Urlz.Fr](https://urlz.fr) |❌|❌|❌||
-| 33 |[Rlu.Ru](http://rlu.ru) |❌|❌|❌||
+| 24 |[Adfoc.us](https://adfoc.us) | ✅|✅|✅||
+| 25 |[Adf.ly](https://adf.ly) | ✅|❌|✅|Going to End 😓|
+| 26 |[Is.gd](https://is.gd) |❌|✅|❌||
+| 27 |[v.gd](https://v.gd) |❌|✅|❌||
+| 28 |[N9.cl](https://n9.cl/en) |❌|❌|❌||
+| 29 |[CleanUri.com](https://cleanuri.com) |❌|❌|❌||
+| 30 |[ShrtCo.de](https://shrtco.de) |❌|❌|❌||
+| 31 |[Vurl.com](https://vurl.com) |❌|❌|❌||
+| 32 |[Chilp.It](http://chilp.it) |❌|❌|❌||
+| 33 |[Urlz.Fr](https://urlz.fr) |❌|❌|❌||
+| 34 |[Rlu.Ru](http://rlu.ru) |❌|❌|❌||
 
 My Goals:
 =============
