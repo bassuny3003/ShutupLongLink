@@ -74,6 +74,7 @@ Supported Service's:
 | 17 |[CutPaidAd.com](https://cutpaidad.com) | ✅|✅|✅||
 | 18 |[Shrtfly.com](https://shrtfly.com) | ✅|✅|✅||
 | 19 |[Linkshortify.com](https://linkshortify.com) | ✅|✅|✅||
+| 19 |[Linkshortify.net](https://linkshortify.net) | ✅|✅|✅||
 | 20 |[Shortox.com](https://shortox.com) | ✅|✅|✅||
 | 21 |[Linkrex.net](https://linkrex.net) | ✅|✅|✅||
 | 22 |[Exe.io](https://exe.io) | ✅|✅|✅||
