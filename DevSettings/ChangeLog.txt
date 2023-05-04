@@ -1,3 +1,4 @@
+#ChangeLog "ShutupLongLink" Application
 =======================================
 + Add New Feature - Remove Feature
 * Update Feature  / Add New 
@@ -11,3 +12,4 @@ ShutUp Long Link  Version 2.3.5.2
 *
 /
 =======================================
+
