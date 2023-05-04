@@ -1,7 +1,7 @@
 #ChangeLog "ShutupLongLink" Application
 =======================================
 + Add New Feature - Remove Feature
-* Update Feature  / Add New 
+* Update Feature  / Fix Bugs
 =======================================
 
 =======================================
