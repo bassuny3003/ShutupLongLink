@@ -56,33 +56,33 @@ Supported Service's:
 | # | Service Website |Need API Key |Support Alias|Support Ads|Notes|
 |:--------:|:----------:|:--------:|:-------:|:-------:|:-------:|
 | 1 | [Bitly.com](https://bitly.com) |        ✔️     | ❌ |❌||
-| 2 | [Bl.ink](https://www.bl.ink) |✅| ❌ |❌||
-| 3 | [Tiny.CC](https://tiny.cc) | ✅| ✅ |❌||
-| 4 | [Rebrandly.com](https://www.rebrandly.com) | ✅|✅|❌||
-| 5 | [TinyURL](https://tinyurl.com) | ✅|✅|❌||
-| 6 | [Cutt.ly](https://cutt.ly) | ✅|✅|❌||
-| 7 | [Recut.in](https://recut.in) | ✅|❌|❌||
-| 8 | [Cutt.us](https://cutt.us) | ✅|✅|❌||
-| 9 | [Asr.im](https://asr.im) | ✅|✅|❌||
-| 10 |[Shorten.rest](https://www.shorten.rest) | ✅|✅|❌||
-| 11 |[Snaplink.tk](https://snaplink.tk) | ✅|✅|❌||
-| 12 |[Picsee.io](https://picsee.io/en) | ✅|❌|❌|Only For Company's |
-| 13 |[7r6.com](https://7r6.com) | ✅|✅|✅||
-| 14 |[Shorte.st](https://shorte.st) | ✅|❌|✅||
-| 15 |[Short-Jambo.com](https://short-jambo.com) | ✅|✅|✅||
-| 16 |[CutPaid.com](https://cutpaid.com) | ✅|✅|✅||
-| 17 |[CutPaidAd.com](https://cutpaidad.com) | ✅|✅|✅||
-| 18 |[Shrtfly.com](https://shrtfly.com) | ✅|✅|✅||
-| 19 |[Linkshortify.com](https://linkshortify.com) | ✅|✅|✅||
-| 19 |[Linkshortify.net](https://linkshortify.net) | ✅|✅|✅||
-| 20 |[Shortox.com](https://shortox.com) | ✅|✅|✅||
-| 21 |[Linkrex.net](https://linkrex.net) | ✅|✅|✅||
-| 22 |[Exe.io](https://exe.io) | ✅|✅|✅||
-| 23 |[Cuty.io](https://cuty.io) | ✅|✅|✅||
-| 24 |[Adfoc.us](https://adfoc.us) | ✅|✅|✅||
-| 25 |[Adf.ly](https://adf.ly) | ✅|❌|✅|Going to End 😓|
-| 26 |[Is.gd](https://is.gd) |❌|✅|❌||
-| 27 |[v.gd](https://v.gd) |❌|✅|❌||
+| 2 | [Bl.ink](https://www.bl.ink) |✔️| ❌ |❌||
+| 3 | [Tiny.CC](https://tiny.cc) | ✔️| ✔️ |❌||
+| 4 | [Rebrandly.com](https://www.rebrandly.com) | ✔️|✔️|❌||
+| 5 | [TinyURL](https://tinyurl.com) | ✔️|✔️|❌||
+| 6 | [Cutt.ly](https://cutt.ly) | ✔️|✔️|❌||
+| 7 | [Recut.in](https://recut.in) | ✔️|❌|❌||
+| 8 | [Cutt.us](https://cutt.us) | ✔️|✔️|❌||
+| 9 | [Asr.im](https://asr.im) | ✔️|✔️|❌||
+| 10 |[Shorten.rest](https://www.shorten.rest) | ✔️|✔️|❌||
+| 11 |[Snaplink.tk](https://snaplink.tk) | ✔️|✔️|❌||
+| 12 |[Picsee.io](https://picsee.io/en) | ✔️|❌|❌|Only For Company's |
+| 13 |[7r6.com](https://7r6.com) | ✔️|✔️|✔️||
+| 14 |[Shorte.st](https://shorte.st) | ✔️|❌|✔️||
+| 15 |[Short-Jambo.com](https://short-jambo.com) | ✔️|✔️|✔️||
+| 16 |[CutPaid.com](https://cutpaid.com) | ✔️|✔️|✔️||
+| 17 |[CutPaidAd.com](https://cutpaidad.com) | ✔️|✔️|✔️||
+| 18 |[Shrtfly.com](https://shrtfly.com) | ✔️|✔️|✔️||
+| 19 |[Linkshortify.com](https://linkshortify.com) | ✔️|✔️|✔️||
+| 19 |[Linkshortify.net](https://linkshortify.net) | ✔️|✔️|✔️||
+| 20 |[Shortox.com](https://shortox.com) | ✔️|✔️|✔️||
+| 21 |[Linkrex.net](https://linkrex.net) | ✔️|✔️|✔️||
+| 22 |[Exe.io](https://exe.io) | ✔️|✔️|✔️||
+| 23 |[Cuty.io](https://cuty.io) | ✔️|✔️|✔️||
+| 24 |[Adfoc.us](https://adfoc.us) | ✔️|✔️|✔️||
+| 25 |[Adf.ly](https://adf.ly) | ✔️|❌|✔️|Going to End 😓|
+| 26 |[Is.gd](https://is.gd) |❌|✔️|❌||
+| 27 |[v.gd](https://v.gd) |❌|✔️|❌||
 | 28 |[N9.cl](https://n9.cl/en) |❌|❌|❌||
 | 29 |[CleanUri.com](https://cleanuri.com) |❌|❌|❌||
 | 30 |[ShrtCo.de](https://shrtco.de) |❌|❌|❌||
