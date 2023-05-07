@@ -55,7 +55,7 @@ Supported Service's:
 
 | # | Service Website |Need API Key |Support Alias|Support Ads|Notes|
 |:--------:|:----------:|:--------:|:-------:|:-------:|:-------:|
-| 1 | [Bitly.com](https://bitly.com) |        ✅     | ❌ |❌||
+| 1 | [Bitly.com](https://bitly.com) |        ✔️     | ❌ |❌||
 | 2 | [Bl.ink](https://www.bl.ink) |✅| ❌ |❌||
 | 3 | [Tiny.CC](https://tiny.cc) | ✅| ✅ |❌||
 | 4 | [Rebrandly.com](https://www.rebrandly.com) | ✅|✅|❌||
