@@ -27,13 +27,19 @@ Old Apps Images:
 New App Images:
 =============
 
-[[![](https://i.imgur.com/Wg2xzgH.png)](https://i.imgur.com/Wg2xzgH.png)](https://i.imgur.com/e3xTbTL.png)
+![https://i.imgur.com/e3xTbTL.png](https://i.imgur.com/e3xTbTL.png)
 
-[![](https://i.imgur.com/4j6wVje.png)](https://i.imgur.com/4j6wVje.png)
+![https://i.imgur.com/fi1bE2z.png](https://i.imgur.com/fi1bE2z.png)
 
-[![](https://i.imgur.com/JnLcsfJ.png)](https://i.imgur.com/JnLcsfJ.png)
+![https://i.imgur.com/6U3SH2B.png](https://i.imgur.com/6U3SH2B.png)
 
-[![](https://i.imgur.com/MpbreRP.png)](https://i.imgur.com/MpbreRP.png)
+![https://i.imgur.com/NJBK1Xm.png](https://i.imgur.com/NJBK1Xm.png)
+
+![https://i.imgur.com/nNkK0E3.png](https://i.imgur.com/nNkK0E3.png)
+
+
+![https://i.imgur.com/Ug7xTNb.png](https://i.imgur.com/Ug7xTNb.png)
+
 
 
 Features:
