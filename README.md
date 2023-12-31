@@ -72,7 +72,7 @@ Supported Service's:
 | 9 | [Asr.im](https://asr.im) | ✔️|✔️|❌||
 | 10 |[Shorten.rest](https://www.shorten.rest) | ✔️|✔️|❌||
 | 11 |[Snaplink.tk](https://snaplink.tk) | ✔️|✔️|❌||
-| 12 |[Picsee.io](https://picsee.io/en) | ✔️|❌|❌|Only For Company's |
+| 12 |[Picsee.io](https://picsee.io/en) | ✔️|❌|❌||
 | 13 |[7r6.com](https://7r6.com) | ✔️|✔️|✔️||
 | 14 |[Shorte.st](https://shorte.st) | ✔️|❌|✔️||
 | 15 |[Short-Jambo.com](https://short-jambo.com) | ✔️|✔️|✔️||
