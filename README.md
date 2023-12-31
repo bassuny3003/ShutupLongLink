@@ -27,7 +27,7 @@ Old Apps Images:
 New App Images:
 =============
 
-[![](https://i.imgur.com/Wg2xzgH.png)](https://i.imgur.com/Wg2xzgH.png)
+[[![](https://i.imgur.com/Wg2xzgH.png)](https://i.imgur.com/Wg2xzgH.png)](https://i.imgur.com/e3xTbTL.png)
 
 [![](https://i.imgur.com/4j6wVje.png)](https://i.imgur.com/4j6wVje.png)
 
