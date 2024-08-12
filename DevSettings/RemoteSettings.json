@@ -1,13 +1,46 @@
 {
   "pricing": {
-    "price": 5.10,
-    "discountPercentage": 10,
+    "oneYearPrice": 5.00,
+    "oneYearDiscount": false,
+    "oneYearDiscountPercentage": 0,
+
+    "multiYearPrice": 7.00,
+    "multiYearDiscount": true,
+    "multiYearDiscountPercentage": 15,
+
     "currency": "USD",
     "validUntil": "2024-12-31"
   },
+  "paymentOptions": {
+    "acceptedMethods": [
+      {
+        "method": "Vodafone Cash",
+        "country": "Egypt",
+        "currency": "EGP",
+        "details": "Vodafone Cash is accepted only in Egypt. For more information, contact support."
+      },
+      {
+        "method": "InstaPay",
+        "country": "Egypt",
+        "currency": "EGP",
+        "details": "InstaPay is accepted only in Egypt. For more information, contact support."
+      }
+    ]
+  },
   "settings": {
-    "featureXEnabled": true,
-    "maxUsers": 5,
-    "supportEmail": "support@example.com"
-  }
+    "minimumAppVersionAllowed": true,
+    "supportEmail": "shortlinkmanger@gmail.com"
+  },
+  "advertising": [
+    {
+      "id": 1,
+      "imageUrl": "https://example.com/ads/ad1.jpg",
+      "isEnabled": true
+    },
+    {
+      "id": 2,
+      "imageUrl": "https://example.com/ads/ad2.jpg",
+      "isEnabled": false
+    }
+  ]
 }
