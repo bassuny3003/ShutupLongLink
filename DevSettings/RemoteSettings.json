@@ -1,10 +1,10 @@
 {
   "pricing": {
-    "oneYearPrice": 5.30,
+    "oneYearPrice": 5.35,
     "oneYearDiscount": false,
     "oneYearDiscountPercentage": 0,
 
-    "multiYearPrice": 7.00,
+    "multiYearPrice": 7.60,
     "multiYearDiscount": true,
     "multiYearDiscountPercentage": 30,
 
