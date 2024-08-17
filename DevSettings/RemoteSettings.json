@@ -6,7 +6,7 @@
 
     "multiYearPrice": 10.60,
     "multiYearDiscount": true,
-    "multiYearDiscountPercentage": 30,
+    "multiYearDiscountPercentage": 35,
 
     "currency": "USD",
     "validUntil": "2024-12-31"
