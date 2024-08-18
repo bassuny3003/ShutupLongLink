@@ -28,7 +28,7 @@
     ]
   },
   "settings": {
-    "minimumAppVersionAllowed": true,
+    "minimumAppVersionAllowed": "2.5.1.1",
     "supportEmail": "shortlinkmanger@gmail.com"
   },
   "advertising": [
